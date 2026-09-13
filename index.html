@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading the opposition report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F8F6;
+  --card:#FFFFFF;
+  --ink:#17241F;
+  --ink-soft:#5A6B64;
+  --water:#1C5C6E;
+  --water-pale:#E4EEF1;
+  --prairie:#4A7A4E;
+  --prairie-pale:#E7EFE7;
+  --clay:#9E4F2C;
+  --clay-pale:#F5E8E1;
+  --rule:#CBD9D3;
+  --rule-soft:#E2EAE6;
+  --sand:#E8EDE9;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+  --serif:"Source Serif 4",Charter,Georgia,serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:15px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:var(--water)}
+:focus-visible{outline:2px solid var(--water);outline-offset:2px;border-radius:2px}
+
+/* ---------------------------------------------------- masthead -- */
+header.top{
+  border-bottom:1px solid var(--rule);background:var(--card);
+  padding:14px 20px 0;
+}
+.mast{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px}
+.mast h1{
+  font-family:var(--serif);font-weight:600;font-size:21px;margin:0;
+  letter-spacing:-0.01em;
+}
+.mast .sub{color:var(--ink-soft);font-size:13.5px}
+.mast .spacer{flex:1}
+.mast .counts{font-size:13px;color:var(--ink-soft);white-space:nowrap}
+.mast .counts b{color:var(--ink);font-weight:600}
+
+/* state strip: bars are scaled to the whole file, never to the
+   current filter, so filtering visibly shrinks them */
+.strip{display:flex;gap:2px;align-items:flex-end;padding:12px 0 0;overflow-x:auto}
+.stbar{
+  flex:1 0 15px;min-width:15px;background:none;border:0;padding:0 0 3px;
+  cursor:pointer;text-align:center;
+}
+.stbar .bar{
+  height:34px;display:flex;align-items:flex-end;justify-content:center;
+}
+.stbar .fill{
+  width:100%;background:var(--rule);border-radius:1px 1px 0 0;min-height:1px;
+  transition:height .18s ease;
+}
+.stbar .live{background:var(--water)}
+.stbar .lbl{font-size:9px;color:var(--ink-soft);letter-spacing:.02em;padding-top:3px}
+.stbar[aria-pressed="true"] .lbl{color:var(--water);font-weight:600}
+.stbar[aria-pressed="true"] .fill{background:var(--water-pale)}
+.stbar[aria-pressed="true"] .live{background:var(--water)}
+.stbar:hover .fill{filter:brightness(.92)}
+
+/* ------------------------------------------------------ layout -- */
+.wrap{display:grid;grid-template-columns:236px minmax(0,1fr) 288px;gap:0;
+      height:calc(100vh - 118px)}
+.col{overflow-y:auto;padding:16px 18px}
+.rail{border-right:1px solid var(--rule)}
+.side{border-left:1px solid var(--rule);background:#FBFCFB}
+
+h2.sec{
+  font-size:12px;font-weight:600;letter-spacing:.01em;margin:0 0 8px;
+  color:var(--ink-soft);
+}
+.rail section{margin-bottom:20px}
+
+/* ----------------------------------------------------- controls -- */
+.chip{
+  display:inline-flex;align-items:center;gap:5px;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink);
+  padding:3px 9px;border-radius:20px;font-size:12.5px;cursor:pointer;
+  margin:0 4px 4px 0;
+}
+.chip[aria-pressed="true"]{background:var(--water);border-color:var(--water);color:#fff}
+.chip.g[aria-pressed="true"]{background:var(--prairie);border-color:var(--prairie)}
+.chip .n{opacity:.62;font-size:11px}
+.chip:hover{border-color:var(--water)}
+
+.search{
+  width:100%;padding:7px 10px;border:1px solid var(--rule);border-radius:4px;
+  background:var(--card);
+}
+.linkish{
+  background:none;border:0;padding:0;color:var(--water);cursor:pointer;
+  font-size:12.5px;text-decoration:underline;text-underline-offset:2px;
+}
+.btn{
+  border:1px solid var(--water);background:var(--water);color:#fff;
+  padding:7px 12px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:500;
+}
+.btn.ghost{background:var(--card);color:var(--water)}
+.btn:disabled{opacity:.45;cursor:default}
+
+/* -------------------------------------------------- result list -- */
+.hits{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px}
+.rec{
+  background:var(--card);border:1px solid var(--rule-soft);border-left:3px solid var(--rule);
+  border-radius:3px;padding:10px 12px;margin-bottom:7px;cursor:pointer;
+}
+.rec:hover{border-color:var(--rule);border-left-color:var(--water)}
+.rec.on{border-color:var(--water);border-left-color:var(--water);background:var(--water-pale)}
+.rec.blocked{border-left-color:var(--clay)}
+.rec.live{border-left-color:var(--prairie)}
+.rec .nm{font-family:var(--serif);font-size:15.5px;font-weight:600;line-height:1.25}
+.rec .meta{font-size:11.5px;color:var(--ink-soft);margin-top:3px}
+.rec .snip{
+  font-family:var(--serif);font-size:13.5px;color:var(--ink-soft);margin-top:5px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.tag{
+  display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:3px;
+  background:var(--sand);color:var(--ink-soft);margin:4px 4px 0 0;
+  border:1px solid var(--rule-soft);
+}
+.tag.tech{background:var(--water-pale);color:var(--water);border-color:#CBE0E6}
+.tag.flag{background:var(--prairie-pale);color:var(--prairie);border-color:#D3E3D4}
+.tag.star{background:#FBF3DC;color:#8A6714;border-color:#EDDFB8}
+
+/* ------------------------------------------------------ detail -- */
+.detail{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:18px 20px}
+.detail h3{font-family:var(--serif);font-size:20px;margin:0 0 4px;line-height:1.2}
+.detail .where{color:var(--ink-soft);font-size:13px;margin-bottom:14px}
+.detail .body{
+  font-family:var(--serif);font-size:15.5px;line-height:1.62;max-width:66ch;
+  white-space:pre-wrap;
+}
+.detail h4{
+  font-size:12px;font-weight:600;color:var(--ink-soft);margin:22px 0 8px;
+  padding-top:12px;border-top:1px solid var(--rule-soft);
+}
+.reflist{list-style:none;margin:0;padding:0}
+.reflist li{padding:6px 0;border-bottom:1px solid var(--rule-soft);font-size:13px}
+.reflist li:last-child{border-bottom:0}
+.reftype{
+  display:inline-block;font-size:10px;padding:1px 5px;border-radius:2px;
+  margin-right:7px;vertical-align:1px;border:1px solid;
+}
+.reftype.news{background:var(--card);color:var(--water);border-color:#CBE0E6}
+.reftype.legal{background:var(--card);color:#6A4E86;border-color:#DCD2E6}
+.reftype.government{background:var(--card);color:var(--ink-soft);border-color:var(--rule)}
+.reftype.opposition{background:var(--clay-pale);color:var(--clay);border-color:#E8D2C5}
+.reflist .cite{color:var(--ink-soft);font-size:12px;display:block;margin-top:2px}
+.reflist a{word-break:break-word}
+
+.codegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:14px}
+.codegroup{font-size:11.5px;color:var(--ink-soft);font-weight:600;margin-bottom:5px}
+.code{
+  display:flex;gap:7px;align-items:flex-start;padding:3px 0;font-size:13px;cursor:pointer;
+}
+.code input{margin-top:3px;accent-color:var(--water)}
+.code.sugg span{color:var(--water)}
+.code .dot{color:var(--water);font-size:15px;line-height:1}
+
+textarea.note{
+  width:100%;min-height:64px;border:1px solid var(--rule);border-radius:4px;
+  padding:8px 10px;font-family:var(--serif);font-size:14px;resize:vertical;
+}
+
+/* ------------------------------------------------------ sidebar -- */
+.work{list-style:none;margin:0;padding:0}
+.work li{
+  padding:8px 0;border-bottom:1px solid var(--rule-soft);font-size:13px;cursor:pointer;
+}
+.work li:hover .wnm{text-decoration:underline}
+.wnm{font-family:var(--serif);font-weight:600;font-size:14px;line-height:1.2}
+.wmeta{font-size:11px;color:var(--ink-soft);margin-top:2px}
+
+.tally{list-style:none;margin:0;padding:0;font-size:12.5px}
+.tally li{display:flex;align-items:center;gap:7px;padding:2.5px 0}
+.tally .tbar{height:8px;background:var(--prairie);border-radius:1px;min-width:1px}
+.tally .tn{color:var(--ink-soft);font-size:11px;width:26px;text-align:right}
+.tally .tl{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ---------------------------------------------------- open file -- */
+.opening{max-width:620px;margin:56px auto;padding:0 24px;text-align:left}
+.opening h2{font-family:var(--serif);font-size:25px;font-weight:600;margin:0 0 10px;line-height:1.22}
+.opening p{color:var(--ink-soft);font-size:15px;line-height:1.6;max-width:60ch}
+.drop{
+  margin:26px 0 18px;border:1.5px dashed var(--rule);border-radius:6px;
+  padding:34px 24px;text-align:center;background:var(--card);
+}
+.drop.hot{border-color:var(--water);background:var(--water-pale)}
+.drop p{margin:10px auto 0;font-size:13.5px}
+.steps{font-size:14px;color:var(--ink-soft);line-height:1.75;padding-left:20px;max-width:60ch}
+.steps b{color:var(--ink);font-weight:600}
+.bar{height:4px;background:var(--rule-soft);border-radius:2px;overflow:hidden;margin-top:14px}
+.bar div{height:100%;background:var(--water);width:0;transition:width .2s}
+.quiet{color:var(--ink-soft);font-size:12.5px}
+.warn{
+  background:#FDF6E6;border:1px solid #EDDFB8;color:#6B5312;
+  padding:9px 12px;border-radius:4px;font-size:12.5px;margin-bottom:12px;
+}
+.empty{color:var(--ink-soft);font-size:14px;font-family:var(--serif);padding:26px 0;max-width:46ch}
+
+@media (max-width:1040px){
+  .wrap{grid-template-columns:1fr;height:auto}
+  .rail,.side{border:0;border-bottom:1px solid var(--rule)}
+  .col{max-height:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div id="open" class="opening">
+  <h2>Read the opposition report state by state</h2>
+  <p>The Sabin Center at Columbia Law School keeps a record of every state and local
+     restriction on wind, solar and storage siting, and every project that has met
+     organized local opposition. This page opens that record in your browser, filters it
+     down to the states and technologies you care about, pulls out the news articles and
+     documents each entry cites, and lets you mark what people objected to.</p>
+
+  <div class="drop" id="drop">
+    <button class="btn" id="pick">Choose a file</button>
+    <p class="quiet">or drag it here — PDF, CSV or XLSX</p>
+    <div class="bar" id="progwrap" hidden><div id="prog"></div></div>
+    <p id="progtxt" class="quiet" hidden></p>
+    <input type="file" id="file" accept=".pdf,.csv,.xlsx,.xls,.tsv" multiple hidden>
+  </div>
+
+  <ol class="steps">
+    <li>Go to <a href="https://oppositionreport.org/reports/current/" target="_blank"
+        rel="noopener">oppositionreport.org</a> and download the data.</li>
+    <li><b>The restriction and contested project files read most cleanly</b> — they are
+        already in columns. Open both at once if you have them.</li>
+    <li>The full report PDF also works. It has to be cut apart by pattern, so a few
+        entries come through ragged; every record keeps its original text so you can
+        check it.</li>
+  </ol>
+  <p class="quiet" style="margin-top:20px">Files are read on your own machine. Nothing is
+     uploaded anywhere, and your tagging is saved in this browser.</p>
+</div>
+
+<header class="top" id="top" hidden>
+  <div class="mast">
+    <h1>Opposition report</h1>
+    <span class="sub" id="srcname"></span>
+    <span class="spacer"></span>
+    <span class="counts" id="counts"></span>
+    <button class="linkish" id="reload">Open a different file</button>
+  </div>
+  <div class="strip" id="strip"></div>
+</header>
+
+<div class="wrap" id="wrap" hidden>
+
+  <div class="col rail">
+    <section>
+      <h2 class="sec">Search the text</h2>
+      <input class="search" id="q" type="search" placeholder="e.g. canal, grazing, well water">
+    </section>
+
+    <section>
+      <h2 class="sec">States</h2>
+      <div id="statepick"></div>
+      <button class="linkish" id="preset">South central</button> ·
+      <button class="linkish" id="clearstates">All states</button>
+    </section>
+
+    <section>
+      <h2 class="sec">Technology</h2>
+      <div id="techpick"></div>
+    </section>
+
+    <section>
+      <h2 class="sec">Of particular interest</h2>
+      <div id="flagpick"></div>
+    </section>
+
+    <section>
+      <h2 class="sec">Record</h2>
+      <div id="kindpick"></div>
+    </section>
+
+    <section>
+      <h2 class="sec">Status</h2>
+      <div id="statuspick"></div>
+    </section>
+
+    <section>
+      <h2 class="sec">Your marks</h2>
+      <div id="markpick"></div>
+    </section>
+  </div>
+
+  <div class="col main">
+    <div id="parsewarn"></div>
+    <p class="hits" id="hits"></p>
+    <div id="list"></div>
+  </div>
+
+  <div class="col side">
+    <section>
+      <h2 class="sec">To chase</h2>
+      <ul class="work" id="work"></ul>
+      <p class="quiet" id="worknote"></p>
+    </section>
+
+    <section style="margin-top:22px">
+      <h2 class="sec">Concerns in the current filter</h2>
+      <ul class="tally" id="tally"></ul>
+      <p class="quiet" id="tallynote"></p>
+    </section>
+
+    <section style="margin-top:22px">
+      <h2 class="sec">Take it with you</h2>
+      <button class="btn ghost" id="exSeeds" style="width:100%;margin-bottom:6px">Seed list for collection</button>
+      <button class="btn ghost" id="exCoded" style="width:100%;margin-bottom:6px">Coded records</button>
+      <button class="btn ghost" id="exRefs"  style="width:100%;margin-bottom:6px">References</button>
+      <button class="btn ghost" id="exSess"  style="width:100%;margin-bottom:6px">Save your work</button>
+      <button class="btn ghost" id="imSess"  style="width:100%">Load saved work</button>
+      <input type="file" id="sessfile" accept=".json" hidden>
+    </section>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="codebook.js"></script>
+<script src="parse.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
