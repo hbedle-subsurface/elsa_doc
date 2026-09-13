@@ -20,7 +20,7 @@ let CONCERN_TOTALS = {};      // fixed denominators for the concern tally
 const F = {
   q: '',
   states: new Set(),
-  tech: new Set(),
+  tech: new Set(['solar']),      // the study is about solar; widen from the rail
   flags: new Set(),
   kinds: new Set(),
   statuses: new Set(),
@@ -67,6 +67,7 @@ function markOf(r) {
 
 $('#pick').addEventListener('click', () => $('#file').click());
 $('#file').addEventListener('change', e => loadFiles(Array.from(e.target.files)));
+$('#trysample').addEventListener('click', loadSample);
 
 const drop = $('#drop');
 ['dragenter', 'dragover'].forEach(ev =>
@@ -113,14 +114,24 @@ async function loadFiles(files) {
   }
 
   if (!records.length) {
-    txt.textContent = 'No entries found in that file. The tabular downloads from '
-                    + 'oppositionreport.org are the most reliable input.';
+    txt.textContent = 'No entries found in that file. The contested project and '
+                    + 'restriction downloads from oppositionreport.org are the surest input.';
     return;
   }
+  finishLoad(records);
+}
 
+function loadSample() {
+  SOURCE = [SAMPLE_NAME];
+  finishLoad(parseTable(parseCsv(SAMPLE_CSV), 'project'));
+}
+
+function finishLoad(records) {
   ALL = dedupe(records);
   bindMarks();
   computeFixedTotals();
+  /* If nothing solar came in, do not hand back an empty screen. */
+  if (F.tech.size && !ALL.some(r => r.technologies.some(t => F.tech.has(t)))) F.tech.clear();
   $('#open').hidden = true; $('#top').hidden = false; $('#wrap').hidden = false;
   $('#srcname').textContent = SOURCE.join(', ');
   buildControls();
@@ -158,14 +169,11 @@ function passes(r) {
 
   if (F.marks.size) {
     const m = MARKS[r.id];
-    const starred = !!(m && m.star);
-    const coded = !!(m && m.tags && m.tags.length);
-    const noted = !!(m && m.note);
     let ok = false;
-    if (F.marks.has('star') && starred) ok = true;
-    if (F.marks.has('coded') && coded) ok = true;
-    if (F.marks.has('noted') && noted) ok = true;
-    if (F.marks.has('untouched') && !starred && !coded && !noted) ok = true;
+    if (F.marks.has('star') && m && m.star) ok = true;
+    if (F.marks.has('coded') && m && m.tags.length) ok = true;
+    if (F.marks.has('noted') && m && m.note) ok = true;
+    if (F.marks.has('unread') && !(m && m.read)) ok = true;
     if (!ok) return false;
   }
 
@@ -219,6 +227,12 @@ function renderControls(hits) {
   const maxState = Math.max(1, ...Object.values(STATE_TOTALS));
   const liveByState = {};
   for (const r of hits) liveByState[r.state] = (liveByState[r.state] || 0) + 1;
+
+  const shown = hits.length, everything = ALL.length;
+  $('#striplab').textContent = shown === everything
+    ? 'Bar height is how many entries each state has. Click one to filter.'
+    : 'Bar height is each state\u2019s full total; the solid part is what the '
+      + 'filters leave. Click one to filter.';
 
   for (const s of STATES) {
     const total = STATE_TOTALS[s] || 0;
@@ -274,21 +288,20 @@ function renderControls(hits) {
   }
 
   const mp = $('#markpick'); mp.innerHTML = '';
-  const touched = m => m && (m.star || (m.tags && m.tags.length) || m.note);
   const marked = {
-    star:  ALL.filter(r => MARKS[r.id] && MARKS[r.id].star).length,
-    coded: ALL.filter(r => MARKS[r.id] && MARKS[r.id].tags.length).length,
-    noted: ALL.filter(r => MARKS[r.id] && MARKS[r.id].note).length,
-    none:  ALL.filter(r => !touched(MARKS[r.id])).length
+    unread: ALL.filter(r => !(MARKS[r.id] && MARKS[r.id].read)).length,
+    star:   ALL.filter(r => MARKS[r.id] && MARKS[r.id].star).length,
+    coded:  ALL.filter(r => MARKS[r.id] && MARKS[r.id].tags.length).length,
+    noted:  ALL.filter(r => MARKS[r.id] && MARKS[r.id].note).length
   };
-  mp.appendChild(chip('To chase', marked.star, F.marks.has('star'),
+  mp.appendChild(chip('Not read yet', marked.unread, F.marks.has('unread'),
+    () => { toggle(F.marks, 'unread'); render(); }, 'g'));
+  mp.appendChild(chip('On the chase list', marked.star, F.marks.has('star'),
     () => { toggle(F.marks, 'star'); render(); }, 'g'));
   mp.appendChild(chip('Coded', marked.coded, F.marks.has('coded'),
     () => { toggle(F.marks, 'coded'); render(); }, 'g'));
   mp.appendChild(chip('With a note', marked.noted, F.marks.has('noted'),
     () => { toggle(F.marks, 'noted'); render(); }, 'g'));
-  mp.appendChild(chip('Not looked at', marked.none,
-    F.marks.has('untouched'), () => { toggle(F.marks, 'untouched'); render(); }, 'g'));
 }
 
 /* ============================ rendering ========================== */
@@ -302,8 +315,10 @@ function render() {
   $('#counts').innerHTML =
     '<b>' + ALL.length + '</b> entries · ' + proj + ' projects · ' + restr + ' restrictions';
 
+  renderActive();
+  const read = hits.filter(r => MARKS[r.id] && MARKS[r.id].read).length;
   $('#hits').textContent = hits.length + ' of ' + ALL.length + ' entries'
-    + (describeFilter() ? ' — ' + describeFilter() : '');
+    + (hits.length ? ' · ' + read + ' read' : '');
 
   if (SELECTED && hits.some(r => r.id === SELECTED)) renderDetail(hits);
   else { SELECTED = null; renderList(hits); }
@@ -313,14 +328,47 @@ function render() {
   parseNotice();
 }
 
-function describeFilter() {
-  const bits = [];
-  if (F.states.size) bits.push(Array.from(F.states).map(s => STATE_ABBR[s] || s).join(', '));
-  if (F.tech.size) bits.push(Array.from(F.tech).map(labelTech).join(', '));
-  if (F.flags.size) bits.push(Array.from(F.flags).map(labelFlag).join(', '));
-  if (F.q) bits.push('"' + F.q + '"');
-  return bits.join(' · ');
+/* Everything currently narrowing the view, each one removable. Without
+   this a filter set three clicks ago is invisible and hard to undo. */
+function renderActive() {
+  const box = $('#active'); box.innerHTML = '';
+  const items = [];
+  for (const v of F.states) items.push([v, () => F.states.delete(v)]);
+  for (const v of F.tech)   items.push([labelTech(v), () => F.tech.delete(v)]);
+  for (const v of F.flags)  items.push([labelFlag(v), () => F.flags.delete(v)]);
+  for (const v of F.kinds)  items.push([v === 'project' ? 'Contested projects' : 'Restrictions',
+                                        () => F.kinds.delete(v)]);
+  for (const v of F.statuses) items.push([v, () => F.statuses.delete(v)]);
+  for (const v of F.marks)  items.push([MARK_LABEL[v] || v, () => F.marks.delete(v)]);
+  if (F.q) items.push(['contains "' + F.q + '"', () => { F.q = ''; $('#q').value = ''; }]);
+
+  if (!items.length) return;
+  for (const [label, drop] of items) {
+    const b = document.createElement('button');
+    b.className = 'pill';
+    b.title = 'Remove this filter';
+    b.innerHTML = esc4(label) + '<span class="x" aria-hidden="true">\u00d7</span>';
+    b.addEventListener('click', () => { drop(); render(); });
+    box.appendChild(b);
+  }
+  if (items.length > 1) {
+    const c = document.createElement('button');
+    c.className = 'pill clear';
+    c.textContent = 'Clear all';
+    c.addEventListener('click', () => {
+      F.q = ''; $('#q').value = '';
+      F.states.clear(); F.tech.clear(); F.flags.clear();
+      F.kinds.clear(); F.statuses.clear(); F.marks.clear();
+      render();
+    });
+    box.appendChild(c);
+  }
 }
+
+const MARK_LABEL = {
+  unread: 'Not read yet', star: 'On the chase list',
+  coded: 'Coded', noted: 'With a note'
+};
 
 function statusClass(r) {
   if (['Canceled', 'Expired', 'Repealed'].includes(r.status)) return 'blocked';
@@ -339,7 +387,7 @@ function renderList(hits) {
   for (const r of hits.slice(0, 400)) {
     const m = MARKS[r.id];
     const d = document.createElement('div');
-    d.className = 'rec ' + statusClass(r);
+    d.className = 'rec ' + statusClass(r) + (m && m.read ? ' seen' : '');
     d.tabIndex = 0;
     const tags = []
       .concat(r.technologies.map(t => '<span class="tag tech">' + labelTech(t) + '</span>'))
@@ -376,24 +424,43 @@ function labelFlag(id) { const f = FLAG_RULES.find(x => x.id === id); return f ?
 function renderDetail(hits) {
   const r = ALL.find(x => x.id === SELECTED);
   const m = markOf(r);
+  if (!m.read) { m.read = true; saveMarks(); }
   const list = $('#list');
   const idx = hits.findIndex(x => x.id === r.id);
 
   const byType = { news: [], government: [], legal: [], opposition: [] };
   for (const ref of r.refs) (byType[ref.type] || byType.news).push(ref);
 
-  const codeHtml = CONCERN_GROUPS.map(g => {
-    const cats = CODEBOOK.filter(c => c.group === g.id);
-    if (!cats.length) return '';
-    return '<div><div class="codegroup">' + esc4(g.label) + '</div>' +
-      cats.map(c => {
-        const on = m.tags.includes(c.id);
-        const sugg = r.suggested.includes(c.id);
-        return '<label class="code' + (sugg ? ' sugg' : '') + '" title="' + esc4(c.hint) + '">' +
-          '<input type="checkbox" data-code="' + c.id + '"' + (on ? ' checked' : '') + '>' +
-          '<span>' + esc4(c.label) + (sugg ? ' <span class="dot">·</span>' : '') + '</span></label>';
-      }).join('') + '</div>';
-  }).join('');
+  const codeBox = c => {
+    const on = m.tags.includes(c.id);
+    return '<label class="code" title="' + esc4(c.hint) + '">' +
+      '<input type="checkbox" data-code="' + c.id + '"' + (on ? ' checked' : '') + '>' +
+      '<span>' + esc4(c.label) + '</span></label>';
+  };
+
+  /* Lead with the handful the wording points at, plus anything already
+     ticked. All twenty-seven at once is a wall. */
+  const upFront = CODEBOOK.filter(c => r.suggested.includes(c.id) || m.tags.includes(c.id));
+  const rest = CODEBOOK.filter(c => !upFront.includes(c));
+
+  const suggestedHtml = upFront.length
+    ? '<div class="sugbox"><div class="codegroup">Words in this entry point at these. '
+      + 'Read it and tick the ones it really says.</div>'
+      + '<div class="codegrid">' + upFront.map(codeBox).join('') + '</div></div>'
+    : '<p class="quiet" style="margin:0 0 10px">No category was suggested by the wording '
+      + 'here. Read the entry and open the full list below.</p>';
+
+  const restHtml = '<details class="allcodes"><summary>All ' + CODEBOOK.length
+    + ' categories</summary><div class="codegrid">'
+    + CONCERN_GROUPS.map(g => {
+        const cats = rest.filter(c => c.group === g.id);
+        if (!cats.length) return '';
+        return '<div><div class="codegroup">' + esc4(g.label) + '</div>'
+             + cats.map(codeBox).join('') + '</div>';
+      }).join('')
+    + '</div></details>';
+
+  const codeHtml = suggestedHtml + restHtml;
 
   const refSection = (label, items) => items.length
     ? '<h4>' + label + '</h4><ul class="reflist">' + items.map(x =>
@@ -405,10 +472,14 @@ function renderDetail(hits) {
     : '';
 
   list.innerHTML =
-    '<p style="margin:0 0 10px"><button class="linkish" id="back">Back to results</button>' +
-    (idx > 0 ? ' · <button class="linkish" id="prev">Previous</button>' : '') +
-    (idx < hits.length - 1 ? ' · <button class="linkish" id="next">Next</button>' : '') +
-    '</p>' +
+    '<div class="navrow">' +
+      '<button class="btn ghost" id="back">All results</button>' +
+      '<span class="spacer"></span>' +
+      '<span class="kbd">' + (idx + 1) + ' of ' + hits.length + '</span>' +
+      '<button class="btn ghost" id="prev"' + (idx > 0 ? '' : ' disabled') + '>Previous</button>' +
+      '<button class="btn ghost" id="next"' + (idx < hits.length - 1 ? '' : ' disabled') +
+        '>Next</button>' +
+    '</div>' +
     '<div class="detail">' +
       '<h3>' + esc4(r.name) + '</h3>' +
       '<div class="where">' + esc4(r.state) + (r.where ? ' · ' + esc4(r.where) : '') +
@@ -429,19 +500,19 @@ function renderDetail(hits) {
       refSection('Opposition groups and petitions', byType.opposition) +
       refSection('Government records', byType.government) +
       refSection('Legal filings', byType.legal) +
-      '<h4>What was raised — mark what the text actually says</h4>' +
-      '<p class="quiet" style="margin:-2px 0 10px">A dot means a word in the entry matched '
-        + 'that category. Read the entry and decide; a word match is not a code.</p>' +
-      '<div class="codegrid">' + codeHtml + '</div>' +
+      '<h4>What was raised</h4>' + codeHtml +
       '<h4>Your note</h4>' +
       '<textarea class="note" id="note" placeholder="What to look for next, who to search '
         + 'for, anything the entry leaves open">' + esc4(m.note) + '</textarea>' +
     '</div>';
 
   $('#back').addEventListener('click', () => { SELECTED = null; render(); });
-  const prev = $('#prev'), next = $('#next');
-  if (prev) prev.addEventListener('click', () => { SELECTED = hits[idx - 1].id; render(); });
-  if (next) next.addEventListener('click', () => { SELECTED = hits[idx + 1].id; render(); });
+  const go = d => {
+    const j = idx + d;
+    if (j >= 0 && j < hits.length) { SELECTED = hits[j].id; render(); window.scrollTo(0, 0); }
+  };
+  $('#prev').addEventListener('click', () => go(-1));
+  $('#next').addEventListener('click', () => go(1));
 
   $('#star').addEventListener('click', () => {
     m.star = !m.star; saveMarks(); render();
@@ -458,6 +529,17 @@ function renderDetail(hits) {
     m.note = e.target.value; saveMarks();
   });
 }
+
+/* Arrow keys move through entries once one is open, unless the cursor
+   is in the note or the search box. */
+document.addEventListener('keydown', e => {
+  if (!SELECTED) return;
+  const t = e.target.tagName;
+  if (t === 'TEXTAREA' || t === 'INPUT') return;
+  if (e.key === 'ArrowRight') { const b = $('#next'); if (b && !b.disabled) b.click(); }
+  if (e.key === 'ArrowLeft')  { const b = $('#prev'); if (b && !b.disabled) b.click(); }
+  if (e.key === 'Escape')     { SELECTED = null; render(); }
+});
 
 function renderWork() {
   const ul = $('#work'); ul.innerHTML = '';

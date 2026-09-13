@@ -7,8 +7,14 @@ people actually objected to.
 
 Live at **https://hbedle-subsurface.github.io/elsa_doc/**
 
-Nothing is uploaded. Files are read in your own browser and your coding is stored there
-as well, with an export button so it can be saved and moved between machines.
+It opens on **solar only**, since that is the subject of the study. Wind, storage and
+transmission are one click away in the left rail — worth having, because a county that
+banned wind often went on to restrict solar, and the same neighbors show up at both
+hearings.
+
+There are six sample entries built into the page, so it can be tried before anything is
+downloaded. Nothing is uploaded. Files are read in your own browser and your coding is
+stored there, with a backup button so it can move between machines.
 
 ---
 
@@ -38,25 +44,34 @@ current edition.
 
 ## Working through it
 
-**Filter.** The strip across the top is every state that appears in the file. Each bar is
-that state's full share of the data; the filled part is how much survives the current
-filter. Bars are scaled to the whole file and stay that way, so applying a filter visibly
-shrinks them rather than quietly rescaling the axis. Click a bar to filter to that state.
-*South central* selects Oklahoma, Texas, Kansas, Arkansas, Louisiana, Missouri, New Mexico
-and Colorado.
+**Filter.** The strip across the top is every state in the file. Each bar is that state's
+full share of the data; the solid part is what survives the current filter. Bars are
+scaled to the whole file and stay that way, so filtering visibly shrinks them rather than
+quietly rescaling the axis. Click a bar to filter to that state. *South central* selects
+Oklahoma, Texas, Kansas, Arkansas, Louisiana, Missouri, New Mexico and Colorado.
 
-The left rail filters by technology, by record type, by status, and by two things worth
-separating out: projects that involve **agrivoltaics** (grazing or cropping under the
-panels) and projects **sited on water** (canals, reservoirs, ponds, irrigation districts).
+Every filter you apply appears as a removable chip above the results, with *Clear all* at
+the end, so nothing is ever narrowing the view invisibly.
+
+Beyond state, energy type and status, the rail separates out three things worth pulling
+apart: projects involving **agrivoltaics** (grazing or cropping under the panels),
+projects **sited on water** (canals, reservoirs, ponds, irrigation districts), and
+projects **serving a data center**, which is increasingly what the fight is actually
+about.
 
 **Read.** Click an entry. You get the report's own account of it, then its references
 sorted into news coverage, opposition groups and petitions, government records, and legal
 filings. Those citations are a curated reading list — the Sabin researchers have already
 found the local coverage of each fight.
 
-**Code.** Under each entry is the concern codebook. A dot beside a category means a word
-in the entry matched one of that category's cue words. That is a place to look, not a
-result. A category enters the data when you check it, having read the entry.
+Arrow keys move between entries once one is open; escape goes back to the list. Entries
+you have opened are marked read, and the results line counts how many of the current set
+you have been through.
+
+**Code.** Under each entry, the categories whose cue words appear in that entry are shown
+first, in a small box. The remaining categories fold open underneath. A cue word matching
+is a place to look, not a result — a category enters the data when you tick it, having
+read the entry.
 
 The counts panel shows word matches until you confirm your first code, then switches to
 counting only your own codes and says so.
@@ -70,10 +85,10 @@ list is the input to the next step.
 
 | Button | File | One row per | Use |
 |---|---|---|---|
-| Seed list for collection | `seed_list_<date>.csv` | entry on the chase list | Feeds the news and social media collection step. Carries a ready-made search string and every URL the report already cites. |
-| Coded records | `coded_records_<date>.csv` | entry in the current filter | Your codes as one column per category, 1 or 0. Reads straight into a statistics tool. |
-| References | `references_<date>.csv` | citation | The reading list, with source type. |
-| Save your work | `coding_session_<date>.json` | — | Your codes, stars and notes. Load it on another machine, or after the database updates. |
+| Projects to look up next | `seed_list_<date>.csv` | entry on the chase list | Feeds the news and social media collection step. Carries a ready-made search string and every URL the report already cites. Falls back to the current filter if nothing is starred. |
+| Your coding, as a table | `coded_records_<date>.csv` | entry in the current filter | Your codes as one column per category, 1 or 0. Reads straight into a statistics tool. |
+| The reading list | `references_<date>.csv` | citation | Every article and document cited by the current filter, sorted by source type. |
+| Back up your work | `coding_session_<date>.json` | — | Your codes, stars and notes. Load it on another machine, or after the database updates. |
 
 Codes are stored against a fingerprint of each entry rather than its row number, so
 loading next month's edition, or the other half of the data, reattaches your work to the
@@ -115,6 +130,13 @@ index.html      the page, and all of the styling
 app.js          loading, filtering, reading, coding, exporting
 parse.js        the PDF and CSV/XLSX parsers
 codebook.js     the concern categories and the technology flags
+sample.js       six real entries, embedded so the page works with no download
+```
+
+To change what the page opens on, edit one line near the top of `app.js`:
+
+```js
+tech: new Set(['solar']),      // ['solar','wind'] for both, new Set() for everything
 ```
 
 pdf.js and SheetJS load from a CDN. Everything else is local. To run it without a server,

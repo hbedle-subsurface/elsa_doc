@@ -207,6 +207,44 @@ textarea.note{
 .bar{height:4px;background:var(--rule-soft);border-radius:2px;overflow:hidden;margin-top:14px}
 .bar div{height:100%;background:var(--water);width:0;transition:width .2s}
 .quiet{color:var(--ink-soft);font-size:12.5px}
+.striplab{font-size:10.5px;color:var(--ink-soft);margin:1px 0 8px}
+
+/* active filters, so what you clicked is visible and removable */
+#active{margin-bottom:9px}
+.pill{
+  display:inline-flex;align-items:center;gap:6px;background:var(--water);color:#fff;
+  border:0;border-radius:20px;padding:3px 6px 3px 11px;font-size:12.5px;
+  margin:0 5px 5px 0;cursor:pointer;
+}
+.pill .x{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:15px;height:15px;border-radius:50%;background:rgba(255,255,255,.24);font-size:11px;
+}
+.pill:hover .x{background:rgba(255,255,255,.42)}
+.pill.clear{background:none;color:var(--water);padding-left:4px;text-decoration:underline;
+  text-underline-offset:2px}
+
+.btn.wide{width:100%;text-align:left}
+.exhint{font-size:11.5px;color:var(--ink-soft);margin:4px 0 13px;line-height:1.4}
+
+/* entries already opened sit back a little */
+.rec.seen .nm{color:var(--ink-soft);font-weight:400}
+.rec.seen .nm::after{content:'read';font-size:9.5px;color:var(--prairie);
+  border:1px solid #D3E3D4;background:var(--prairie-pale);border-radius:3px;
+  padding:0 4px;margin-left:7px;vertical-align:2px;font-family:var(--sans)}
+
+/* coding: what the wording suggested comes first, the rest folds away */
+.sugbox{background:var(--water-pale);border:1px solid #CBE0E6;border-radius:4px;
+  padding:10px 12px;margin-bottom:10px}
+.sugbox .code{padding:4px 0}
+details.allcodes>summary{
+  cursor:pointer;font-size:12.5px;color:var(--water);padding:5px 0;
+  text-decoration:underline;text-underline-offset:2px;
+}
+details.allcodes[open]>summary{margin-bottom:9px}
+.navrow{display:flex;gap:8px;align-items:center;margin:0 0 12px;flex-wrap:wrap}
+.navrow .spacer{flex:1}
+.kbd{font-size:11px;color:var(--ink-soft)}
 .warn{
   background:#FDF6E6;border:1px solid #EDDFB8;color:#6B5312;
   padding:9px 12px;border-radius:4px;font-size:12.5px;margin-bottom:12px;
@@ -224,32 +262,38 @@ textarea.note{
 <body>
 
 <div id="open" class="opening">
-  <h2>Read the opposition report state by state</h2>
-  <p>The Sabin Center at Columbia Law School keeps a record of every state and local
-     restriction on wind, solar and storage siting, and every project that has met
-     organized local opposition. This page opens that record in your browser, filters it
-     down to the states and technologies you care about, pulls out the news articles and
-     documents each entry cites, and lets you mark what people objected to.</p>
+  <h2>Every solar project people fought, and why</h2>
+  <p>The Sabin Center at Columbia Law School keeps a record of every project that has met
+     organized local opposition, and every state and local rule restricting where one can
+     be built. This page opens that record, narrows it to the states you are studying,
+     collects the news coverage each entry cites, and lets you mark what the neighbors
+     actually objected to.</p>
 
   <div class="drop" id="drop">
-    <button class="btn" id="pick">Choose a file</button>
-    <p class="quiet">or drag it here — PDF, CSV or XLSX</p>
+    <button class="btn" id="pick">Open your downloaded file</button>
+    <p class="quiet">or drag it here — CSV, XLSX or the report PDF</p>
     <div class="bar" id="progwrap" hidden><div id="prog"></div></div>
     <p id="progtxt" class="quiet" hidden></p>
     <input type="file" id="file" accept=".pdf,.csv,.xlsx,.xls,.tsv" multiple hidden>
   </div>
 
+  <p style="margin:0 0 26px">
+    <button class="linkish" id="trysample">Have a look with six sample entries first</button>
+    <span class="quiet"> — no download needed</span>
+  </p>
+
+  <h3 style="font-family:var(--serif);font-size:17px;margin:0 0 8px">Getting the real data</h3>
   <ol class="steps">
-    <li>Go to <a href="https://oppositionreport.org/reports/current/" target="_blank"
-        rel="noopener">oppositionreport.org</a> and download the data.</li>
-    <li><b>The restriction and contested project files read most cleanly</b> — they are
-        already in columns. Open both at once if you have them.</li>
-    <li>The full report PDF also works. It has to be cut apart by pattern, so a few
-        entries come through ragged; every record keeps its original text so you can
-        check it.</li>
+    <li>Open <a href="https://oppositionreport.org/reports/current/" target="_blank"
+        rel="noopener">oppositionreport.org</a> and download the contested project data
+        and the restriction data.</li>
+    <li><b>Those two files read most cleanly</b> — they are already in columns. Open both
+        at once.</li>
+    <li>The full report PDF works too. It has to be cut apart by pattern, so a few entries
+        arrive ragged; each one keeps its original text so it can be checked.</li>
   </ol>
-  <p class="quiet" style="margin-top:20px">Files are read on your own machine. Nothing is
-     uploaded anywhere, and your tagging is saved in this browser.</p>
+  <p class="quiet" style="margin-top:20px">Everything happens on your own machine. No file
+     is uploaded, and your coding is saved in this browser.</p>
 </div>
 
 <header class="top" id="top" hidden>
@@ -261,6 +305,7 @@ textarea.note{
     <button class="linkish" id="reload">Open a different file</button>
   </div>
   <div class="strip" id="strip"></div>
+  <p class="striplab" id="striplab"></p>
 </header>
 
 <div class="wrap" id="wrap" hidden>
@@ -279,17 +324,17 @@ textarea.note{
     </section>
 
     <section>
-      <h2 class="sec">Technology</h2>
+      <h2 class="sec">Energy type</h2>
       <div id="techpick"></div>
     </section>
 
     <section>
-      <h2 class="sec">Of particular interest</h2>
+      <h2 class="sec">Kind of project</h2>
       <div id="flagpick"></div>
     </section>
 
     <section>
-      <h2 class="sec">Record</h2>
+      <h2 class="sec">Projects or rules</h2>
       <div id="kindpick"></div>
     </section>
 
@@ -299,13 +344,14 @@ textarea.note{
     </section>
 
     <section>
-      <h2 class="sec">Your marks</h2>
+      <h2 class="sec">Where you are</h2>
       <div id="markpick"></div>
     </section>
   </div>
 
   <div class="col main">
     <div id="parsewarn"></div>
+    <div id="active"></div>
     <p class="hits" id="hits"></p>
     <div id="list"></div>
   </div>
@@ -325,11 +371,18 @@ textarea.note{
 
     <section style="margin-top:22px">
       <h2 class="sec">Take it with you</h2>
-      <button class="btn ghost" id="exSeeds" style="width:100%;margin-bottom:6px">Seed list for collection</button>
-      <button class="btn ghost" id="exCoded" style="width:100%;margin-bottom:6px">Coded records</button>
-      <button class="btn ghost" id="exRefs"  style="width:100%;margin-bottom:6px">References</button>
-      <button class="btn ghost" id="exSess"  style="width:100%;margin-bottom:6px">Save your work</button>
-      <button class="btn ghost" id="imSess"  style="width:100%">Load saved work</button>
+      <button class="btn ghost wide" id="exSeeds">Projects to look up next</button>
+      <p class="exhint">Your chase list, with a ready-made search string and every link
+         the report already cites.</p>
+      <button class="btn ghost wide" id="exCoded">Your coding, as a table</button>
+      <p class="exhint">One row per entry, one column per category. Opens in a
+         spreadsheet or a statistics tool.</p>
+      <button class="btn ghost wide" id="exRefs">The reading list</button>
+      <p class="exhint">Every article and document cited by what you are looking at now.</p>
+      <button class="btn ghost wide" id="exSess">Back up your work</button>
+      <p class="exhint">Keep this if you switch computers, or before the database
+         updates next month.</p>
+      <button class="btn ghost wide" id="imSess" style="margin-bottom:0">Restore a backup</button>
       <input type="file" id="sessfile" accept=".json" hidden>
     </section>
   </div>
@@ -338,6 +391,7 @@ textarea.note{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="codebook.js"></script>
+<script src="sample.js"></script>
 <script src="parse.js"></script>
 <script src="app.js"></script>
 </body>
