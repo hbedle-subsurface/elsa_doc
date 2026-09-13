@@ -1,191 +1,162 @@
 /* ------------------------------------------------------------------
-   app.js — loading, filtering, reading, coding, exporting.
+   app.js — reads what the crawler collected and lets you work through it.
+
+   The data files sit in this repository, so they load from the same
+   origin and there is no API to call from the browser. Your coding is
+   kept in this browser, with a backup button, because a page served
+   from GitHub Pages cannot write back to the repository.
 ------------------------------------------------------------------ */
 
-if (window.pdfjsLib) {
-  pdfjsLib.GlobalWorkerOptions.workerSrc =
-    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-}
+const SAVE_KEY = 'solar_news_codes_v1';
 
-const SAVE_KEY = 'elsa_doc_marks_v2';
-
-let ALL = [];                 // every parsed record
-let PRINTS = loadPrints();    // fingerprint -> { tags:[], star:bool, note:'' }
-let MARKS = {};               // record id -> the same objects, for this file
+let BOOK = null;          // codebook.json
+let ALL = [];             // every collected article
+let RUNS = [];            // collection history
+let META = {};            // updated stamp, threshold
+let CODES = loadCodes();  // article id -> { tags:[], star, note, read }
 let SELECTED = null;
-let SOURCE = [];              // file names loaded
-let STATE_TOTALS = {};        // fixed denominators for the state strip
-let CONCERN_TOTALS = {};      // fixed denominators for the concern tally
+let STATE_TOTALS = {};
+let CUE_TOTALS = {};
 
 const F = {
   q: '',
   states: new Set(),
-  tech: new Set(['solar']),      // the study is about solar; widen from the rail
-  flags: new Set(),
-  kinds: new Set(),
-  statuses: new Set(),
-  marks: new Set()
+  topics: new Set(),
+  outlets: new Set(),
+  marks: new Set(),
+  days: 0,             // 0 means everything
+  showWeak: false
 };
 
-const $  = s => document.querySelector(s);
+const $ = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
+const esc4 = s => String(s == null ? '' : s)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;');
 
 /* ========================== persistence ========================== */
 
-/* Coding is stored against a fingerprint of the entry rather than its
-   position in a file. Loading a newer edition of the report, or the
-   other half of the data, reattaches earlier work to the right entries
-   and leaves everything else untouched. */
-function fingerprint(r) {
-  return (r.state + '|' + r.kind + '|' + r.name.toLowerCase().replace(/[^a-z0-9]/g, ''))
-         .slice(0, 120);
-}
-function loadPrints() {
+function loadCodes() {
   try { return JSON.parse(localStorage.getItem(SAVE_KEY)) || {}; }
   catch (e) { return {}; }
 }
-function saveMarks() {
-  try { localStorage.setItem(SAVE_KEY, JSON.stringify(PRINTS)); }
-  catch (e) { /* private browsing blocks this; the export button is the fallback */ }
+function saveCodes() {
+  try { localStorage.setItem(SAVE_KEY, JSON.stringify(CODES)); }
+  catch (e) { /* private browsing; the backup button is the fallback */ }
 }
-/* Point the id-keyed view at the stored objects for the loaded file. */
-function bindMarks() {
-  MARKS = {};
-  for (const r of ALL) {
-    const p = PRINTS[fingerprint(r)];
-    if (p) MARKS[r.id] = p;
-  }
-}
-function markOf(r) {
-  const p = fingerprint(r);
-  if (!PRINTS[p]) PRINTS[p] = { tags: [], star: false, note: '' };
-  MARKS[r.id] = PRINTS[p];
-  return PRINTS[p];
+function codeOf(a) {
+  if (!CODES[a.id]) CODES[a.id] = { tags: [], star: false, note: '', read: false };
+  return CODES[a.id];
 }
 
-/* ============================ loading ============================ */
+/* ============================= startup =========================== */
 
-$('#pick').addEventListener('click', () => $('#file').click());
-$('#file').addEventListener('change', e => loadFiles(Array.from(e.target.files)));
-$('#trysample').addEventListener('click', loadSample);
+start();
 
-const drop = $('#drop');
-['dragenter', 'dragover'].forEach(ev =>
-  drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('hot'); }));
-['dragleave', 'drop'].forEach(ev =>
-  drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('hot'); }));
-drop.addEventListener('drop', e => loadFiles(Array.from(e.dataTransfer.files)));
-
-$('#reload').addEventListener('click', () => {
-  $('#open').hidden = false; $('#top').hidden = true; $('#wrap').hidden = true;
-  $('#progwrap').hidden = true; $('#progtxt').hidden = true;
-});
-
-async function loadFiles(files) {
-  if (!files.length) return;
-  const bar = $('#prog'), wrap = $('#progwrap'), txt = $('#progtxt');
-  wrap.hidden = false; txt.hidden = false;
-  let records = [];
-  SOURCE = [];
-
-  for (const f of files) {
-    SOURCE.push(f.name);
-    txt.textContent = 'Reading ' + f.name;
-    bar.style.width = '4%';
-    await new Promise(r => setTimeout(r, 30));
-    try {
-      if (f.name.toLowerCase().endsWith('.pdf')) {
-        const raw = await extractPdfText(f, (p, n) => {
-          bar.style.width = Math.round(88 * p / n) + '%';
-          txt.textContent = 'Reading ' + f.name + ' — page ' + p + ' of ' + n;
-        });
-        txt.textContent = 'Cutting ' + f.name + ' into entries';
-        await new Promise(r => setTimeout(r, 30));
-        records = records.concat(parsePdfDocument(raw));
-      } else {
-        records = records.concat(await parseTabularFile(f));
-      }
-    } catch (err) {
-      txt.textContent = 'Could not read ' + f.name + ': ' + err.message;
-      console.error(err);
-      return;
-    }
-    bar.style.width = '96%';
+async function start() {
+  let book, data, runs;
+  try {
+    [book, data, runs] = await Promise.all([
+      fetch('codebook.json').then(r => r.json()),
+      fetch('data/articles.json').then(r => r.json()),
+      fetch('data/runs.json').then(r => r.json()).catch(() => ({ runs: [] }))
+    ]);
+  } catch (err) {
+    return showOpening('This page needs a web server',
+      '<p>It loads its data from files in this repository, and a browser will not '
+      + 'read those from a <code>file://</code> address. Open it at its published '
+      + 'address instead, or from a local server '
+      + '(<code>python3 -m http.server</code> in the repository folder).</p>'
+      + '<p class="quiet">' + esc4(err.message) + '</p>');
   }
 
-  if (!records.length) {
-    txt.textContent = 'No entries found in that file. The contested project and '
-                    + 'restriction downloads from oppositionreport.org are the surest input.';
-    return;
-  }
-  finishLoad(records);
-}
+  BOOK = book;
+  ALL = data.articles || [];
+  META = { updated: data.updated, threshold: data.threshold || 2 };
+  RUNS = runs.runs || [];
 
-function loadSample() {
-  SOURCE = [SAMPLE_NAME];
-  finishLoad(parseTable(parseCsv(SAMPLE_CSV), 'project'));
-}
+  if (!ALL.length) return showEmpty();
 
-function finishLoad(records) {
-  ALL = dedupe(records);
-  bindMarks();
-  computeFixedTotals();
-  /* If nothing solar came in, do not hand back an empty screen. */
-  if (F.tech.size && !ALL.some(r => r.technologies.some(t => F.tech.has(t)))) F.tech.clear();
-  $('#open').hidden = true; $('#top').hidden = false; $('#wrap').hidden = false;
-  $('#srcname').textContent = SOURCE.join(', ');
+  computeTotals();
   buildControls();
+  $('#opening').hidden = true;
+  $('#top').hidden = false;
+  $('#wrap').hidden = false;
   render();
 }
 
-function dedupe(recs) {
-  const seen = new Map();
-  for (const r of recs) {
-    const key = fingerprint(r);
-    const prev = seen.get(key);
-    if (!prev || r.text.length > prev.text.length) seen.set(key, r);
-  }
-  return Array.from(seen.values());
+function showOpening(title, html) {
+  $('#opentitle').textContent = title;
+  $('#openbody').innerHTML = html;
 }
 
-/* Denominators are taken once, from the whole file. Bars then shrink
-   as filters are applied instead of quietly rescaling. */
-function computeFixedTotals() {
-  STATE_TOTALS = {}; CONCERN_TOTALS = {};
-  for (const r of ALL) {
-    STATE_TOTALS[r.state] = (STATE_TOTALS[r.state] || 0) + 1;
-    for (const c of r.suggested) CONCERN_TOTALS[c] = (CONCERN_TOTALS[c] || 0) + 1;
+function showEmpty() {
+  showOpening('Nothing collected yet',
+    '<p>The crawler has not run, so there is nothing to read. It searches GDELT and '
+    + 'Google News for coverage of solar projects meeting local opposition, and writes '
+    + 'what it finds back into this repository.</p>'
+    + '<h3>Starting it</h3>'
+    + '<ol class="steps">'
+    + '<li>Go to the <b>Actions</b> tab of this repository.</li>'
+    + '<li>Choose <b>Collect news</b> in the left column.</li>'
+    + '<li>Press <b>Run workflow</b>. Leave the boxes blank for the usual eight '
+    + 'states and the last thirty days.</li>'
+    + '<li>It takes four or five minutes. Reload this page when it finishes.</li>'
+    + '</ol>'
+    + '<p class="quiet">After that it runs itself every Monday. GDELT only indexes '
+    + 'about three months back, so the weekly run is what builds the archive — '
+    + 'coverage from a month you skip cannot be recovered later.</p>');
+}
+
+function computeTotals() {
+  STATE_TOTALS = {}; CUE_TOTALS = {};
+  for (const a of ALL) {
+    for (const s of placesOf(a)) STATE_TOTALS[s] = (STATE_TOTALS[s] || 0) + 1;
+    for (const c of a.cues || []) CUE_TOTALS[c] = (CUE_TOTALS[c] || 0) + 1;
   }
 }
+
+/* A state named in the headline is a fact; the state whose search found
+   the article is a good guess. Both are usable for filtering, and the
+   difference is shown wherever it matters. */
+function placesOf(a) {
+  const set = new Set(a.states || []);
+  for (const v of a.via_states || []) set.add(v);
+  return Array.from(set);
+}
+function stateIsCertain(a, s) { return (a.states || []).includes(s); }
 
 /* =========================== filtering =========================== */
 
-function passes(r) {
-  if (F.states.size && !F.states.has(r.state)) return false;
-  if (F.kinds.size && !F.kinds.has(r.kind)) return false;
-  if (F.statuses.size && !F.statuses.has(r.status)) return false;
-  if (F.tech.size && !r.technologies.some(t => F.tech.has(t))) return false;
-  if (F.flags.size && !r.flags.some(t => F.flags.has(t))) return false;
+function daysAgo(iso) {
+  if (!iso) return 1e6;
+  return (Date.now() - new Date(iso + 'T12:00:00Z').getTime()) / 86400000;
+}
+
+function passes(a) {
+  if (a.weak && !F.showWeak) return false;
+  if (F.states.size && !placesOf(a).some(s => F.states.has(s))) return false;
+  if (F.topics.size && !(a.topics || []).some(t => F.topics.has(t))) return false;
+  if (F.outlets.size && !F.outlets.has(a.outlet)) return false;
+  if (F.days && daysAgo(a.published) > F.days) return false;
 
   if (F.marks.size) {
-    const m = MARKS[r.id];
+    const c = CODES[a.id];
     let ok = false;
-    if (F.marks.has('star') && m && m.star) ok = true;
-    if (F.marks.has('coded') && m && m.tags.length) ok = true;
-    if (F.marks.has('noted') && m && m.note) ok = true;
-    if (F.marks.has('unread') && !(m && m.read)) ok = true;
+    if (F.marks.has('unread') && !(c && c.read)) ok = true;
+    if (F.marks.has('star') && c && c.star) ok = true;
+    if (F.marks.has('coded') && c && c.tags.length) ok = true;
+    if (F.marks.has('noted') && c && c.note) ok = true;
     if (!ok) return false;
   }
-
   if (F.q) {
-    const needle = F.q.toLowerCase();
-    const hay = (r.name + ' ' + r.where + ' ' + r.state + ' ' + r.text).toLowerCase();
-    if (!hay.includes(needle)) return false;
+    const hay = (a.title + ' ' + a.outlet + ' ' + (a.counties || []).join(' ')).toLowerCase();
+    if (!hay.includes(F.q.toLowerCase())) return false;
   }
   return true;
 }
 
-function current() { return ALL.filter(passes); }
+const current = () => ALL.filter(passes);
 
 /* ============================ controls =========================== */
 
@@ -197,155 +168,122 @@ function chip(label, count, on, onClick, cls) {
   b.addEventListener('click', onClick);
   return b;
 }
-function esc4(s) {
-  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-
-function toggle(set, val) { set.has(val) ? set.delete(val) : set.add(val); }
+const toggle = (set, v) => set.has(v) ? set.delete(v) : set.add(v);
 
 function buildControls() {
   $('#q').addEventListener('input', e => { F.q = e.target.value.trim(); render(); });
-
-  $('#preset').addEventListener('click', () => {
-    F.states = new Set(SOUTH_CENTRAL.filter(s => STATE_TOTALS[s]));
-    render();
-  });
-  $('#clearstates').addEventListener('click', () => { F.states = new Set(); render(); });
-
-  $('#exSeeds').addEventListener('click', exportSeeds);
   $('#exCoded').addEventListener('click', exportCoded);
-  $('#exRefs').addEventListener('click', exportRefs);
+  $('#exList').addEventListener('click', exportList);
   $('#exSess').addEventListener('click', exportSession);
   $('#imSess').addEventListener('click', () => $('#sessfile').click());
   $('#sessfile').addEventListener('change', importSession);
 }
 
+function topicLabel(id) {
+  const t = { solar_siting: 'Siting and opposition', agrivoltaics: 'Agrivoltaics',
+              solar_on_water: 'Canals and reservoirs' };
+  return t[id] || id;
+}
+
 function renderControls(hits) {
-  /* state strip — outline is the state's full total, fill is the
-     count surviving the current filter */
   const strip = $('#strip'); strip.innerHTML = '';
   const maxState = Math.max(1, ...Object.values(STATE_TOTALS));
-  const liveByState = {};
-  for (const r of hits) liveByState[r.state] = (liveByState[r.state] || 0) + 1;
+  const live = {};
+  for (const a of hits) for (const s of placesOf(a)) live[s] = (live[s] || 0) + 1;
+  const names = Object.keys(STATE_TOTALS).sort();
+  const few = names.length <= 16;
 
-  const shown = hits.length, everything = ALL.length;
-  /* with only a handful of states there is room to print the count */
-  const fewStates = Object.keys(STATE_TOTALS).length <= 16;
-  $('#striplab').textContent = shown === everything
-    ? 'Bar height is how many entries each state has. Click one to filter.'
-    : 'Bar height is each state\u2019s full total; the solid part is what the '
-      + 'filters leave. Click one to filter.';
+  $('#striplab').textContent = hits.length === ALL.length
+    ? 'Articles per state. Click one to filter.'
+    : 'Bar height is each state\u2019s full total; the solid part is what the filters leave.';
 
-  for (const s of STATES) {
-    const total = STATE_TOTALS[s] || 0;
-    if (!total) continue;
-    const live = liveByState[s] || 0;
+  for (const s of names) {
+    const total = STATE_TOTALS[s], now = live[s] || 0;
     const b = document.createElement('button');
     b.className = 'stbar';
     b.setAttribute('aria-pressed', F.states.has(s) ? 'true' : 'false');
-    b.title = s + ' — ' + live + ' shown of ' + total;
+    b.title = s + ' \u2014 ' + now + ' shown of ' + total;
     const outline = Math.max(2, Math.round(34 * total / maxState));
-    const fill = total ? Math.round(outline * live / total) : 0;
+    const fill = Math.round(outline * now / total);
     b.innerHTML =
       '<span class="bar"><span class="fill" style="height:' + outline + 'px">' +
-      '<span class="fill live" style="display:block;height:' + fill + 'px;' +
-      'margin-top:' + (outline - fill) + 'px"></span></span></span>' +
-      '<span class="lbl">' + (STATE_ABBR[s] || s.slice(0, 2)) +
-        (fewStates ? '<span class="cnt">' + live + '</span>' : '') + '</span>';
+      '<span class="fill live" style="display:block;height:' + fill + 'px;margin-top:' +
+      (outline - fill) + 'px"></span></span></span>' +
+      '<span class="lbl">' + esc4(s.length > 9 ? s.slice(0, 8) + '.' : s) +
+      (few ? '<span class="cnt">' + now + '</span>' : '') + '</span>';
     b.addEventListener('click', () => { toggle(F.states, s); render(); });
     strip.appendChild(b);
   }
 
-  const count = (fn) => ALL.filter(fn).length;
+  const sp = $('#statepick'); sp.innerHTML = '';
+  for (const s of names) {
+    sp.appendChild(chip(s, STATE_TOTALS[s], F.states.has(s),
+      () => { toggle(F.states, s); render(); }));
+  }
+  const guessed = ALL.filter(a => !(a.states || []).length && (a.via_states || []).length).length;
+  $('#statenote').textContent = guessed
+    ? guessed + ' of these name no state in the headline and are placed by which '
+      + 'search found them. The exported table keeps the two apart.'
+    : '';
 
-  const tp = $('#techpick'); tp.innerHTML = '';
-  for (const t of TECH_RULES) {
-    const n = count(r => r.technologies.includes(t.id));
-    if (!n) continue;
-    tp.appendChild(chip(t.label, n, F.tech.has(t.id),
-      () => { toggle(F.tech, t.id); render(); }));
+  const tp = $('#topicpick'); tp.innerHTML = '';
+  const topics = {};
+  for (const a of ALL) for (const t of a.topics || []) topics[t] = (topics[t] || 0) + 1;
+  for (const t of Object.keys(topics).sort()) {
+    tp.appendChild(chip(topicLabel(t), topics[t], F.topics.has(t),
+      () => { toggle(F.topics, t); render(); }));
   }
 
-  const fp = $('#flagpick'); fp.innerHTML = '';
-  for (const f of FLAG_RULES) {
-    const n = count(r => r.flags.includes(f.id));
-    if (!n) continue;
-    fp.appendChild(chip(f.label, n, F.flags.has(f.id),
-      () => { toggle(F.flags, f.id); render(); }, 'g'));
+  const dp = $('#datepick'); dp.innerHTML = '';
+  for (const [d, label] of [[7, 'Past week'], [30, 'Past month'],
+                            [90, 'Past 3 months'], [0, 'Everything']]) {
+    dp.appendChild(chip(label, ALL.filter(a => !d || daysAgo(a.published) <= d).length,
+      F.days === d, () => { F.days = d; render(); }));
   }
 
-  const kp = $('#kindpick'); kp.innerHTML = '';
-  for (const [id, label] of [['project', 'Contested projects'], ['restriction', 'Restrictions']]) {
-    const n = count(r => r.kind === id);
-    if (!n) continue;
-    kp.appendChild(chip(label, n, F.kinds.has(id),
-      () => { toggle(F.kinds, id); render(); }));
-  }
-
-  const sp = $('#statuspick'); sp.innerHTML = '';
-  const statuses = Array.from(new Set(ALL.map(r => r.status))).sort();
-  for (const s of statuses) {
-    const n = count(r => r.status === s);
-    sp.appendChild(chip(s, n, F.statuses.has(s),
-      () => { toggle(F.statuses, s); render(); }));
+  const op = $('#outletpick'); op.innerHTML = '';
+  const outlets = {};
+  for (const a of ALL) if (!a.weak) outlets[a.outlet] = (outlets[a.outlet] || 0) + 1;
+  const top = Object.entries(outlets).sort((x, y) => y[1] - x[1]).slice(0, 12);
+  for (const [name, n] of top) {
+    op.appendChild(chip(name, n, F.outlets.has(name),
+      () => { toggle(F.outlets, name); render(); }));
   }
 
   const mp = $('#markpick'); mp.innerHTML = '';
-  const marked = {
-    unread: ALL.filter(r => !(MARKS[r.id] && MARKS[r.id].read)).length,
-    star:   ALL.filter(r => MARKS[r.id] && MARKS[r.id].star).length,
-    coded:  ALL.filter(r => MARKS[r.id] && MARKS[r.id].tags.length).length,
-    noted:  ALL.filter(r => MARKS[r.id] && MARKS[r.id].note).length
-  };
-  mp.appendChild(chip('Not read yet', marked.unread, F.marks.has('unread'),
-    () => { toggle(F.marks, 'unread'); render(); }, 'g'));
-  mp.appendChild(chip('On the chase list', marked.star, F.marks.has('star'),
-    () => { toggle(F.marks, 'star'); render(); }, 'g'));
-  mp.appendChild(chip('Coded', marked.coded, F.marks.has('coded'),
-    () => { toggle(F.marks, 'coded'); render(); }, 'g'));
-  mp.appendChild(chip('With a note', marked.noted, F.marks.has('noted'),
-    () => { toggle(F.marks, 'noted'); render(); }, 'g'));
+  const cnt = fn => ALL.filter(fn).length;
+  mp.appendChild(chip('Not read yet', cnt(a => !(CODES[a.id] && CODES[a.id].read)),
+    F.marks.has('unread'), () => { toggle(F.marks, 'unread'); render(); }, 'g'));
+  mp.appendChild(chip('To follow up', cnt(a => CODES[a.id] && CODES[a.id].star),
+    F.marks.has('star'), () => { toggle(F.marks, 'star'); render(); }, 'g'));
+  mp.appendChild(chip('Coded', cnt(a => CODES[a.id] && CODES[a.id].tags.length),
+    F.marks.has('coded'), () => { toggle(F.marks, 'coded'); render(); }, 'g'));
+  mp.appendChild(chip('With a note', cnt(a => CODES[a.id] && CODES[a.id].note),
+    F.marks.has('noted'), () => { toggle(F.marks, 'noted'); render(); }, 'g'));
+
+  const wp = $('#weakpick'); wp.innerHTML = '';
+  const weak = ALL.filter(a => a.weak).length;
+  wp.appendChild(chip(F.showWeak ? 'Showing them' : 'Hidden', weak, F.showWeak,
+    () => { F.showWeak = !F.showWeak; render(); }, 'g'));
+  $('#weaknote').textContent = weak
+    ? 'A search for "solar farm" in Texas also turns up module prices and earnings '
+      + 'reports. These scored too low to look like a local siting story. Worth a '
+      + 'glance now and then to see what is being thrown away.'
+    : '';
 }
 
-/* ============================ rendering ========================== */
-
-function render() {
-  const hits = current();
-  renderControls(hits);
-
-  const proj = ALL.filter(r => r.kind === 'project').length;
-  const restr = ALL.length - proj;
-  $('#counts').innerHTML =
-    '<b>' + ALL.length + '</b> entries · ' + proj + ' projects · ' + restr + ' restrictions';
-
-  renderActive();
-  const read = hits.filter(r => MARKS[r.id] && MARKS[r.id].read).length;
-  $('#hits').textContent = hits.length + ' of ' + ALL.length + ' entries'
-    + (hits.length ? ' · ' + read + ' read' : '');
-
-  if (SELECTED && hits.some(r => r.id === SELECTED)) renderDetail(hits);
-  else { SELECTED = null; renderList(hits); }
-
-  renderWork();
-  renderTally(hits);
-  parseNotice();
-}
-
-/* Everything currently narrowing the view, each one removable. Without
-   this a filter set three clicks ago is invisible and hard to undo. */
 function renderActive() {
   const box = $('#active'); box.innerHTML = '';
   const items = [];
   for (const v of F.states) items.push([v, () => F.states.delete(v)]);
-  for (const v of F.tech)   items.push([labelTech(v), () => F.tech.delete(v)]);
-  for (const v of F.flags)  items.push([labelFlag(v), () => F.flags.delete(v)]);
-  for (const v of F.kinds)  items.push([v === 'project' ? 'Contested projects' : 'Restrictions',
-                                        () => F.kinds.delete(v)]);
-  for (const v of F.statuses) items.push([v, () => F.statuses.delete(v)]);
-  for (const v of F.marks)  items.push([MARK_LABEL[v] || v, () => F.marks.delete(v)]);
+  for (const v of F.topics) items.push([topicLabel(v), () => F.topics.delete(v)]);
+  for (const v of F.outlets) items.push([v, () => F.outlets.delete(v)]);
+  for (const v of F.marks) items.push([MARK_LABEL[v] || v, () => F.marks.delete(v)]);
+  if (F.days) items.push(['past ' + F.days + ' days', () => { F.days = 0; }]);
+  if (F.showWeak) items.push(['including off-topic', () => { F.showWeak = false; }]);
   if (F.q) items.push(['contains "' + F.q + '"', () => { F.q = ''; $('#q').value = ''; }]);
-
   if (!items.length) return;
+
   for (const [label, drop] of items) {
     const b = document.createElement('button');
     b.className = 'pill';
@@ -359,55 +297,77 @@ function renderActive() {
     c.className = 'pill clear';
     c.textContent = 'Clear all';
     c.addEventListener('click', () => {
-      F.q = ''; $('#q').value = '';
-      F.states.clear(); F.tech.clear(); F.flags.clear();
-      F.kinds.clear(); F.statuses.clear(); F.marks.clear();
+      F.q = ''; $('#q').value = ''; F.days = 0; F.showWeak = false;
+      F.states.clear(); F.topics.clear(); F.outlets.clear(); F.marks.clear();
       render();
     });
     box.appendChild(c);
   }
 }
 
-const MARK_LABEL = {
-  unread: 'Not read yet', star: 'On the chase list',
-  coded: 'Coded', noted: 'With a note'
-};
+const MARK_LABEL = { unread: 'Not read yet', star: 'To follow up',
+                     coded: 'Coded', noted: 'With a note' };
 
-function statusClass(r) {
-  if (['Canceled', 'Expired', 'Repealed'].includes(r.status)) return 'blocked';
-  if (['Operational', 'Under construction', 'In effect'].includes(r.status)) return 'live';
-  return '';
+/* ============================ rendering ========================== */
+
+function render() {
+  const hits = current();
+  renderControls(hits);
+  renderActive();
+
+  const strong = ALL.filter(a => !a.weak).length;
+  $('#counts').innerHTML = '<b>' + strong + '</b> articles worth reading · '
+    + (ALL.length - strong) + ' set aside';
+  $('#updated').textContent = META.updated
+    ? 'collected through ' + META.updated.slice(0, 10) : '';
+
+  const read = hits.filter(a => CODES[a.id] && CODES[a.id].read).length;
+  $('#hits').textContent = hits.length + ' article' + (hits.length === 1 ? '' : 's')
+    + (hits.length ? ' · ' + read + ' read' : '');
+
+  if (SELECTED && hits.some(a => a.id === SELECTED)) renderDetail(hits);
+  else { SELECTED = null; renderList(hits); }
+
+  renderWork();
+  renderTally(hits);
+
+  const r = RUNS[0];
+  $('#runinfo').textContent = r
+    ? r.when.slice(0, 10) + ' — ' + r.searches + ' searches, ' + r.new
+      + ' new, ' + r.total + ' on file'
+      + (r.problems && r.problems.length ? '. ' + r.problems.length + ' searches had trouble.' : '')
+    : 'No run recorded yet.';
 }
 
 function renderList(hits) {
   const list = $('#list'); list.innerHTML = '';
   if (!hits.length) {
-    list.innerHTML = '<p class="empty">Nothing matches that combination. '
-                   + 'Widen the states or clear the search box.</p>';
+    list.innerHTML = '<p class="empty">Nothing matches that combination. Widen the '
+      + 'states, or clear the search box.</p>';
     return;
   }
   const frag = document.createDocumentFragment();
-  for (const r of hits.slice(0, 400)) {
-    const m = MARKS[r.id];
+  for (const a of hits.slice(0, 400)) {
+    const c = CODES[a.id];
     const d = document.createElement('div');
-    d.className = 'rec ' + statusClass(r) + (m && m.read ? ' seen' : '');
+    d.className = 'art ' + (a.weak ? 'weak' : 'strong') + (c && c.read ? ' seen' : '');
     d.tabIndex = 0;
     const tags = []
-      .concat(r.technologies.map(t => '<span class="tag tech">' + labelTech(t) + '</span>'))
-      .concat(r.flags.map(f => '<span class="tag flag">' + labelFlag(f) + '</span>'))
-      .concat(m && m.star ? ['<span class="tag star">to chase</span>'] : [])
-      .concat(m && m.tags && m.tags.length
-        ? ['<span class="tag">' + m.tags.length + ' coded</span>'] : []);
+      .concat((a.topics || []).map(t => '<span class="tag topic">' + topicLabel(t) + '</span>'))
+      .concat((a.counties || []).map(x => '<span class="tag place">' + esc4(x) + '</span>'))
+      .concat(c && c.star ? ['<span class="tag star">to follow up</span>'] : [])
+      .concat(c && c.tags.length ? ['<span class="tag">' + c.tags.length + ' coded</span>'] : []);
     d.innerHTML =
-      '<div class="nm">' + esc4(r.name) + '</div>' +
-      '<div class="meta">' + esc4(r.state) +
-        (r.where ? ' · ' + esc4(r.where) : '') +
-        ' · ' + esc4(r.status) +
-        (r.refs.length ? ' · ' + r.refs.length + ' reference'
-            + (r.refs.length > 1 ? 's' : '') : '') + '</div>' +
-      (r.narrative ? '<div class="snip">' + esc4(r.narrative.slice(0, 260)) + '</div>' : '') +
+      '<div class="hd">' + esc4(a.title) + '</div>' +
+      '<div class="meta">' + esc4(a.outlet || a.domain) +
+        (a.published ? ' · ' + esc4(a.published) : '') +
+        ((a.states || []).length
+          ? ' · ' + esc4(a.states.join(', '))
+          : (a.via_states || []).length
+            ? ' · likely ' + esc4(a.via_states.join('/'))
+            : '') + '</div>' +
       (tags.length ? '<div>' + tags.join('') + '</div>' : '');
-    const open = () => { SELECTED = r.id; render(); window.scrollTo(0, 0); };
+    const open = () => { SELECTED = a.id; render(); window.scrollTo(0, 0); };
     d.addEventListener('click', open);
     d.addEventListener('keydown', e => { if (e.key === 'Enter') open(); });
     frag.appendChild(d);
@@ -421,62 +381,41 @@ function renderList(hits) {
   }
 }
 
-function labelTech(id) { const t = TECH_RULES.find(x => x.id === id); return t ? t.label : id; }
-function labelFlag(id) { const f = FLAG_RULES.find(x => x.id === id); return f ? f.label : id; }
-
 function renderDetail(hits) {
-  const r = ALL.find(x => x.id === SELECTED);
-  const m = markOf(r);
-  if (!m.read) { m.read = true; saveMarks(); }
+  const a = ALL.find(x => x.id === SELECTED);
+  const c = codeOf(a);
+  const idx = hits.findIndex(x => x.id === a.id);
   const list = $('#list');
-  const idx = hits.findIndex(x => x.id === r.id);
 
-  const byType = { news: [], government: [], legal: [], opposition: [] };
-  for (const ref of r.refs) (byType[ref.type] || byType.news).push(ref);
+  const box = cat => '<label class="code" title="' + esc4(cat.hint) + '">'
+    + '<input type="checkbox" data-code="' + cat.id + '"'
+    + (c.tags.includes(cat.id) ? ' checked' : '') + '>'
+    + '<span>' + esc4(cat.label) + '</span></label>';
 
-  const codeBox = c => {
-    const on = m.tags.includes(c.id);
-    return '<label class="code" title="' + esc4(c.hint) + '">' +
-      '<input type="checkbox" data-code="' + c.id + '"' + (on ? ' checked' : '') + '>' +
-      '<span>' + esc4(c.label) + '</span></label>';
-  };
+  const upFront = BOOK.categories.filter(
+    x => (a.cues || []).includes(x.id) || c.tags.includes(x.id));
+  const rest = BOOK.categories.filter(x => !upFront.includes(x));
 
-  /* Lead with the handful the wording points at, plus anything already
-     ticked. All twenty-seven at once is a wall. */
-  const upFront = CODEBOOK.filter(c => r.suggested.includes(c.id) || m.tags.includes(c.id));
-  const rest = CODEBOOK.filter(c => !upFront.includes(c));
+  const sug = upFront.length
+    ? '<div class="sugbox"><div class="codegroup">Words in the headline point at '
+      + 'these. The headline is all this page has, so read the article before '
+      + 'ticking anything.</div><div class="codegrid">'
+      + upFront.map(box).join('') + '</div></div>'
+    : '';
 
-  const suggestedHtml = upFront.length
-    ? '<div class="sugbox"><div class="codegroup">Words in this entry point at these. '
-      + 'Read it and tick the ones it really says.</div>'
-      + '<div class="codegrid">' + upFront.map(codeBox).join('') + '</div></div>'
-    : '<p class="quiet" style="margin:0 0 10px">No category was suggested by the wording '
-      + 'here. Read the entry and open the full list below.</p>';
-
-  const restHtml = '<details class="allcodes"><summary>All ' + CODEBOOK.length
-    + ' categories</summary><div class="codegrid">'
-    + CONCERN_GROUPS.map(g => {
-        const cats = rest.filter(c => c.group === g.id);
+  const all = '<details class="allcodes"' + (upFront.length ? '' : ' open')
+    + '><summary>All ' + BOOK.categories.length + ' categories</summary><div class="codegrid">'
+    + BOOK.groups.map(g => {
+        const cats = rest.filter(x => x.group === g.id);
         if (!cats.length) return '';
         return '<div><div class="codegroup">' + esc4(g.label) + '</div>'
-             + cats.map(codeBox).join('') + '</div>';
+             + cats.map(box).join('') + '</div>';
       }).join('')
     + '</div></details>';
 
-  const codeHtml = suggestedHtml + restHtml;
-
-  const refSection = (label, items) => items.length
-    ? '<h4>' + label + '</h4><ul class="reflist">' + items.map(x =>
-        '<li><span class="reftype ' + x.type + '">' + x.type + '</span>' +
-        '<a href="' + esc4(x.url) + '" target="_blank" rel="noopener">' +
-        esc4(x.url.length > 92 ? x.url.slice(0, 92) + '…' : x.url) + '</a>' +
-        (x.cite ? '<span class="cite">' + esc4(x.cite.slice(0, 240)) + '</span>' : '') +
-        '</li>').join('') + '</ul>'
-    : '';
-
   list.innerHTML =
     '<div class="navrow">' +
-      '<button class="btn ghost" id="back">All results</button>' +
+      '<button class="btn ghost" id="back">All articles</button>' +
       '<span class="spacer"></span>' +
       '<span class="kbd">' + (idx + 1) + ' of ' + hits.length + '</span>' +
       '<button class="btn ghost" id="prev"' + (idx > 0 ? '' : ' disabled') + '>Previous</button>' +
@@ -484,34 +423,30 @@ function renderDetail(hits) {
         '>Next</button>' +
     '</div>' +
     '<div class="detail">' +
-      '<h3>' + esc4(r.name) + '</h3>' +
-      '<div class="where">' + esc4(r.state) + (r.where ? ' · ' + esc4(r.where) : '') +
-        ' · ' + esc4(r.status) +
-        (r.kind === 'restriction' ? ' · restriction' : ' · contested project') +
-        (r.date ? ' · ' + esc4(r.date) : '') + '</div>' +
-      '<div>' +
-        '<button class="btn' + (m.star ? '' : ' ghost') + '" id="star">' +
-        (m.star ? 'On your chase list' : 'Add to chase list') + '</button></div>' +
-      (r.rules.length
-        ? '<h4>Rules cited</h4><div>' + r.rules.map(x =>
-            '<span class="tag">' + esc4(x.number + ': ' + x.label + ' (' + x.tech + ')') +
-            '</span>').join('') + '</div>'
-        : '') +
-      '<h4>What the report says</h4>' +
-      '<div class="body">' + esc4(r.narrative || r.text) + '</div>' +
-      (r.narrative && r.narrative !== r.text
-        ? '<details class="allcodes"><summary>The entry exactly as printed</summary>'
-          + '<div class="body verbatim">' + esc4(r.text) + '</div></details>'
-        : '') +
-      refSection('News coverage', byType.news) +
-      refSection('Opposition groups and petitions', byType.opposition) +
-      refSection('Government records', byType.government) +
-      refSection('Legal filings', byType.legal) +
-      '<h4>What was raised</h4>' + codeHtml +
+      '<h3>' + esc4(a.title) + '</h3>' +
+      '<div class="where">' + esc4(a.outlet || a.domain) +
+        (a.published ? ' · ' + esc4(a.published) : '') +
+        ((a.counties || []).length ? ' · ' + esc4(a.counties.join(', ')) : '') +
+        ((a.states || []).length ? ' · ' + esc4(a.states.join(', ')) : '') +
+        (!(a.states || []).length && (a.via_states || []).length
+          ? ' · found by the ' + esc4(a.via_states.join('/')) + ' search' : '') +
+        (a.weak ? ' · set aside as off-topic' : '') + '</div>' +
+      '<div class="readfirst">' +
+        '<a class="btn" href="' + esc4(a.url) + '" target="_blank" rel="noopener">'
+          + 'Open the article</a>' +
+        '<p>Only the headline, outlet, date and link are stored here. Everything you '
+          + 'code comes from reading the piece itself.</p>' +
+      '</div>' +
+      '<h4>Follow up</h4>' +
+      '<button class="btn' + (c.star ? '' : ' ghost') + '" id="star">' +
+        (c.star ? 'On your follow-up list' : 'Add to follow-up list') + '</button>' +
+      '<h4>What was raised</h4>' + sug + all +
       '<h4>Your note</h4>' +
-      '<textarea class="note" id="note" placeholder="What to look for next, who to search '
-        + 'for, anything the entry leaves open">' + esc4(m.note) + '</textarea>' +
+      '<textarea class="note" id="note" placeholder="Who objected, what they said, '
+        + 'anything worth quoting">' + esc4(c.note) + '</textarea>' +
     '</div>';
+
+  if (!c.read) { c.read = true; saveCodes(); }
 
   $('#back').addEventListener('click', () => { SELECTED = null; render(); });
   const go = d => {
@@ -520,53 +455,44 @@ function renderDetail(hits) {
   };
   $('#prev').addEventListener('click', () => go(-1));
   $('#next').addEventListener('click', () => go(1));
-
-  $('#star').addEventListener('click', () => {
-    m.star = !m.star; saveMarks(); render();
-  });
-  $$('#list input[data-code]').forEach(box => {
-    box.addEventListener('change', () => {
-      const id = box.dataset.code;
-      if (box.checked) { if (!m.tags.includes(id)) m.tags.push(id); }
-      else m.tags = m.tags.filter(t => t !== id);
-      saveMarks(); renderTally(current()); renderWork();
+  $('#star').addEventListener('click', () => { c.star = !c.star; saveCodes(); render(); });
+  $$('#list input[data-code]').forEach(bx => {
+    bx.addEventListener('change', () => {
+      const id = bx.dataset.code;
+      if (bx.checked) { if (!c.tags.includes(id)) c.tags.push(id); }
+      else c.tags = c.tags.filter(t => t !== id);
+      saveCodes(); renderTally(current()); renderWork();
     });
   });
-  $('#note').addEventListener('input', e => {
-    m.note = e.target.value; saveMarks();
-  });
+  $('#note').addEventListener('input', e => { c.note = e.target.value; saveCodes(); });
 }
 
-/* Arrow keys move through entries once one is open, unless the cursor
-   is in the note or the search box. */
 document.addEventListener('keydown', e => {
   if (!SELECTED) return;
-  const t = e.target.tagName;
-  if (t === 'TEXTAREA' || t === 'INPUT') return;
+  if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
   if (e.key === 'ArrowRight') { const b = $('#next'); if (b && !b.disabled) b.click(); }
-  if (e.key === 'ArrowLeft')  { const b = $('#prev'); if (b && !b.disabled) b.click(); }
-  if (e.key === 'Escape')     { SELECTED = null; render(); }
+  if (e.key === 'ArrowLeft') { const b = $('#prev'); if (b && !b.disabled) b.click(); }
+  if (e.key === 'Escape') { SELECTED = null; render(); }
 });
 
 function renderWork() {
   const ul = $('#work'); ul.innerHTML = '';
-  const starred = ALL.filter(r => MARKS[r.id] && MARKS[r.id].star);
+  const starred = ALL.filter(a => CODES[a.id] && CODES[a.id].star);
   if (!starred.length) {
-    $('#worknote').textContent = 'Open an entry and add it here when it is worth '
-      + 'following up. The chase list becomes the seed file for collecting coverage.';
+    $('#worknote').textContent = 'Open an article and add it here when it is worth '
+      + 'coming back to — a project to track, or a fight worth reading the whole '
+      + 'record on.';
     return;
   }
-  $('#worknote').textContent = starred.length + ' entr'
-    + (starred.length === 1 ? 'y' : 'ies') + ' · '
-    + starred.reduce((n, r) => n + r.refs.length, 0) + ' references between them';
-  for (const r of starred) {
+  $('#worknote').textContent = starred.length + ' article'
+    + (starred.length === 1 ? '' : 's') + ' set aside.';
+  for (const a of starred) {
     const li = document.createElement('li');
-    const m = MARKS[r.id];
-    li.innerHTML = '<div class="wnm">' + esc4(r.name) + '</div>' +
-      '<div class="wmeta">' + esc4(r.abbr || r.state) +
-      (r.where ? ' · ' + esc4(r.where) : '') +
-      (m.tags.length ? ' · ' + m.tags.length + ' coded' : ' · not yet coded') + '</div>';
-    li.addEventListener('click', () => { SELECTED = r.id; render(); window.scrollTo(0, 0); });
+    const c = CODES[a.id];
+    li.innerHTML = '<div class="wnm">' + esc4(a.title.slice(0, 90)) + '</div>'
+      + '<div class="wmeta">' + esc4(a.outlet) + ' · ' + esc4(a.published)
+      + (c.tags.length ? ' · ' + c.tags.length + ' coded' : ' · not yet coded') + '</div>';
+    li.addEventListener('click', () => { SELECTED = a.id; render(); window.scrollTo(0, 0); });
     ul.appendChild(li);
   }
 }
@@ -574,58 +500,39 @@ function renderWork() {
 function renderTally(hits) {
   const ul = $('#tally'); ul.innerHTML = '';
   const confirmed = {}, suggested = {};
-  for (const r of hits) {
-    const m = MARKS[r.id];
-    if (m) for (const t of m.tags) confirmed[t] = (confirmed[t] || 0) + 1;
-    for (const s of r.suggested) suggested[s] = (suggested[s] || 0) + 1;
+  for (const a of hits) {
+    const c = CODES[a.id];
+    if (c) for (const t of c.tags) confirmed[t] = (confirmed[t] || 0) + 1;
+    for (const s of a.cues || []) suggested[s] = (suggested[s] || 0) + 1;
   }
-  const anyCoded = Object.keys(confirmed).length > 0;
-  const source = anyCoded ? confirmed : suggested;
-  /* width scaled to the whole file, so the bars shrink under a filter */
-  const denom = Math.max(1, ...Object.values(CONCERN_TOTALS));
+  const own = Object.keys(confirmed).length > 0;
+  const src = own ? confirmed : suggested;
+  const denom = Math.max(1, ...Object.values(CUE_TOTALS), ...Object.values(confirmed));
 
-  const rows = CODEBOOK
-    .map(c => ({ c, n: source[c.id] || 0 }))
-    .filter(x => x.n > 0)
-    .sort((a, b) => b.n - a.n)
-    .slice(0, 14);
+  const rows = BOOK.categories.map(c => ({ c, n: src[c.id] || 0 }))
+    .filter(x => x.n > 0).sort((a, b) => b.n - a.n).slice(0, 14);
 
-  if (!rows.length) {
-    $('#tallynote').textContent = 'Nothing to count yet.';
-    return;
-  }
+  if (!rows.length) { $('#tallynote').textContent = 'Nothing to count yet.'; return; }
   for (const { c, n } of rows) {
     const li = document.createElement('li');
-    li.innerHTML = '<span class="tn">' + n + '</span>' +
-      '<span class="tbar" style="width:' + Math.max(2, Math.round(70 * n / denom)) + 'px"></span>' +
-      '<span class="tl" title="' + esc4(c.hint) + '">' + esc4(c.label) + '</span>';
+    li.innerHTML = '<span class="tn">' + n + '</span>'
+      + '<span class="tbar" style="width:' + Math.max(2, Math.round(70 * n / denom)) + 'px"></span>'
+      + '<span class="tl" title="' + esc4(c.hint) + '">' + esc4(c.label) + '</span>';
     ul.appendChild(li);
   }
-  $('#tallynote').textContent = anyCoded
-    ? 'Counting the categories you confirmed.'
-    : 'Counting word matches only — these are a place to start, not results. '
-    + 'They are replaced by your own codes as soon as you confirm any.';
-}
-
-function parseNotice() {
-  const el = $('#parsewarn');
-  const fromPdf = SOURCE.some(n => n.toLowerCase().endsWith('.pdf'));
-  const ragged = ALL.filter(r => r.name.length < 4 || r.name.length > 95
-                              || /^\(unnamed/.test(r.name)).length;
-  if (fromPdf && ragged) {
-    el.innerHTML = '<div class="warn">' + ragged + ' of ' + ALL.length +
-      ' entries came out of the PDF with a ragged title. Every entry keeps its original ' +
-      'text, so check those against the report. The CSV or XLSX downloads avoid this.</div>';
-  } else el.innerHTML = '';
+  $('#tallynote').textContent = own
+    ? 'Counting the categories you confirmed after reading.'
+    : 'Counting headline word matches only. Headlines are short, so this undercounts '
+    + 'badly. It is replaced by your own codes as soon as you confirm any.';
 }
 
 /* ============================ exporting ========================== */
 
-function csvCell(v) {
+const csvCell = v => {
   const s = v == null ? '' : String(v);
   return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
-}
-let download = function (name, text, mime) {
+};
+function download(name, text, mime) {
   const blob = new Blob([text], { type: (mime || 'text/csv') + ';charset=utf-8' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
@@ -633,82 +540,49 @@ let download = function (name, text, mime) {
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 2000);
 }
-function stamp() { return new Date().toISOString().slice(0, 10); }
+const stamp = () => new Date().toISOString().slice(0, 10);
 
-/* A search string a person or a collector script can use directly. */
-function searchQuery(r) {
-  const place = r.where ? r.where.replace(/\bCount(y|ies)\b/i, 'County') : '';
-  return ['"' + r.name.replace(/"/g, '') + '"', place, r.state].filter(Boolean).join(' ');
-}
-
-/* The handoff to the collection step: one row per entry worth
-   chasing, carrying the references the report already found. */
-function exportSeeds() {
-  const rows = ALL.filter(r => MARKS[r.id] && MARKS[r.id].star);
-  const use = rows.length ? rows : current();
-  const head = ['seed_id', 'state', 'state_abbr', 'county', 'name', 'kind', 'status',
-                'technologies', 'flags', 'search_query', 'coded_concerns', 'note',
-                'n_refs', 'news_urls', 'opposition_urls', 'government_urls', 'legal_urls'];
-  const pick = (r, t) => r.refs.filter(x => x.type === t).map(x => x.url).join(' | ');
-  const body = use.map(r => {
-    const m = MARKS[r.id] || { tags: [], note: '' };
-    return [r.id, r.state, r.abbr, r.where, r.name, r.kind, r.status,
-            r.technologies.join(';'), r.flags.join(';'), searchQuery(r),
-            m.tags.join(';'), m.note, r.refs.length,
-            pick(r, 'news'), pick(r, 'opposition'),
-            pick(r, 'government'), pick(r, 'legal')];
-  });
-  download('seed_list_' + stamp() + '.csv',
-    [head, ...body].map(r => r.map(csvCell).join(',')).join('\n'));
-}
-
-/* One row per entry, one column per category, ready to read into a
-   statistics tool. */
 function exportCoded() {
   const use = current();
-  const head = ['record_id', 'state', 'state_abbr', 'county', 'name', 'kind', 'scope',
-                'status', 'year', 'technologies', 'flags', 'n_refs', 'n_codes',
-                'on_chase_list', 'note']
-    .concat(CODEBOOK.map(c => 'code_' + c.id));
-  const body = use.map(r => {
-    const m = MARKS[r.id] || { tags: [], note: '', star: false };
-    return [r.id, r.state, r.abbr, r.where, r.name, r.kind, r.scope, r.status, r.date,
-            r.technologies.join(';'), r.flags.join(';'), r.refs.length, m.tags.length,
-            m.star ? 1 : 0, m.note]
-      .concat(CODEBOOK.map(c => m.tags.includes(c.id) ? 1 : 0));
+  const head = ['article_id', 'headline', 'outlet', 'published', 'url', 'topics',
+                'state_in_headline', 'state_from_search', 'counties', 'relevance_score',
+                'off_topic', 'read', 'follow_up', 'n_codes', 'note']
+    .concat(BOOK.categories.map(c => 'code_' + c.id));
+  const body = use.map(a => {
+    const c = CODES[a.id] || { tags: [], note: '', star: false, read: false };
+    return [a.id, a.title, a.outlet, a.published, a.url, (a.topics || []).join(';'),
+            (a.states || []).join(';'), (a.via_states || []).join(';'),
+            (a.counties || []).join(';'), a.score, a.weak ? 1 : 0,
+            c.read ? 1 : 0, c.star ? 1 : 0, c.tags.length, c.note]
+      .concat(BOOK.categories.map(x => c.tags.includes(x.id) ? 1 : 0));
   });
-  download('coded_records_' + stamp() + '.csv',
+  download('coded_articles_' + stamp() + '.csv',
     [head, ...body].map(r => r.map(csvCell).join(',')).join('\n'));
 }
 
-/* One row per citation — the reading list. */
-function exportRefs() {
+function exportList() {
   const use = current();
-  const head = ['record_id', 'state', 'county', 'name', 'kind', 'status',
-                'ref_type', 'citation', 'url'];
-  const body = [];
-  for (const r of use) {
-    for (const ref of r.refs) {
-      body.push([r.id, r.state, r.where, r.name, r.kind, r.status,
-                 ref.type, ref.cite, ref.url]);
-    }
-  }
-  if (!body.length) { alert('No references in the current filter.'); return; }
-  download('references_' + stamp() + '.csv',
+  const head = ['published', 'outlet', 'headline', 'url', 'topics', 'counties',
+                'state_in_headline', 'state_from_search', 'relevance_score', 'off_topic'];
+  const body = use.map(a => [a.published, a.outlet, a.title, a.url,
+    (a.topics || []).join(';'), (a.counties || []).join(';'),
+    (a.states || []).join(';'), (a.via_states || []).join(';'),
+    a.score, a.weak ? 1 : 0]);
+  download('reading_list_' + stamp() + '.csv',
     [head, ...body].map(r => r.map(csvCell).join(',')).join('\n'));
 }
 
 function exportSession() {
   const out = {};
-  for (const r of ALL) {
-    const m = MARKS[r.id];
-    if (!m) continue;
-    if (!m.star && !m.note && !(m.tags && m.tags.length)) continue;
-    out[fingerprint(r)] = { tags: m.tags, star: m.star, note: m.note, name: r.name,
-                            state: r.state };
+  for (const a of ALL) {
+    const c = CODES[a.id];
+    if (!c) continue;
+    if (!c.star && !c.note && !c.tags.length && !c.read) continue;
+    out[a.id] = { tags: c.tags, star: c.star, note: c.note, read: c.read,
+                  headline: a.title.slice(0, 120) };
   }
-  download('coding_session_' + stamp() + '.json',
-    JSON.stringify({ saved: new Date().toISOString(), source: SOURCE, marks: out }, null, 2),
+  download('coding_backup_' + stamp() + '.json',
+    JSON.stringify({ saved: new Date().toISOString(), codes: out }, null, 2),
     'application/json');
 }
 
@@ -717,19 +591,22 @@ async function importSession(e) {
   if (!f) return;
   try {
     const data = JSON.parse(await f.text());
-    const incoming = data.marks || {};
+    const incoming = data.codes || {};
     let matched = 0;
-    for (const r of ALL) {
-      const hit = incoming[fingerprint(r)];
+    for (const a of ALL) {
+      const hit = incoming[a.id];
       if (!hit) continue;
-      const m = markOf(r);
-      m.tags = Array.from(new Set((m.tags || []).concat(hit.tags || [])));
-      m.star = m.star || !!hit.star;
-      m.note = m.note ? (m.note + (hit.note ? '\n' + hit.note : '')) : (hit.note || '');
+      const c = codeOf(a);
+      c.tags = Array.from(new Set(c.tags.concat(hit.tags || [])));
+      c.star = c.star || !!hit.star;
+      c.read = c.read || !!hit.read;
+      c.note = c.note ? c.note + (hit.note ? '\n' + hit.note : '') : (hit.note || '');
       matched++;
     }
-    saveMarks(); render();
-    alert('Restored marks for ' + matched + ' of ' + Object.keys(incoming).length + ' entries.');
+    saveCodes(); render();
+    alert('Restored ' + matched + ' of ' + Object.keys(incoming).length + ' articles. '
+      + (matched < Object.keys(incoming).length
+         ? 'The rest are not in the current file — they may have aged out.' : ''));
   } catch (err) {
     alert('That file could not be read: ' + err.message);
   }

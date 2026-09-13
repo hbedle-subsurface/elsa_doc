@@ -1,167 +1,157 @@
-# Reading the opposition report
+# Solar siting in the news
 
-A browser tool for working through the Sabin Center's record of local opposition to
-renewable energy siting. Filter it down to the states and technologies you are studying,
-read the entries, pull out the news articles and documents each one cites, and mark what
-people actually objected to.
+A crawler that collects news coverage of solar projects meeting local opposition, and a
+page for reading and coding what it finds.
 
 Live at **https://hbedle-subsurface.github.io/elsa_doc/**
 
-It opens on **solar only**, since that is the subject of the study. Wind, storage and
-transmission are one click away in the left rail — worth having, because a county that
-banned wind often went on to restrict solar, and the same neighbors show up at both
-hearings.
-
-There are six sample entries built into the page, so it can be tried before anything is
-downloaded. Nothing is uploaded. Files are read in your own browser and your coding is
-stored there, with a backup button so it can move between machines.
+It runs itself every Monday. Nobody has to install anything, register for anything, or
+open a terminal.
 
 ---
 
-## Getting the data
+## How it works
 
-The source is the Sabin Center for Climate Change Law at Columbia Law School,
-*Opposition to Renewable Energy Facilities in the United States*, and its companion
-database at **https://oppositionreport.org**. The database is updated monthly.
+The fetching cannot happen in the browser. GDELT and Google News send no CORS headers, so
+a page served from github.io is blocked from calling them. Instead:
 
-Two routes in:
-
-**The tabular downloads (recommended).** The current data page offers the restriction
-data and the contested project data as separate files. They are already in columns, so
-they read cleanly. Drop both in at once.
-
-**The report PDF.** Also works. The report has a regular shape — state by state, then
-siting framework, state restrictions, local restrictions, contested projects — so it can
-be cut apart by pattern. PDF text extraction is never exact, so a small number of entries
-come through with a ragged title. Every record keeps the original text it was built
-from, and the tool says how many look ragged, so those can be checked against the report.
-
-The PDF is around 17 MB and belongs to the Sabin Center. It is not in this repository and
-should not be added to it. Download it fresh, which also means you are working from the
-current edition.
-
----
-
-## Working through it
-
-**Filter.** The strip across the top is every state in the file. Each bar is that state's
-full share of the data; the solid part is what survives the current filter. Bars are
-scaled to the whole file and stay that way, so filtering visibly shrinks them rather than
-quietly rescaling the axis. Click a bar to filter to that state. *South central* selects
-Oklahoma, Texas, Kansas, Arkansas, Louisiana, Missouri, New Mexico and Colorado.
-
-Every filter you apply appears as a removable chip above the results, with *Clear all* at
-the end, so nothing is ever narrowing the view invisibly.
-
-Beyond state, energy type and status, the rail separates out three things worth pulling
-apart: projects involving **agrivoltaics** (grazing or cropping under the panels),
-projects **sited on water** (canals, reservoirs, ponds, irrigation districts), and
-projects **serving a data center**, which is increasingly what the fight is actually
-about.
-
-**Read.** Click an entry. You get the report's own account of it with the citation block
-lifted off, then those references sorted into news coverage, opposition groups and
-petitions, government records, and legal filings. The entry exactly as printed folds open
-underneath, for checking against the source. Those citations are a curated reading list — the Sabin researchers have already
-found the local coverage of each fight.
-
-Arrow keys move between entries once one is open; escape goes back to the list. Entries
-you have opened are marked read, and the results line counts how many of the current set
-you have been through.
-
-**Code.** Under each entry, the categories whose cue words appear in that entry are shown
-first, in a small box. The remaining categories fold open underneath. A cue word matching
-is a place to look, not a result — a category enters the data when you tick it, having
-read the entry.
-
-The counts panel shows word matches until you confirm your first code, then switches to
-counting only your own codes and says so.
-
-**Mark what to chase.** *Add to chase list* flags an entry worth following up. The chase
-list is the input to the next step.
-
----
-
-## What comes out
-
-| Button | File | One row per | Use |
-|---|---|---|---|
-| Projects to look up next | `seed_list_<date>.csv` | entry on the chase list | Feeds the news and social media collection step. Carries a ready-made search string and every URL the report already cites. Falls back to the current filter if nothing is starred. |
-| Your coding, as a table | `coded_records_<date>.csv` | entry in the current filter | Your codes as one column per category, 1 or 0. Reads straight into a statistics tool. |
-| The reading list | `references_<date>.csv` | citation | Every article and document cited by the current filter, sorted by source type. |
-| Back up your work | `coding_session_<date>.json` | — | Your codes, stars and notes. Load it on another machine, or after the database updates. |
-
-Codes are stored against a fingerprint of each entry rather than its row number, so
-loading next month's edition, or the other half of the data, reattaches your work to the
-right entries.
-
-If two people code the same 50 entries independently and export, comparing the two
-`coded_records` files gives an inter-coder agreement figure. That is worth doing before
-coding the rest.
-
----
-
-## Changing the codebook
-
-`codebook.js` holds the categories, in plain form:
-
-```js
-{
-  id: 'farmland_loss',
-  label: 'Loss of farmland',
-  group: 'land',
-  hint: 'Objection that productive or prime agricultural land is taken out of farming.',
-  cues: ['farmland', 'prime farmland', 'agricultural land', ...]
-}
+```
+GitHub Actions  ──  collect/collect.py  ──  data/articles.json  ──  index.html
+ (weekly, or a         queries GDELT           committed to           reads it from
+  button press)        and Google News         this repository        the same origin
 ```
 
-Copy a block to add a category. `id` is what appears in the exported column names, so
-changing an id after coding has started orphans that column. `cues` only produce
-suggestions; nothing else in the tool depends on them.
+Everything the crawler needs is in the Python standard library, and neither source needs
+an API key, so there is nothing in repository secrets and nothing to renew.
 
-The same file holds `FLAG_RULES`, which is where agrivoltaics, solar on water, offshore
-wind and data-center-serving projects are detected.
+### Running it now
+
+1. **Actions** tab → **Collect news** → **Run workflow**.
+2. Leave the boxes blank for the usual eight states and the last thirty days, or fill
+   them in to run something narrower.
+3. Four or five minutes. The run summary says how many searches went out, how many
+   articles were new, and which searches had trouble.
+
+**The weekly run is not optional if you want an archive.** GDELT's index reaches back
+about three months and Google News about one. Coverage from a month nobody collected
+cannot be recovered later.
+
+---
+
+## What it searches
+
+`collect/queries.json` holds the whole search, and it is the only file that needs editing
+to change what gets collected.
+
+Three topics. **Siting and opposition** is run once per state, pairing solar phrases with
+the words that show up when a project is contested — moratorium, zoning, hearing, setback,
+petition. **Agrivoltaics** and **canals and reservoirs** are run nationally, because the
+volume is low enough that splitting them by state would mostly return nothing.
+
+Each topic has two vocabularies, which matters:
+
+- `subjects` are what gets searched for.
+- `recognize` is the wider set used to judge whether a result belongs. A headline may say
+  "reservoir solar" when the search asked for "floating solar", and an article about an
+  ordinary solar farm often arrives through the floating solar search. Judging results
+  against only the phrase that found them throws away good material and mislabels the
+  rest.
+
+### What gets set aside
+
+A search for "solar farm" in Texas also returns module prices, earnings reports and
+listicles. Each result is scored: a topic phrase in the headline is worth 2, each
+opposition word 1 up to 2, a named county 1, a named state 1. Below 2 it is marked
+off-topic and hidden, not deleted — there is a filter in the left rail for looking at what
+is being thrown away, which is worth doing occasionally to check the threshold is not too
+harsh.
+
+### States, stated and inferred
+
+A state named in the headline is a fact about the article. The state whose search returned
+it is a reasonable guess, and local headlines usually name a county rather than a state, so
+the guess does most of the work. The two are stored in separate fields and exported in
+separate columns. The interface shows the guess as "likely Texas" rather than "Texas".
+
+---
+
+## Reading and coding
+
+Only the **headline, outlet, date and link** are stored. No article text is copied. So the
+page is a reading list: open the article, read it, come back and code it.
+
+Filter down the left by state, topic, date, outlet, and how far you have got. Every active
+filter shows as a removable chip above the results, with *Clear all*.
+
+Open an article and the categories whose words appear in the headline are offered first,
+with the remaining ones folding open underneath. Headlines are short, so these suggestions
+miss most of what an article contains — the panel says so, and the counts in the right
+column switch from headline matches to your own codes as soon as you confirm any.
+
+Arrow keys move between articles, escape goes back. Articles you have opened are marked
+read.
+
+### Changing the categories
+
+`codebook.json` holds them, read by both the crawler and the page so there is only one
+copy. Copy a block to add one. `id` becomes the exported column name, so changing an id
+after coding has started orphans that column.
+
+### What comes out
+
+| Button | File | One row per |
+|---|---|---|
+| Your coding, as a table | `coded_articles_<date>.csv` | article in the current filter, with one 1/0 column per category |
+| The reading list | `reading_list_<date>.csv` | article in the current filter |
+| Back up your work | `coding_backup_<date>.json` | — |
+
+Coding lives in the browser, because a page on GitHub Pages cannot write back to the
+repository. Back it up before switching machines. Committing the backup file into the
+repository is a reasonable way to keep it safe.
+
+If two people code the same fifty articles independently and both export, comparing the
+two tables gives an inter-coder agreement figure. Worth doing before coding the rest.
 
 ---
 
 ## Files
 
 ```
-index.html      the page, and all of the styling
-app.js          loading, filtering, reading, coding, exporting
-parse.js        the PDF and CSV/XLSX parsers
-codebook.js     the concern categories and the technology flags
-sample.js       six real entries, embedded so the page works with no download
+.github/workflows/collect.yml   the weekly run and the Run workflow button
+collect/collect.py              the crawler; standard library only
+collect/queries.json            states, phrases, scoring thresholds
+codebook.json                   the concern categories
+index.html                      the page and its styling
+app.js                          filtering, reading, coding, exporting
+data/articles.json              what has been collected; written by the workflow
+data/runs.json                  a log of each run
 ```
 
-To change what the page opens on, edit one line near the top of `app.js`:
+Publish with Pages set to the `main` branch, root folder. The page needs a web server —
+opening `index.html` from the file system will not work, because a browser will not read
+the data files from a `file://` address.
 
-```js
-tech: new Set(['solar']),      // ['solar','wind'] for both, new Set() for everything
+---
+
+## Testing a change without waiting for Monday
+
 ```
-
-pdf.js and SheetJS load from a CDN. Everything else is local. To run it without a server,
-open `index.html` directly in a browser.
-
-To publish: in the repository settings, under Pages, serve from the `main` branch, root
-folder.
+python3 collect/collect.py --dry-run                  # print the searches, fetch nothing
+python3 collect/collect.py --states Oklahoma --days 7 # one state, one week
+python3 -m http.server                                # then open localhost:8000
+```
 
 ---
 
 ## Credit
 
-The underlying data is collected and maintained by the Sabin Center for Climate Change
-Law at Columbia Law School, as part of the Renewable Energy Legal Defense Initiative.
-Cite the report, not this tool, for any figure taken from it:
-
-> Romany M. Webb and Ivonne C. Norman, *Opposition to Renewable Energy Facilities in the
-> United States: September 2026 Edition*, Sabin Center for Climate Change Law.
+Article metadata comes from the [GDELT Project](https://www.gdeltproject.org) and Google
+News. Coverage belongs to the outlets that published it; this repository stores links, not
+articles.
 
 Built for undergraduate research on public response to solar development in the
 south-central states, at the University of Oklahoma.
 
 ## License
 
-Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). See `LICENSE`.
-This covers the tool. It does not cover the Sabin Center's data, which carries its own
-terms.
+Creative Commons Attribution-ShareAlike 4.0 International. See `LICENSE`.
