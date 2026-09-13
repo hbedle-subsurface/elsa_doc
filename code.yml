@@ -1,0 +1,57 @@
+name: Collect news
+
+on:
+  schedule:
+    - cron: '0 13 * * 1'
+  workflow_dispatch:
+    inputs:
+      states:
+        description: 'States, comma separated. Leave blank for the usual eight.'
+        required: false
+        default: ''
+      days:
+        description: 'How many days back to reach. Blank uses 30.'
+        required: false
+        default: ''
+      topics:
+        description: 'solar_siting, agrivoltaics, solar_on_water. Blank runs all.'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-news
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run the crawler
+        run: |
+          python collect/collect.py \
+            ${{ inputs.states && format('--states "{0}"', inputs.states) || '' }} \
+            ${{ inputs.days   && format('--days {0}',     inputs.days)   || '' }} \
+            ${{ inputs.topics && format('--topics "{0}"', inputs.topics) || '' }}
+
+      - name: Save what it found
+        run: |
+          git config user.name  'news collector'
+          git config user.email 'actions@github.com'
+          git add data/articles.json data/runs.json
+          if git diff --staged --quiet; then
+            echo "Nothing new this time."
+          else
+            git commit -m "Collected news, $(date -u +%Y-%m-%d)"
+            git push
+          fi
