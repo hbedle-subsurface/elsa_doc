@@ -355,6 +355,7 @@ function makeRecord(kind, state, name, where, status, text, scope) {
     technologies: [],
     flags: [],
     refs: [],
+    narrative: '',
     suggested: []
   };
   const hay = (rec.name + ' ' + rec.text).toLowerCase();
@@ -377,7 +378,12 @@ function makeRecord(kind, state, name, where, status, text, scope) {
   for (const cat of CODEBOOK) {
     if (cat.cues.some(c => hay.includes(c))) rec.suggested.push(cat.id);
   }
-  rec.refs = extractRefs(rec.text);
+  const found = extractRefs(rec.text);
+  rec.refs = found.refs;
+  /* the entry's own account, with the citation block left off */
+  rec.narrative = found.citeStart > 40
+    ? rec.text.slice(0, found.citeStart).replace(/[\s;,]*$/, '').trim()
+    : rec.text;
   if (!rec.date) {
     const y = rec.text.match(/\b(19|20)\d{2}\b/g);
     if (y) rec.date = y[y.length - 1];
@@ -406,20 +412,51 @@ function normalizeStatus(s) {
   return s.trim();
 }
 
+/* Legal and news citations are dense with abbreviations, so a plain
+   search backwards for ". " lands inside "Feb. 6" or "No. 23" and
+   chops the citation in half. Skip any period that closes one of
+   these, or an initial. */
+const ABBREV = new RegExp(
+  '(?:^|[\\s(])(?:' +
+    'Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sept?|Oct|Nov|Dec|' +
+    'No|Nos|Inc|Co|Corp|Cos|Ltd|Assn|Ass’n|Bros|' +
+    'Ct|Cir|Cnty|Dept|Dep’t|Div|Comm’n|Comm|Ed|Rev|Stat|Ann|Art|Sec|Supp|' +
+    'U\\.S|N\\.Y|D\\.C|v|ed|al|et al|Mr|Mrs|Ms|Dr|St|Ave|Rd|' +
+    'Ala|Ariz|Ark|Cal|Colo|Conn|Del|Fla|Ga|Ill|Ind|Kan|Ky|La|Md|Mass|Mich|Minn|' +
+    'Miss|Mo|Mont|Neb|Nev|Okla|Or|Pa|Tenn|Tex|Va|Wash|Wis|Wyo|' +
+    '[A-Z]' +
+  ')\\.$'
+);
+
+function citeStart(before) {
+  for (let i = before.length - 2; i > 0; i--) {
+    const c = before[i];
+    if ((c !== '.' && c !== ';') || before[i + 1] !== ' ') continue;
+    if (c === '.' && ABBREV.test(before.slice(Math.max(0, i - 12), i + 1))) continue;
+    return i + 2;
+  }
+  return -1;
+}
+
 /* Pull every link out of the citation string and work out what kind
-   of source it is, because that decides what to do with it next. */
+   of source it is, because that decides what to do with it next.
+   Also report where the citation block begins, so the entry's own
+   words can be shown without it repeated underneath. */
 function extractRefs(text) {
   const urlRe = /https?:\/\/[^\s;)"'\]]+/g;
   const refs = [];
+  let earliest = -1;
   let m;
   while ((m = urlRe.exec(text)) !== null) {
     const url = m[0].replace(/[.,;]+$/, '');
-    const before = text.slice(Math.max(0, m.index - 220), m.index);
-    const cut = Math.max(before.lastIndexOf('. '), before.lastIndexOf('; '));
-    const cite = (cut >= 0 ? before.slice(cut + 2) : before).replace(/,\s*$/, '').trim();
+    const window = text.slice(Math.max(0, m.index - 260), m.index);
+    const cut = citeStart(window);
+    const abs = cut >= 0 ? m.index - (window.length - cut) : -1;
+    const cite = (cut >= 0 ? window.slice(cut) : window).replace(/[,\s]*$/, '').trim();
+    if (abs >= 0 && (earliest < 0 || abs < earliest)) earliest = abs;
     refs.push({ url, cite, type: classifyRef(url, cite) });
   }
-  return refs;
+  return { refs, citeStart: earliest };
 }
 
 function classifyRef(url, cite) {

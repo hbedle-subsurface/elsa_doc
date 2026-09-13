@@ -229,6 +229,8 @@ function renderControls(hits) {
   for (const r of hits) liveByState[r.state] = (liveByState[r.state] || 0) + 1;
 
   const shown = hits.length, everything = ALL.length;
+  /* with only a handful of states there is room to print the count */
+  const fewStates = Object.keys(STATE_TOTALS).length <= 16;
   $('#striplab').textContent = shown === everything
     ? 'Bar height is how many entries each state has. Click one to filter.'
     : 'Bar height is each state\u2019s full total; the solid part is what the '
@@ -248,7 +250,8 @@ function renderControls(hits) {
       '<span class="bar"><span class="fill" style="height:' + outline + 'px">' +
       '<span class="fill live" style="display:block;height:' + fill + 'px;' +
       'margin-top:' + (outline - fill) + 'px"></span></span></span>' +
-      '<span class="lbl">' + (STATE_ABBR[s] || s.slice(0, 2)) + '</span>';
+      '<span class="lbl">' + (STATE_ABBR[s] || s.slice(0, 2)) +
+        (fewStates ? '<span class="cnt">' + live + '</span>' : '') + '</span>';
     b.addEventListener('click', () => { toggle(F.states, s); render(); });
     strip.appendChild(b);
   }
@@ -402,7 +405,7 @@ function renderList(hits) {
         ' · ' + esc4(r.status) +
         (r.refs.length ? ' · ' + r.refs.length + ' reference'
             + (r.refs.length > 1 ? 's' : '') : '') + '</div>' +
-      (r.text ? '<div class="snip">' + esc4(r.text.slice(0, 260)) + '</div>' : '') +
+      (r.narrative ? '<div class="snip">' + esc4(r.narrative.slice(0, 260)) + '</div>' : '') +
       (tags.length ? '<div>' + tags.join('') + '</div>' : '');
     const open = () => { SELECTED = r.id; render(); window.scrollTo(0, 0); };
     d.addEventListener('click', open);
@@ -495,7 +498,11 @@ function renderDetail(hits) {
             '</span>').join('') + '</div>'
         : '') +
       '<h4>What the report says</h4>' +
-      '<div class="body">' + esc4(r.text) + '</div>' +
+      '<div class="body">' + esc4(r.narrative || r.text) + '</div>' +
+      (r.narrative && r.narrative !== r.text
+        ? '<details class="allcodes"><summary>The entry exactly as printed</summary>'
+          + '<div class="body verbatim">' + esc4(r.text) + '</div></details>'
+        : '') +
       refSection('News coverage', byType.news) +
       refSection('Opposition groups and petitions', byType.opposition) +
       refSection('Government records', byType.government) +

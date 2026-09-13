@@ -59,9 +59,10 @@ projects **sited on water** (canals, reservoirs, ponds, irrigation districts), a
 projects **serving a data center**, which is increasingly what the fight is actually
 about.
 
-**Read.** Click an entry. You get the report's own account of it, then its references
-sorted into news coverage, opposition groups and petitions, government records, and legal
-filings. Those citations are a curated reading list — the Sabin researchers have already
+**Read.** Click an entry. You get the report's own account of it with the citation block
+lifted off, then those references sorted into news coverage, opposition groups and
+petitions, government records, and legal filings. The entry exactly as printed folds open
+underneath, for checking against the source. Those citations are a curated reading list — the Sabin researchers have already
 found the local coverage of each fight.
 
 Arrow keys move between entries once one is open; escape goes back to the list. Entries
