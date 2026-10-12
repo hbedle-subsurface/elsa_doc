@@ -1,6 +1,41 @@
 {
  "runs": [
   {
+   "when": "2026-10-12T21:34:06+00:00",
+   "searches": 23,
+   "states": [
+    "Oklahoma",
+    "Texas",
+    "Kansas",
+    "Arkansas",
+    "Louisiana",
+    "Missouri",
+    "New Mexico",
+    "Colorado"
+   ],
+   "days": 30,
+   "results": 380,
+   "new": 233,
+   "total": 1312,
+   "problems": [
+    "gdelt solar_siting/Oklahoma — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_siting/Oklahoma — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_siting/Texas — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_siting/Texas — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_siting/Kansas — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_siting/Arkansas — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_siting/Arkansas — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_siting/Louisiana — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_siting/Louisiana — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_siting/Missouri — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_siting/New Mexico — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt agrivoltaics/all — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_on_water/all — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_on_water/all — HTTPError: HTTP Error 429: Too Many Requests",
+    "gdelt solar_on_water/all — HTTPError: HTTP Error 429: Too Many Requests"
+   ]
+  },
+  {
    "when": "2026-09-28T19:59:35+00:00",
    "searches": 23,
    "states": [
