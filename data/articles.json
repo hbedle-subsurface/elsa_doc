@@ -1,7 +1,2607 @@
 {
- "updated": "2026-11-02T22:06:16+00:00",
+ "updated": "2026-11-16T22:43:10+00:00",
  "threshold": 2,
  "articles": [
+  {
+   "id": "041e4c1be395",
+   "title": "United Airlines says it has a widespread system outage just days after nationwide ground stop",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPZ1RQOVdjeEZsZVhUM19URENyYUtWRTlfVFhZYU1aWWVwdVVaQVNjMUhZcjJWZjA5ZjFuLWpUbmdPWWk2TWRVaFUxX3JpZldTZXdVMmhDMDhnRGsyc2Jsa3FXaEJSOElvYWNyUGk5UHVOeEFncFIwTzlNc1ZCTC01ZDU3bUR0QjFOQU9Gd21EOTVwZDBPSE42SjFGUW5fQjBmYlJyT1RiSmdhS014bDIxN0JINl9wYkxKaFozOWVlbVFqQTF2dlZId1laOGpfLVY4V2Eza3JLZWlMYnZFNWxpQkln?oc=5",
+   "domain": "the-journal.com",
+   "outlet": "The Journal",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Colorado"
+   ],
+   "cues": [
+    "tribal"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "ca720a0ee47b",
+   "title": "Residents Oppose Andong Lake Solar Project to Protect Gull Habitat",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQaDBPUVBKNlJRaUFNTWFZU3F6YmxMaTFPUm1LQzVEQ1pVekpPaFFKdEt6bzVrM0Nfb2oyNTh2UmJlMHhseG9sVFlPM0lJNzdDMmo5MEhaRzNPbUZ6UGNjUTVVdWxYWWEtWkJKdU1hMExyZmljR2tUNnkxYWowdmF2dTdxNExfaTNW?oc=5",
+   "domain": "chosun.com",
+   "outlet": "조선일보",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "wildlife"
+   ],
+   "score": 3,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "fa3c12ab5ab1",
+   "title": "Nearly 2,200 migrants reach Canary Islands in 2 days, Spain says",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRGRPZmJTSDhWbjV2TWpRTTNpdW5RWnZ1U0NSSDJpb1VfVVFwbER3RndXWk53RmdKYXNRdHZyS3Fxb215SzRydk10XzFfSnhSZ0xrUU9wRi11aGliRkRqSHlkRF8wcDlZVE83b0JIOS16MlZ5eGlKejQ1S3FkYWVnRm92Q0o0akNEdVA4NjNMR3h1VDgwQU9ELVFOcEd1RHhVNlhHa0VRMmFNcC1KNVk4dnZJT01zVFNB?oc=5",
+   "domain": "the-journal.com",
+   "outlet": "The Journal",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Colorado"
+   ],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "272b4734b4d1",
+   "title": "Lindsay Clancy to face March retrial in deaths of her 3 children",
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNMEY5eF9hU1BNWkY2QThoNnBhZVc0MTB2S3VSNnJrYWZGSE83b3dsYmRjWE93bFl6eG5SMDJuRE93TDU1Z2hUUUJwYk9BQUhCWFQwR3p4bWRnc3A3c0xpblI1QkFXRjRVV18ybVBTUGpPUmszcjNtdzNaZzA3M0s1U1FOclJwWVlpMmJyWkdJNjQybFFlSU55cEwySVJHVGV2WkJQQVFmX3ZZRGUycUsyRTlxZXdDRUpsemxVa2xlR3ZfTmlBZm15blBxekVKVV96d3UyNg?oc=5",
+   "domain": "the-journal.com",
+   "outlet": "The Journal",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Colorado"
+   ],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "617ba69f3f69",
+   "title": "Karnataka Explores 1,500 MW Floating Solar Potential",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQdHg3eVZmR1duQ1Q2TXBEQUlXSHh6UUZxOGNnX19TN0VabHhvdmwxSmlKVUNiNm9RdnhNUUFmZzZpT3lMRmtqQlVGaDZUeWxRV1NSWmdhOTM2ZDVpUmFfc09hZnFiaFRudGlnOXR6WU9sWjk4UkdPVWRJQmdHRU05RTZwb0QtMURuVXRRRE9aNUtsclhkLUtzdVlNSnNvblRNdExJNWdjcWRqRFZPa3UwNHgtMFF2WkpMVF9oV3FlZ1ZtNW5yYlZmWDh2c2pMSUhTZDNwaTBBNA?oc=5",
+   "domain": "constructionworld.in",
+   "outlet": "Construction World",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "22776c62e222",
+   "title": "Huge waves pummel the California coast, forcing the closure of iconic piers",
+   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZkN2LU1LcjFXeGtTbWo3SEMwVnF4QmFMV2NORmEySW5ZQ2NLQ0pFRktNRlZMc05PeEVZLUdxajlMNkhtdG1MR0k5SmdnLURCNV9SX2l4VkZhSVIydWtMdjBGWDl3NmNwMVA5b09IbFY3TUlWNG82a3d2NHNBOVNIYk9kSUFVQXN1NFgzLUwyRjlIenZvalBNZXNLREtXSHY2dHI5V1lvOElIOFBYQlNoSjNONkNtaGI3RTloT25GQ0M0NmRQX1FLSw?oc=5",
+   "domain": "the-journal.com",
+   "outlet": "The Journal",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Colorado"
+   ],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "62b7d44487c5",
+   "title": "High-tech drone amplifies research scale for Mountain Studies Institute in Southwest Colorado",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORThBSXRGSVNzWmNCT0RHRzdZY3JEd29obnlmNV92QlZrLVpvTFpZNERFalNxRjBRX3JYRlQ3UWt2bFpWa05GYWZPVFRpZ1BkalVDcDRNWENoOHlsWjJsN1Rpa3lYU2FuMTJDVjVDeFdPZFk1aDdRMDhub29lTjVaU0UxMmFxdUJjNnJiSGlYVE9mM1M4Y1k2Vno1OW9uTm5jNGt2aldtcXV4c3hKU2dTZHVyNG5SUzJkNkpOQzU2cTMycXFEMGJfd3FPUW9FcThaZnc?oc=5",
+   "domain": "the-journal.com",
+   "outlet": "The Journal",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [
+    "Colorado"
+   ],
+   "counties": [],
+   "via_states": [
+    "Colorado"
+   ],
+   "cues": [],
+   "score": 1,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "95979faef0de",
+   "title": "Floating Solar Panels Market to Reach USD 323.20 Million by 2033 |",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOdmJjbHJiWjAtNVpqcmhkNXRXY1hWRTg2aVRETW9Ud2VCdEh3QU4xa1cyOUxhcWRGcUxRUWdWQXQ0dE1hTGRjWk94UmFKY2xmNzdBVHdVV1FZSHk3YzBSclplSGkzRnI0YlpaeDNjTnV5Vmw5STZYVDAwdldza3NOeEVOM3dzSk9IRjhQa1FHTFVFdGFQZmpJRGRveGtwdVJQb2c?oc=5",
+   "domain": "openpr.com",
+   "outlet": "openPR.com",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "814065b14b89",
+   "title": "Farming rule puts portion of Italy solar at risk – analysts",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNcmwxeXJCUzI2V2ZqenAzMG1PbUoxZlFsT1FqV1Awb1FYSjFkVV82WXdBV0JJR3hTMURSVGRZWml5ems1Smg0S1lKanM1alVENzM2QmJmMWZUS1E1VVVoUU01LWxTWnhWdHkxUFBIOHFjaU9nYzZKNE1oczdVRm1PcWRuSzktRER6a1JvNDVOay01elFpb0ZiQzZpelg4eHZ2MXJOVzd0LWxZSkM3NW9nQ2xrSHQ3S0VMeVFUWFFoWlVmM1ZBQkE?oc=5",
+   "domain": "montelnews.com",
+   "outlet": "Montel News",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "farmland_loss"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "93db8356de20",
+   "title": "Elgin invests in a new agrivoltaic plant in Friuli Venezia Giulia",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSTA5WVlIY3ZQbUtYTXJHeEx3VkJLcVQ2LWNLUTdCSTRORWtoMlE3czN3S1ZvRlpKT3NPWXhWZWEyTGx5Qi1qY0FfTjZwTnAtUVJ6NVl2Zjk0VjNjZmxybE52VWdCUTlqMkd4Rm5DZm1WUU9uMjZJT3lNT3dkSGx6NS0xV3o0YXF6UXpZbktPOEtwQW40SFpLanBIa2lVaWs?oc=5",
+   "domain": "renewableenergymagazine.com",
+   "outlet": "Renewable Energy Magazine",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "0b1e92fafc23",
+   "title": "Dolores volleyball bows out of 2A tournament after earning program-best state finish",
+   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPb0V2MFc3STlmSHNDSmlsRGg0NmhhNkdJRG1UUTgxNjZKY0MyQjVuU0VEU05oQ0dwLU50alBEbV9fUFVuZzA4Z2VOVEtlVXFPTWtvbnBJR01hRHdrZ3BGVFhRWi1JRGVhYVQ4MWN5aGMzU2d5M0NCZ1BGV0VRQmlaUUdVcE53eXkya1hnZ2FJcDdvTUVvbW9lS1JQaWpiYklBVVYtVkFBS2Vobk1obThuNkNBbkxfRW15LTJFWTZyVFMtRG52X3RyTw?oc=5",
+   "domain": "the-journal.com",
+   "outlet": "The Journal",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Colorado"
+   ],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "e1ffbbd52866",
+   "title": "Cultivating energy. Agrivoltaics and the challenges for the landscape",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVllRVDNqUWYxLUNTZW1WbTdnN2s5ZWhSRjYzOXdBdWJOQzd0MjZFOHpKelJNRFJVLTh1X21HZ3NsZlVfbDBHLVh1MkJjR2d1V0h3OHlmVGZMWnRGcmhPSG9pSk9IN2dtZE81Yk9kVGpwR2M1a19xd1kxLWRJeERERWEzYW1Kc3BPY1M1cmlxR2M?oc=5",
+   "domain": "unipd.it",
+   "outlet": "Università di Padova",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "25d7e915571d",
+   "title": "Can Solar Cells Grow Crops, Save Water and Generate Energy?",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRXYtNjNSU2NWWUZkUmxhSm1EMGRVa1gtQzIxVUhiWV9EbVpNdGhPZGdCQm5yVEQweXVoX05VVmVfY0ZrVEtpUkQ2MUFXUXc5UkxSQTdmT3M1MW9PNFFDNUEzY0I5b042cl9odHpvcnd0S0dPYWU5ZHpGN2t6eVVSV0pudw?oc=5",
+   "domain": "miragenews.com",
+   "outlet": "Mirage News",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "fb8a110e8899",
+   "title": "Blue Elephant Energy reaches financial close for German agrivoltaic project",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPRU55RXM3TU52emVrY0RPRmxyUE1CVkF4SWUxemUwaWxORTl5Z3hLenFoSTRBZUl2LWl6Q0ZaTmkzbEhZWXlaaXFnV1hpbExvczVzUV9LVVRPdGc1VUUyQzh1VXJpdXBRZ3hIdHQtSTJmU3JGSkZQejMwRU9JU1ZXOXd5d1cwM0FPWk9acXc4X01nYUpoVWxySnptbHE4VmRFa0xfOF82c1VCVENIbGlGZGpsZ1JkaFo5Um41RQ?oc=5",
+   "domain": "energyglobal.com",
+   "outlet": "Energy Global",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "f3238828b7b8",
+   "title": "Blue Elephant Energy Hits Financial Close on Germany’s Largest Agri-PV Project With Tracker-Mounted Modules",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPbjJJMl9qODlfQUhQM2hFcU8yMC1lamYxcHdWOFlQSE5SSXZlOS0wd25OSTRMS0k1bHRjUkswQngyeGg4cEV2QWFoMGdzTlFhYnBxUzR2WTZwcS13LWFIelBiX1lRYnNxcWx0Q0RWS0ppeFMwMUlFMTdfWE9KUUhxaThZdzZ6b3A2dzZMMWY3eVVSQWUxYkdRek52aWRsV1FZaWR2RA?oc=5",
+   "domain": "renewableenergymagazine.com",
+   "outlet": "Renewable Energy Magazine",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "43b7ad80488b",
+   "title": "Award-winning authors to discuss new books on ‘Mormon Ghosts and Wellness Grifters’",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQUXc5OFUtN1pJMzlBc3VQeFFWWjJtdTB4M0NDdjNBdzdwWDdqN2Z2R2wzcF9FU1AzaC1nbDNLV0ZYUzZzSWY4Sl9LbFF1MWZ2aS1sdXZtaXZDN1NvMXZ1amlUaGY5RW5PZ0xlV0hvdXdhZUlJNEJhcDR1Q0pVVS0yYmJRQ3FVT0tIcm9sNnBpdk1ZbFhKODhYSkVJTDNNaTc4bHRfU055UnA3MGVFUjNGU1pIRlBHMVFiWktXMnZGNGJwSlJZ?oc=5",
+   "domain": "the-journal.com",
+   "outlet": "The Journal",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Colorado"
+   ],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "8aa0f3744f92",
+   "title": "5 European countries aim to send rejected migrants to center in Rwanda",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNWFJJMVRGQzVkajNTUEJSa1M1dEhiZEpyTU04TUthSjBFdVdiak5yeUVYeUx4MkROckR0ZjZUUWRYdmZCQ0ZlRGduT1pqaERqVE1KUlNDU0dmaTkwRzNLQnZVVWlPcDJEckJfR182YWRlTlZsRENuN2xpRG9ZbW5fSTFSYVc2eGJZcjlNd0p0U243aTV1dEY4aGpVa3huY3lSekVnb1pVZGYtMUlQMEZVcjFvTF9wRmowdEt2dlNaemduNXc?oc=5",
+   "domain": "the-journal.com",
+   "outlet": "The Journal",
+   "published": "2026-11-16",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Colorado"
+   ],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "fd27561b3c34",
+   "title": "Rs 40k to Rs 4 lakh: How farmers grow food below, generate power above, earn 10x",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPYWVxZHhFbVA4YnZqbjVCaHdZU3ZDTldqdTlXQ29mRkRobnhsamIwaXpYQmEwOExUUXdQYnV2Z1VndHRYTnpVWE5VcnJISWU4Y2l5S1FfZjd4SFA4cHpqd3BzSFFTUG9sSHlRVGNwb0VkcWRTNEFCQkdjeWdhTXJsQzdJS3ZNRFZkNVRiTHktWVJERzNEaUpDb2cyc3dtM0FKUUp5SWk0NGN2cEVyV0xSVy11SWp1T2FDbzhNdzR3cG5qNkJlc1N1a3RsYk4zVTBYWDdEampBWjM0Y05kUXfSAeMBQVVfeXFMTWNURzdFS2JtSzBydjlybnp6R003ZVdCSlVWUmt4UVJyMW5TYTNiWFJXa2FrS1ozRG9EeGt4WE0yZ005U3prQkhvenBhaXQxWHFTcEQ2c3FyVTU1SUE1clBkZ0xsa25lV3RtOUtlaFcwcFBNRU1WVTRDMlhteXl4dnNMLXFNVXg3dnZvVDVTWWhfc1phM21BYlFHdFMwYks0WVVxVFZRUS1Ucmg2VVhRdnJMcExiVlAyeG41RkxRRUpLV0ZxV25zZ1FrWFNFZUhZOUFLZUlsRVd6UW9OV1ZNSkRMUmc?oc=5",
+   "domain": "indiatoday.in",
+   "outlet": "India Today",
+   "published": "2026-11-15",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "farmland_loss"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "31e13a1c0d4c",
+   "title": "Portugal’s Alto Rabagão floating solar farm becomes a storm test site for self-adjusting mooring buoys and 3D-printed concrete anchors",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBBOS1zTWR3cUI2ZGNleHhLcENUOFV3SThQY0JXLXljQjhBUmhEaHBPZ1UzclA5c2REeDM2SVAxYUhZRzkzU1dPVUpOSzFFRmNsUUpjSGpVUHRfTWpROTVFZnhhT2tqY3FKcjQ4?oc=5",
+   "domain": "energiesmedia.com",
+   "outlet": "Energies Media",
+   "published": "2026-11-15",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "2ecaa7facf4b",
+   "title": "Opposition to Valley Range solar project in Montezuma County calls for renewed moratorium",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNOUMwN01naUQ4SkFiZGVOV3R6TWRHRURzQzRWME1jNXZTQkpnMXJWSnBuUXUyZkFMUGdEQkJKbGgwaUtMNmxLdTBCOURNUUg4SlJOT0IwWTQ4cHIzX21QaU0zVTBzNXUtRlpSYmZTbDJLbldFeUhvVlFUQm5GSnNQQkRJUm9wX3FzdnkyUzF3OTFmMG52akJkSXVDQ0NnX0NBb0VzcjNTTlBxUnNvZUQtWDRFVDBCcGl5YnF0bi1CUFlCUXVWNkd2VDJnek5aVDQ?oc=5",
+   "domain": "durangoherald.com",
+   "outlet": "Durango Herald",
+   "published": "2026-11-15",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [
+    "Montezuma County"
+   ],
+   "via_states": [
+    "Colorado"
+   ],
+   "cues": [],
+   "score": 5,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "5c6064394e88",
+   "title": "On a private golf course pond in Carmel, California, nearly 1,000 floating solar panels sat finished for months, and the array still sent not a single watt to the clubhouse",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE40TTdJN1BSRG8wdXIzdnN2WThKcDRHbXlicmhpVlZuQk1IMXMxUFRpcnNhOVNzMVoxbXVJOHNNOWpzX2NZc1BXLXpZMWdOMWtyS2RXUnZyZkNFaHA3NTJndmlfdXpybmdUcndFM0xBNUk5ZlR3c2c?oc=5",
+   "domain": "energiesmedia.com",
+   "outlet": "Energies Media",
+   "published": "2026-11-15",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "5038c5c68881",
+   "title": "Viral \"Solar Sheep\" and Surpassing Coal: How China’s Green Living Accelerates Global Climate Action",
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOTnZVN2hsXzh5ejZRQm8tUUluODUzVENaYTgxemtrTHFzNHBYSTNOR3o0SXYyUXExcUJ3VTNHcVlvV3daRDN4Qm5zMHFSY0RtX2FpdmRyQjJfNkstYUhIbVlrMmFQOWw2Wnh0Mnl4TUQxM0VtQ2xCNmpaS0Z6MzNBTnM2OEt6cjVaM0p2OExqd21Zdk5hM1k2X0RDOHNpT0laLXg5OGlYM0t3QkQtQUcybTQ2RW01ZkI2SWVaRmExVVcxSXBWSFJ1NWJLRU1aYXNQNE9IdEtyT0FzTm5tN0JPTXJDNWZFU1U?oc=5",
+   "domain": "bastillepost.com",
+   "outlet": "巴士的報",
+   "published": "2026-11-14",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "support_energy"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "323d4048fef2",
+   "title": "Southwest Colorado relief fund raises more than $700,000 for flood recovery",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOOUNMdERTRHg2VHh0elFQd2NmeHV2cFVDbTNUWldxRXJKSDdsVnlqYlR4MENFMEF1U2xBMEttTUxnMldiVGtmeEY1ZTVuN1BRcldyVkdaRmZucU1jMDR4bmFFR1V0NnRMTGxpQllwSkFKSTBzNV93QTdRbjZ3Qkg1UzBNSC05Wk0zWkpQM1RqX2dITEdDa2N3TjlmSnVJUTNyQ3djUnJGRUxGU0RxenRYTmgwR0J5eEE?oc=5",
+   "domain": "the-journal.com",
+   "outlet": "The Journal",
+   "published": "2026-11-14",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [
+    "Colorado"
+   ],
+   "counties": [],
+   "via_states": [
+    "Colorado"
+   ],
+   "cues": [
+    "drainage_erosion"
+   ],
+   "score": 1,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "ca4d5aa63790",
+   "title": "The five moments of truth for a solar customer: where you win or lose the relationship forever.",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8xUFBpalhFTDF1eEVzZHV6OGVtYWJvcTZiVEo1OG1zTnFBQUNlbkI3YkhhZ0F5ZXljeTJCdHdjUWZDSV9TWE5oNUg2bndXbVFxVGd4Zm0xRFZzbWJzM1RWOTRoczhWTmN2MTNaYm9WN2ZKbnpteVdz?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-13",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "81f3e5b71c2b",
+   "title": "SolarEdge announces the end of direct sales and local operations in Brazil.",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbmNrWkZtVVVuN3BpRjZkdXRmMHF2QjFoc3BUdGZKaXpSTHg5emhoU0Vna1k2djU4ejZUX1dET0Y5NTUxSFVVeVBDYmF3UGpnVE5IUTh5YlZXbWx3U3c5cEFhcjRLakpEcC1IX2hfc2pMeG1aVVlDdkhsREpGdmxJNVYwQlBDdmNwQTFSZGJpS2llTmhuRDZYZ0Y5YnNueUlrdENjNFlHNEE?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-13",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "e8cd8edb6ec0",
+   "title": "Shinsung E&G Unveils 640-650 W Bifacial TOPCon Solar Module Series - News and Statistics",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSUVnTnpicU1JMFRJcDRsb0FVcXI2YVVXYU1mZzJsUTM1Y2xMcHFpVmRXbWlRTVU4b1ZMLWRiZU1oSXYtMlFQOXpXVUZTZENDc21QZkw0ZlpzM1BYMTIwSHFhcE0xNXNtVHFBNnc3LVk2d3pibS1qaW5GMjRGWWJvM1JxWk03SzZabGY5RVVuaDZsU3Ewb2pKc2FVOHJyUXhMdnBYeXZQbXJDV1BRY1RaM0FPWVgtZw?oc=5",
+   "domain": "indexbox.io",
+   "outlet": "IndexBox",
+   "published": "2026-11-13",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "95f7864fdda0",
+   "title": "Portsmouth Weighs Floating Solar on Newport Reservoirs",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWVBUSDJ2RmdEem0tRkVxNG1FbjFlUDdnZWRDc25xdmg4ZWUzeTNheXRTTWo0VFViUW1hcWNwVU5CNDlVc01KckItRzRrcGdmRXJOd0U0bWNYbGFNQm5BOUQ3cEI2N2gwRmptMm1pMXQ3VVhxY1hJYU5mbGtyLW1LUUFfdTJ2eVo4UzBrTTZwU0JtaTViaU51U29FcDcwWGJncnk3YQ?oc=5",
+   "domain": "upriseri.com",
+   "outlet": "Uprise RI",
+   "published": "2026-11-13",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "cc759745296f",
+   "title": "Paraná will offer credit to rural producers to invest in batteries to combat blackouts.",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRFRnN3d1eGJhaHBSQ2xaMnM0U3NuTm1Qb0h1cXdpUXJxODJFU3JoVHJmMzBXd2R2SDcteHJfR29LUnlzMWltNy1MaFRBSnZwUkpTUlVkTDBXaG96UVNqdGx0MWxVQ1FIc2x6dlExaWhjZndab1NQcWFaNC1mUGFMRnBOclFQUHRWRVZN?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-13",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "rural_character"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "18af8e63902a",
+   "title": "Masdar, Citaglobal and TIZA Global Mark Start of Construction for Floating Solar Projects",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWHhvODBkRkx3ZXZmWmRUeW85eEN4a05qZGx3TzZYdUI3cWpJMm9maHc3cjdNalpLOXAyQWFWaWxobW8zQXFhN1gtMHNFN0xkeHFHcnpFa0QtNGF3bmVrSkZRUUVNV3B3UHdjWDdkWU9xMlFKaGNESm5SUVVsekpvMVpLZE5WUzdFTThCejJuMzVReW4yS2FZMFdIOURMTFNiTVJiRw?oc=5",
+   "domain": "renewableenergymagazine.com",
+   "outlet": "Renewable Energy Magazine",
+   "published": "2026-11-13",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "62af47ee0c69",
+   "title": "Legislator says farming and solar farming can coexist",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWnkwYmZVMXlMTU9XRFU5bXptUnotWFQ4QTduM3NrNl9iLVZQSlVfOHJGakhsZzUweDYxZWxPaHZvTXNLVmRoU1U4OHRFUk05aVZWNkJFcEVKMW9EQ3FBNXJQc05aQVNTZm40M2VpLUxxbkRtSjZueE81SU52LXhxcXdKVTZxREpwelNNbHFITXlOdw?oc=5",
+   "domain": "okenergytoday.com",
+   "outlet": "Oklahoma Energy Today",
+   "published": "2026-11-13",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Oklahoma"
+   ],
+   "cues": [
+    "farmland_loss"
+   ],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "81967a6a0da6",
+   "title": "Kyrgyzstan to build 15 MW floating solar power plant",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOd3FtTWxKZWhkekczV2ZkYkFwbE9GdkN0QUdwMW9tRU1RRmx3T1RXOWxSUjdtZWhidEZzUmNfdm5IUmtFZmNKWldpTWkxbUVJOWZJbERMVlo2aDZhNERLbGdTcDVfNzd3S2lZMTNPNFpLVlI3TXZjTWdiV3Q4VklVemcydERzTEQ2R09wUENwc9IBjwFBVV95cUxNLU95ZjZ0bFlrVENVOXp0cUg3QXNsOWVSZlA4QUVCR0lUVjRqd2lCaXkzRkpRaWRia0ZQQmFSckRwaWRyd3RZeGozX0tUVjlieGxnOG9TUkQyNFloM0RacExOckdNdjNGemcyWkNGTTVMRFFPcWZaQVJGWW9IdkVUTkhKWHRrVlAzbjRqNG83bw?oc=5",
+   "domain": "qazinform.com",
+   "outlet": "Qazinform",
+   "published": "2026-11-13",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "3e21480c12b6",
+   "title": "Beyond the price per watt: the role of graphene glass in ZNShine Solar modules.",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxObEo5cmlmbmlxVlA2M21hM0kyd2lNVENLVm1hYkxwNkZPSG0xVUlLdTNTSkpJejdSSmt6QnIzbDBKcUdOcWJoVl8ybGI0MERkTDlzY251LU4zVVc0eHN5MUU4eDZIcWlvZG9sa3lINzZQM09MUmFRYTdWZU92bGRoN2FB?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-13",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "7f20c072cdc9",
+   "title": "Agrivoltaics: Integrating Agriculture with Solar Energy in India",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcExfREFZbWNtZXNVU3c2Y3FLYXJaYVF6N1Q5TnBVelBGZXR1N1pQUzEzekVUMmZuQ3gyczd4OHdFaUtsNjc1OEZ5UFBmYi1SY01ITlZ5R3BWN0hNenMyOE11cnRZWUg4U19CTkpWOHhWQlotS0l2ZmlKNlZWbE8tOC1FZF9uODBBeF9qWmtnWW5ieVp6VlZBeUhyem5FQjVuQVZ4XzNwTWZ0MElNa0xDemFJOWJRcHMydFBNZEtsa2pJdw?oc=5",
+   "domain": "drishtiias.com",
+   "outlet": "Drishti IAS",
+   "published": "2026-11-13",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "e6b877e4f4d8",
+   "title": "175 GW Solar Done, India Now Eyes Floating Solar with Storage and 1 Crore Rooftops",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQTGUxUzZxZnRHaElGSzk5SmwxRlBUZjRDN3RXbXhVcG5NazZiNWlBNEVrdVlzRWNSRkZZX0t6VEFnUnhFbElRUXMxNklqeHZFZEZzeEFlMDlGVFRES0pxelRNcG1wcmlnN0JlOEZjU0pEVFFybFR0WDk2MWRDeXFWdFhmemlOVS1FVUpQQ0VoMWI4YWJiYVV3T0VwWHg3Ynp0ZklqdEZXWGZ0My1XVWtVT0VMeHBCbTkzT3dnY2ZBbHFNTFJ5amRrUklSSFo4WlNz?oc=5",
+   "domain": "saurenergy.com",
+   "outlet": "Saur Energy",
+   "published": "2026-11-13",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "882d23d67133",
+   "title": "Two sheep per hectare at a New York solar farm boosted beneficial insects 38%, but eight sheep cut honeybee numbers 45%",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5ReDFOcHVMSXlIc2NhTFgyQ1ExMzVpMzNMdjFTR2VwZHNBTDlsQjREczBqTEFVY21RN2FWdnVRU2ZUWEF3WjZkWXloT29Zcld6SHNfbEVKSkt0QnB5MU9aVUZka2ZGVGlVTW5MT2JjWUdDbDJJdnc4MGVpMVM1LVE?oc=5",
+   "domain": "ecoportal.net",
+   "outlet": "EcoPortal.net",
+   "published": "2026-11-12",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "a91b1a1fe65d",
+   "title": "Solar Grazing at Cornell: Achieving a 38% Increase in Bees and Ladybugs with 2 Sheep per Hectare at New York Solar Plant",
+   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOLXVNbVlacGktaGctQkNycEtFVDNuX2ZBT0JPaFV4SEJRLThPc0c5cm1xa0JabEc0M0laN1g4ZUUtbGJ1Uy0tcUNVN1UyQlRjNkpGWkc0N29KWmp6MXZPSzhJbzliSWYwclJqcVh3MUE0QXY0MjBfa05uQ1dpakVsYTZqNnRYTWVjeHZpLXE5VFdBZFc5dWJ2Yi1oZk45TGw4bHc0Ulp6cUtLR0NVbVRkTzlLcUxZQ3pzd3VZNy1wM0c5REo3M1dDOTA4amsxS3liaXJ3SXgxWUI1eC1fS2ZReXhRRE1heHdob0tHdkVIUmTSAfYBQVVfeXFMTk9ybl9JVGd5UWlXUm5xNFI5RkZZdVNaZzd1S3E4ZmkyT1Y2M3F6elhpRjB2SGlfUXNrZXd3ZjJEdXFjY3BONThFSUY5TVZ6LVh4RllpdzdLTnpudVFJaExiQkszRmVhTm5zSmJ3Njg3UVNoYVpSTjVjSHJaR3hJZGhaVGU4Vk52a3RkX1lWZHdzMjg1QkVSV3RuMmoxLUJ1b1BYNHpRZEItekZZSjUwNEtoT29OaFhLZ3lUSkttd3pJYkxWUjY5dFBYWWJ6WllDcmlSTmVaMTJJdGRwcm40VTRXUGRWU0NjSGs3RjI1X05Ka25PUzJR?oc=5",
+   "domain": "noticiasambientales.com",
+   "outlet": "Noticias Ambientales",
+   "published": "2026-11-12",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "823b26d7c9b8",
+   "title": "Norway to buy carbon offsets from Indonesian power projects, Indonesia says",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQN1dRd2cxdE5QaDVndjNDR25PSWlBM1pJSTRJVG1NakdvRXVnanFLS01jMFhNZkdyVGFEcGdsNXVCZUVLS25LY25VSEJ5WjR2d1lIMkxJNE0xWEFQODNubHhqbUFiRFRSdTctRUk2clFaWlJjUjJZYlB3TG1JNFhkb08xekF6QzZMUEp5X01HYWE4YWJLc2lnRjl0LUsyTTJfRjZRSlMzc084TGlIWUZHbGd0TnRVcFpFUVE?oc=5",
+   "domain": "reuters.com",
+   "outlet": "Reuters",
+   "published": "2026-11-12",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "94647358f777",
+   "title": "Massachusetts bogs generate both power, and cranberries",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNeDk4d1lEd1phWHpMXzRHMGFISkRIVnc5S2NSQ0lCY09TMWVsVWpMeWUxSGZtSWRNdHd5cnk1RW1vNUw1Z0wwRWFqd3hWWGxvdG1ENXk4aFpxRzN0Unc4aXRtV05RSHdhcnNuUDZPTGNGVmJGWEEyUThMWkxFNzJ0ZEhzX1VaN3VRNTNneGR3WTFpZ0JWT1Q4LS1uQlhGV1VyaFow?oc=5",
+   "domain": "planetizen.com",
+   "outlet": "Planetizen",
+   "published": "2026-11-12",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "8c9c380d5c25",
+   "title": "KSERC Extends NTPC Kayamkulam PPA For Three Years, Pushes 500 MW BESS And Floating Solar Expansion In Kerala",
+   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNdXBkQ0R2T1FGMjlFQmxUZXlQSDdxbk1xc183dnVRTDBqdVNHTFVsaE9BTktuWF8xOU11b1psdWs4ZnYtQVJxQUd3andJZVVyQ3JGTVVyOTFraE1FSzNpLW92MDNCd0JMdmdLb0ZsY0NtT3JJZ1hzOW52VklFbnJIWFQtYlZNd2Z1U0lLTjd2MWp3VVlWNUJ6eXVnVFBVQm1iLW9GelpGb21fOUdpQ0xleHloREhBVk1sR2dMdVJ5cHFsX0xTZlNMOXlHTmxuU09COHk5YXdxbnYyamk1?oc=5",
+   "domain": "solarquarter.com",
+   "outlet": "SolarQuarter",
+   "published": "2026-11-12",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "2fd0791953fd",
+   "title": "In Monroeville, Ohio, 6 megawatts of floating panels will cover the reservoir that supplies the town's tap water, so a drinking water utility became a power plant",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5feGpMSVVzWEhTTXJibnFzV29JTnRGZVZQYzJzdVd6NXFFNF8xQS1hX3Jod3Jmd2NrcUhaVHBEbHdITDNENHZHM0I0ZXIwWUpoX3RlX1pybzBvRnVCRmlWNThsSVl0THNXZ1pDM0pHUU1pS3JlQlI1VDlHcw?oc=5",
+   "domain": "energiesmedia.com",
+   "outlet": "Energies Media",
+   "published": "2026-11-12",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "water_quality"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "acdd5f974ac5",
+   "title": "Fixed-Time Rate and Business Opportunities",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE51TUZKQS0tdEVaU3NvM2c5X0RsZEdaejAxQnhaOVJKZFVEYWFnelYxaUQ2c3FuYWJELW5iUGZlQy1rdldTZmtUbWpqMV9laXZNdjZYdmUteTdNVTVMVzlfZFByZG1kRkVqWGNZVVJvX2NZNDVnQ05V?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-12",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "241b493c5190",
+   "title": "Entergy Arkansas Google Deal Adds $500M Customer Savings",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOc1dyR2RhYVZ1eWZoZTJxTWM4QV9XYTRreHJqaTllcENjMTZCdVVjYnhrZVVrYTY0SGo5YTFNbEY2dzRhdDFnWHZ5V1M5X1hyTzZJRkJSb3Z5TWJwT3I2UjdOS1h0UWw1aXNtVTRSTzduSkt4aWRsZkdEeklUbFppdzRLUGFfVmtaRFhSa2J0VzY1Sk4zWTJnQkNtczE4ZDVkY1E?oc=5",
+   "domain": "arkansasradio.com",
+   "outlet": "Arkansas Radio",
+   "published": "2026-11-12",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [
+    "Kansas",
+    "Arkansas"
+   ],
+   "counties": [],
+   "via_states": [
+    "Arkansas"
+   ],
+   "cues": [],
+   "score": 1,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "7dfdcfa130d1",
+   "title": "Ameren plans three more Missouri battery plants",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQY3l6TGJLVm42aVU1VTNSNUd2RmJVU1BhX2ttSkZIMjNvcGg5WXNnS285QlhTNVN5UE9jUmJELUlXdEM4ZTRvaG4yVmRFbE1KV29SajFEa1ZzUk1wZC1vTDFfancyWEpackhoSFlXN3dpYXEwYi1xVzZMSjNPR2ZZTktTYlpPQUx4SjZsMjJHV0FQWHN5cXc?oc=5",
+   "domain": "missouriindependent.com",
+   "outlet": "Missouri Independent",
+   "published": "2026-11-12",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [
+    "Missouri"
+   ],
+   "counties": [],
+   "via_states": [
+    "Missouri"
+   ],
+   "cues": [],
+   "score": 1,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "e0512a70855e",
+   "title": "Agrivoltaics can increase profitability of indoor farming agrotunnels",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSW5PTmRrbWdRWjMxd3RUb0s1cnlhcDBtdVFwMm1OUU5vYTkzdUd0bWdhYWI0ZjFPQnNTVDVvYTZPZG50VnlmVXgxUEZRZjVMQndaQmphMzUzOWJnQ0VBU1dsbTNIcEU3NEhUQVVTaGU2YXpMcmR3ektsa1NYUXNTUDJVb1Q4cnd1bW9lYnB2T0poamNvLTRwZzNWRFc1OVpwNk1Eakt0TEI0Ri1KVVE?oc=5",
+   "domain": "pv-magazine-usa.com",
+   "outlet": "pv magazine USA",
+   "published": "2026-11-12",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "farmland_loss"
+   ],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "1070b4a7687c",
+   "title": "ABGD announces name change and will now be called RED.",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVFlkUV90dHdqTDJQczI4TVdJVVIxU1RqVmlCeC1Lb3pxdllaTmdCUmlVYnliSXk0OXNCTXp3b19hNTdGZFpBM1FYbjdWT0gyWTB6SmhpYTg3NXpHZUpUQWRKbDV5YVJwaG5jU1BudGhiOXRZakYza2NxY3RuNjJwRGRkUzZLbGVl?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-12",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "207227272705",
+   "title": "Three years after approval, Karnataka’s floating solar park plan gathers momentum",
+   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPWS1kTVpBM0pHTElhc185SXVyMWU1ckVDQ2JneVNhX3VIbGt6ZXpUQXZaZlM3dEk3ZWpyWFI3cTJfdmtJeDA2cjE0dWg3YlpjODM5RVZPTi1PSWp4NG5KcXc1WVVzV2lmNGJzT1BFdVpSV3NndzdPX0ZtVGs0YUFlWTZVdGhmdmU5YXM0bG9MYVluTDJXSFcxbElHTDlKcHZWNXh1Uk9zcVQ5SVNabHFrajVvbGtYdTYwS1c5YUpmQUVST1NsRHdtRU5HNTR1anlselZObVFwaWxOa1llUlc3SXItV1pOMDJ6NHMxNtIB8gFBVV95cUxQUDV4TnM2S3BWLUJqZXg3cmdZelRuN2ZNWERHeE4yR05FMFFmUXhkRng3cV92VnZJd25CZVVSYzBpYmxuX21wajJyOXpJWlNYQkhjazNtTkRpMmh6UkViZTM1ZE53Ml9FSXVTYllnTFFRZHNpVWhmNVFBNXpEckhDQU9mYjFwenMwSGVfMHJaV2pDZmlYOHFQZTdzakRkNndrV2pSSEVmdHhsaldyVE1ZVG5GY0pSRWcwOHljeTIzWUFnWTAwOHBqNEYxYk5rSGVlbkphWFZmZzNXMk5jWVRGaEFmbmJoZVBHYTUwQk1sSHJwZw?oc=5",
+   "domain": "timesofindia.indiatimes.com",
+   "outlet": "The Times of India",
+   "published": "2026-11-11",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "e351d333dfee",
+   "title": "Solis Roadshow Goiânia will discuss the \"Tarifa Hora Certa\" (Special Time Rate) and opportunities in the sector.",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5CMVFHVEg1MGlNX3NqQUlxMGR5YjlrUkJVTElDVVhCdnpGY2dTWGJMcl9STEtDUVp2ZTR0ZlVhVEVjUVJ6V0hWdHZNaURVM3dPSHgxZ29va1ppUDdJUkdCMWp4dUJ1WXpWbDBsNkN5QXVIOUxIZk5yaktPd08?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-11",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "27878b885896",
+   "title": "Open Energy: Energy begins to change hands.",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9CNktwR2tlbi1HVENIc3FxclBZM2JuTVA5NDFiVFByZF9ReHAwRHFqaWF6MW5GcG41MVI2WjNBNEtPMjBfOUxqQ0JkZTNkeThLMHZBOVBvaWhlVnJtRjhOWl9UcUtRWTRjbm45SHVxQnJSdkk?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-11",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "7cd9981675cf",
+   "title": "Ocean Sun Signs MoU for Approximately 6 MWp Floating Solar Project in Brazil",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNa3d4ampybENJMzBVaGg2U1I1Vk00dnAwZHFfMDNvNXlsTEcxV3pPTzVHdmxDYU9hSlpldVppZFNEUTF4YUd1Ri1VeXR2SFZMVVlrMDVLRU1mYWlpMXcyZlZETmEzb1RiMXFXUDktOURaRW5XNm9oVGRSUlJvVFphUjJTUUdCbmhJTk10OVBEVUZEMGRKNHc4MndpOXNhRWFCaDdCdmstSmdRR2dIZWJZcERuYUcxR0t6azRiR0xEd1NNcEM1S1U4?oc=5",
+   "domain": "tipranks.com",
+   "outlet": "TipRanks",
+   "published": "2026-11-11",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "95801f0583c0",
+   "title": "Lam Dong province adjusts investor for solar power project on Buon Kuop hydroelectric reservoir.",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZXF2YldsbF9ZT0tGX3daY3dzWGVsTF9HOU5fREcxVjl2dnRLY1R1N0N4cHFib2RDQTVKZ1BTMHhkRV9haTMzTjh1eEpici13TVFOUDgzWHNJZlpfRE9SanJWLU1Sd3oxOGUzMHk1aGFKSDVyc1RvVEJJRUw3ZGpDZ3kxNTQ3M3RqVi1KcHN3R2RKSEE4RUFwSk1kQVJmeWV3Z25BbUpDWQ?oc=5",
+   "domain": "vietnam.vn",
+   "outlet": "Vietnam.vn",
+   "published": "2026-11-11",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "047401f83f05",
+   "title": "Karnataka plans feasibility studies for 1,500 MW floating solar capacity",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNdDFQeUhMczBHYW1CUVREVTRHZ2dKcV9ibkFrVzVEVF94Y3RKajhhS3VwelI4UVRjb0xvSjVkVXd2S2VSUS1COEFoU0xtQXV3QjdjMVFXQ1k5bHdMU1AzMHduRm9FbVozYmtPS3FoUkxvbEIzMjA2NXBSMWZjaXBlVzdENzFrdldlUklUU1dPdjhyeU5ZUEE2V2Q0V0trQzJJWldMZXB5WlpmS1NtTXNSSDBqRDBMNVdRYlhXRUtzeGdoRHllU0w5YW1PdkdNOHRVSDI4ZXJEeGo1ZUl4ckHSAeMBQVVfeXFMT3U1V0lUeE10VmpDLUlUaV9md1U0LUp5bW1Jd3ItRXl1TmM1c2YzVTg4SVdjbGFnWWNwTWpEZFNzYXlvU2VXNHNoRTFDYXhYVnN5XzNyRWVMaHZieDlBVk1hVkxhQ0NpVGZtZ1dMZzM5dDFFeHctVmxna1lsSFNjNV9mWTRkUFBBOVV2azZFV3hQZ2N0NkxGNmZySjQyMktuUVJjUVNDaUhlZE9mdnVzTjVTb1publViOFpOQVpXUGxVc1Z0QjZWcVNvRG5KdUtlN203SUlrdTE1bXlHOHNXT2tMZnc?oc=5",
+   "domain": "m.economictimes.com",
+   "outlet": "The Economic Times",
+   "published": "2026-11-11",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "71568db2e48f",
+   "title": "Fixed-Time Tariff: associations point to risks for solar power generation.",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE95aHNLdml4emoxQk00YUgwV05ITGZTbDh0bXlBMDRvMmsxVzlOckFHR0xYZ3N4UEw5MExMZUxzNDRWRXdBYUdtalpISlZjRmJuUEtxX1o2ak5LWXNwbVhzY25UNHdIMG9iV2I1TmJsZTdMVmhxV0RpQVBsS2E?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-11",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "d36cc30720ab",
+   "title": "Elgin acquires 72MW Italian agrivoltaic project",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORkFqU2x2VE8ybHpkalkyR0E0dnFQcjRZaWUwNHh5WXg0eVVLQloxY0RrczVDVF93aVA1Z29WZjJrdTdwSWNmX0djRi1wZ2RyWnJxUVMwaW51NmM4R0JJRkZTQ04xdUFqUDMwZUVDNUZGNDhsUjdud180enlMTGlSc2lDWQ?oc=5",
+   "domain": "renews.biz",
+   "outlet": "reNEWS",
+   "published": "2026-11-11",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "27ff5afc0815",
+   "title": "COP 31: Brazil rises six positions in the global climate ranking, but remains outside the top 20.",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYjJqb1prdldxQnhkUXhjRFFpc0NXakptSVFhclpTWktpVjQ2bVlReFAwQ1BMNjJHREVUcVRxN2Y1Q3loTXFJZmF5alVST2ZXbkNKWEw0ZUV6d0U1eFJaNklZeUZ2VkxwbHZ3bktQNXh1NEYxV3BrbVVMNE9Md2lKUA?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-11",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "support_energy"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "7536675901c1",
+   "title": "Birds visiting an Orlando floating solar farm favored the vegetated shoreline over the panels, federal observers found",
+   "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE4tdVpoWWFxZjFwY0VtNlk2RG0tbURza1J6eXNfanJ4dTh6QUktRnFDdFAtb29zcFI2czdCclZFT3NSU0JHQTctclZHX0FETVVvOTlRckNWUGV2aDRWZjB2a0dSQWhIb3FzRDhreWVvSk91d3NrMC0ta0kyaWJDQQ?oc=5",
+   "domain": "energiesmedia.com",
+   "outlet": "Energies Media",
+   "published": "2026-11-11",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "wildlife"
+   ],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "776eaf634d2e",
+   "title": "TCU points out coordination failures and risks in opening the free energy market.",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB4SnVxbXVwNDllV3dUUk1SMGx3dFFPX1oyMVN2ckxWT0Nxd2ZNQ1JSNEsyMVJkMDdPWHdPR2xCV3dHOHZtSlFjWjJIaGYwd1NZTURfUnlTZ2tTV0l6cXZ3Y3dHWDZQNTlHb0Z1a3k3WG11VTBVdHd3YThR?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-10",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "tribal"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "6c3026cd8484",
+   "title": "Shared generation: expanding access through the leasing of power plants does not distort the model.",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNZnZyU0tUVXlwQmdCclpncmxKZmlmVkt1YU9OcEllckk5RXAyS3VtMVU0OUM5MURYdkk4c1NQOTZzaWY1YWRQWmo4bEo5NTF3ZDZkN0k2cFhEX080NFJZbG80cFhvamF1SDZ3UlMzWjRQaENOV1FGa09DTUo4Q2l5VQ?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-10",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "20a735d3e169",
+   "title": "Residents oppose large solar farm for Watertown, Hounsfield",
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPUG44QTRhOUY2dndhTS0tZ0NDbGFWYUI3X2hFWlRDOXFzZVRiTlQ1SHpUVUE3ekVaX2hjaWJmQW1uYnNlSnZyRnR2ODhqaDJ4elRtZ1M0d0VCaGZGb0N5NGVxVkhCSXhpU2ZEa21JTWppYW9TNUpJdFctOFhZeW9YSUNyaGF0S0I0ZUMzVnFJdklJWGQ4cGRWOUZYdDFuZ3RKX1ZJNE9ZU0ltck92ZlozbXhwc3l3b1lLb3pMaFZSbUd2ZHo4YVBwZ3VnRXd2SnltMVRHeFVUQy1iMW1POGNGMVAwV09vMjA?oc=5",
+   "domain": "nny360.com",
+   "outlet": "Watertown Daily Times",
+   "published": "2026-11-10",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Arkansas",
+    "Kansas",
+    "Louisiana",
+    "Missouri",
+    "Oklahoma"
+   ],
+   "cues": [],
+   "score": 3,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "fb0bb8c6c11f",
+   "title": "How Oman Keeps Mature Oil Fields Producing With Enhanced Recovery",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPdWV2ZVRZMEgwOWZZcGhhQVFmNDlDWjJNTVI2QW91SVJWcVlGWWVaMzZORGFDVFpOWW1JOFphdDZIN1duM1o4TW1NSE5mV2p6SnhWLTlCcmpjTGRKQ2JiQ0JmYV9aMVdyd3MxdnRjdWtGYTg0VUQ5N1g1SHBsME8xaWN1clc?oc=5",
+   "domain": "discoveryalert.com",
+   "outlet": "Discovery Alert",
+   "published": "2026-11-10",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "6b5e0777fb10",
+   "title": "Demand for solar energy is growing, but 90% of manufacturers are expected to accumulate losses by 2026.",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5WdFlFUnZxSkxFOHM2aVdCVE0zQWlHRlEwYldRZWtrTkV0cHZJUXU4S3VxNFB0cjY4bm4tb0dLZ2pXOThWOFBnc1lWdXBwR0cxUXZjdzVmejZEM3loQXlzekRZUlFzUmd0OF82LWo2Skw2UVBFd0hjRk9B?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-10",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "5b6f42d90957",
+   "title": "Why MNL grazes sheep under Minnesota solar arrays instead of mowing",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOSXZnQTVCb1Z5N3lEMk0tMGotaExSUTBqMTlGNGx3ZUZyXzNaUlhEZGVtOGJjckZSOHF0aGpvNmpPQXRSU3lyci02c2xWN0ViM2I0N0RNM2NwWFdSeFhOTjFWTXhUdE1iQzBuSnNSb2VxXzNRSXlPQm5tVGhwQnZBRERJMWtlSDBkdjZ0RXd5dE1RZXFZT3BPMjl6ZFBvYnJrTVBHM0t1NHlxckVLanlwdFFKNWY1TGM1YTZrQ3RR?oc=5",
+   "domain": "marketscale.com",
+   "outlet": "MarketScale",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "02af9f8dee3f",
+   "title": "Tennessee solar farm develops software-controlled panels that tilt almost flat to let cattle graze beneat",
+   "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxONmdXN3d4YS1QQ0JVWjVubGgzcDVaSDd5anpIaC1VbGlrLUpWU1FyVkg3MkxyemRiTHZoQkNPNVZkbXVTOUhFNzBzX0FaMTlWWW1nejBDbDgzWkFDOWNVUlQ1eXBYOWxMTDhMTmg2cnZXUG9zMDI1QnNZcTRwTGRVNThrbjNLX0dqQjFNOWtSSkpldFRRSDRsMTZVdVc4dmtPYy1QRkhKWktkTFBrRVVGSHZhMi1Nc1JrenRwOTFJaHhHRjdVZjVYQkxsNkJDU0x3TEFpclJNMjQ4cUo1SXZTSmFYQU1JcWcxUno4djhScHM5NXd6Ym96eVFibVF3Z2oyVGJieDVQYy1yTG13bVpIdXVyaUdRdUNPVGpsa1pkM2RZOUZOYWM5N1NnYmFQYVJLRXhRelJrWldJUUFzYWQtLUxlNlNsNkRrZlhHQ0xMdXN4N0RaQ3JJbjJpYTctT0NZa3dsZmhXWEJrbVdYTFhHU3ViWXBMTDV2QWdxM2xOcFI4a3pzRllNWVBJMnBXLXJSbnBRUkphVFo2Z0Jtb0RnQ3lR0gGnA0FVX3lxTFBpeGZma0M2ZDloOGRWUElZUFNiOHoyVi10OU5GekRZNzhfX2w1NFUzZHZyd1pCM0dzejZYSmkyV0hoTHhPaDFKemIzYXJzSzlYQ1dLdGZNZjZLTmRaTldyMG5ZWFhfQ2JMMzJUSlB1bWlsT1pfTDZGVTlPTFBXQTNzZjk1NlVOLTBMZ0xZZVJaV1owVERBRC1LMlVfNHVlUXFxU3B2LW1oZ3lVQ1Z0VVd2UUJuLTZ2ZmRmX29qRHBBSHFYU3dZNlUwNnlMal9YeFVSUmNIcEFrazgyN1l1NDl2UWQtVk96S2dNZUxiUjlCX0JzRUMtZk5kWVdzQnNmNHZIcG1RRkhtcE94a2c1XzgyRUtrbFphbXlQZ2tfcFE2Rkh6VXJVNFNnMFJ0eEsxVHRMLTVzeWdnZmxHUGhreFdSaFFXYUFKdlRwcXlxenI5U2RRWmFGbnI5RS16QXQ4eHY2NnZkY0tUSlBYZlFQWVRsbktqb2hNSGJnMzl1LWViSVlDZ1BSYTJTZVpWVnEtYzZ3bExVd3BPTldoN2w3NGFOMVRkTGY1cw?oc=5",
+   "domain": "timesofindia.indiatimes.com",
+   "outlet": "The Times of India",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "2e68c30efb53",
+   "title": "Solar Grazing Allows Farmers to Raise Sheep While Maintaining Solar Energy Sites",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOOGRTanNRcG5yZ0pMSG9nVDZRX2drblhDcE8zT1IxMXRwbHVzZ1hRTFRac3ZmT1JORFdhZTVJYTFVVmtXY1RtMlM4NGNVRmVYSWV3ZS15OWNzUE9KbmdWZURJU2ZoaG1PMmF6OW10ajdlMUFwWmhFZW9SNjFkMXhPY0M5VWxyZ1lSak9UMXVpWGcyYjJyRTJDbkJnMXd2S01DSGh2TzBGUU5WbEU0X2hPQzR2SDQtMnEzUzd6bEZOUHp5ejYxSmc?oc=5",
+   "domain": "oklahomafarmreport.com",
+   "outlet": "Oklahoma Farm Report",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "farmland_loss"
+   ],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "743a6fbb987c",
+   "title": "Sarawak plans floating solar project at Sungai Kuap to power Sama Jaya High-Tech Park",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNR1E4NGxWYkN1bnZoMEExeFF1Q3BwcjMyazJZOFk0bkstUUNSYWMzSDhJR2tyR2JPSTZxU3lmc2RqdldfYV9BSFZad29uT0VXa0hwNWFlWm5WVVRRVUpsSHB0YkwxdjE1LXRFMlU4WWZ4Z1hoOGJPeXJKZ3pkdnJ1OHluT25TMDM4WW4tQ0NJTWY1eDRVRHNxVHVNa2FvLUg3c0NMZ1AwZXFuRnpOSHN2WjVSV3AxQy1leUYxM2ZyMHhMY3FQN3c?oc=5",
+   "domain": "theborneopost.com",
+   "outlet": "Borneo Post",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "d03ba0932203",
+   "title": "Panamint gets loan for North America’s largest solar brownfield | Projects Weekly",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWTZIVDVPT2xpYXF5STh5OFFHTlYxY1o4NHJLNHJGYjVOTnhySkF3enA2Vko3c3Y0UkFZMGRPeFFCSEJGamRVWmtXRU83Y0pPa04zUUNjOEFwTnhEVVJuN1hTRnRaMHpQNTMtZEp6Y1JQQzhMRkJOQ21ncGtoQnZINjAwa05iVGh0SlpPTUNOdTd4cmVQZWU2c2RFU2p5aGZaN2dZMkJrbzNucTJ2ek5ZVDE3Mnp6THM?oc=5",
+   "domain": "solarbuildermag.com",
+   "outlet": "Solar Builder",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Arkansas"
+   ],
+   "cues": [
+    "land_use_conflict"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "5806496980e7",
+   "title": "November begins with projections of above-average water inflows.",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB2NmdwVVYtLXdEX1ZpV1FsbVFDLTNNVWlhTFNJRlNzTnRTcTYtQmtzTGZBVkstWW4ydEVBSFlmdHBLNzhkWmQzRXpsLWZhdFZIclBJNnVNb25SQ1E2OHlZUDlSSkIzM3BBZm40OGFVZlNCWEx6Zmx4bjQ3bw?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "7b54e5b0a1a1",
+   "title": "Indonesia eyes reservoirs for 100GW solar expansion amid land shortages",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxORXY4cXNwLUpuMkswbDZGV0dNTnkyeTJuUWhraWVkY1RnLVVLT05qdHFHWXZZS2hodXFlY1g1QUtqRjg3QmRiaHY3MjNLMFE4S19EdWNsb19GU1ZIRnJPa0VOUGJXdE96WFZ0STE1QXlLSWFEVmo2UkZacldsenRnak9VamdwY1BDUmV0dmU4TWs0cmtRU0RWWjVNYjhTVTJSN1R2NlM3bFRFSGxYNU9SbmlDZDRaalpO?oc=5",
+   "domain": "thejakartapost.com",
+   "outlet": "The Jakarta Post",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "f1f389b8991a",
+   "title": "In Middletown, Delaware, 5,000 floating panels cover six acres of a working wastewater lagoon, and engineers kept the plant treating sewage without a single day of interruption",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQU3BReTc4VzUyZ0Z1b0hfNDl1amhid2hMNjhpYkwtMndtTG9kb2lrUTBQbjNQSkhTbkk1Nk9MMXZYU2RlY2stUUN3YmRtMUlRVW0xcS1rUHh0SnllVnhoMjJBQ1pWSjNremJKRVEzR1d5ekZmeUFrVWRmNm5jRFE5ZQ?oc=5",
+   "domain": "energiesmedia.com",
+   "outlet": "Energies Media",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "c0f5056eac02",
+   "title": "Convalt Energy’s Project Golden Eagle solar manufacturing facility gets green light in Gallup",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQd1hZVFEyaWJ1d2htd0N2UV82MUp3TjloVzFtSERJT2RwM2V4Q29SazlnNkozRkUtdHB6cGFGUGQ2Mm9HYVhvRlJhV0NyYUVWWVlCRkF3RjlsLVJpZ2FfWmJnQVZCLTFjdXdIQlA5WTNScjBJUXNWbnBiMkpTallEUk9zU0ZTWVNmLW9TR3YzSmFnZ1ZjZ19ISEtGc1p1bDdJaDdlM2IxcU9Bd3MxSnFQd3hXcjdFZERBWjQ0NjlQRl9pcVFlR3dZcEhrWEJDaFHSAc8BQVVfeXFMUHdYWVRRMmlidXdobXdDdlFfNjFKd045aFcxbUhESU9kcDNleENvUms5ZzZKM0ZFLXRwenBhRlBkNjJvR2FYb0ZSYVdDcmFFVllZQkZBd0Y5bC1SaWdhX1piZ0FWQi0xY3V3SEJQOVkzUnIwSVFzVm5wYjJKU2pZRFJPc1NGU1lTZi1vU0d2M0phZ2dWY2dfSEhLRnNadWw3SWg3ZTNiMXFPQXdzMUpxUHd4V3I3RWREQVo0NDY5UEZfaXFRZUd3WXBIa1hCQ2hR?oc=5",
+   "domain": "krqe.com",
+   "outlet": "KRQE",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "New Mexico"
+   ],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "581b4e9b57a6",
+   "title": "Consumer advocates sue regulators over fast-track Louisiana data center approvals",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOc2Vhb3djaDB6QU1zaV9CU19vemdVNWtwaXVFTnM5R21iVm5ER3Yzd1pnS2RqM0JWSmV0WGktanBGbFF5a0NrbkxjekluZXNLbjc5LXc1Q0RTZkRUdUFHYWU3T3pNY2NFTV9yWThDTHIxTk1UeHR1R2RYSktMWnJ3dllGSnI5MEdLTV9fOGZkMHFIYWw0RGlQZHVwWGZFaHZCVk5nalJSOHY0aG9rOWF5ZWdYV2FzQ0x3d3B3?oc=5",
+   "domain": "americanpress.com",
+   "outlet": "American Press",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [
+    "Louisiana"
+   ],
+   "counties": [],
+   "via_states": [
+    "Louisiana"
+   ],
+   "cues": [
+    "benefits_doubt"
+   ],
+   "score": 1,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "75a7f47fa675",
+   "title": "Brazil will hold three energy auctions this week.",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQQjQ0dXNHR0lCSThmR3BIcTVLdWdSMkdwTERYLWdHcEtWMmp1c1BLQno0aGtUdk5EX3d5Yk03RHA5bTkxUFdVU2dJbm1MeFItT3c1NHk4WUZ2UFlJRTNTdDFLanYweDJoNnZHMzkycnhHSHNUYnJvMVUzN19MV2JId25vR2FNZw?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "b2ec5aefcc36",
+   "title": "Brazil put 26 new power plants into operation in October, and all of them are from renewable sources.",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE94UGhFNWcwUkszYnJlZk5hU0NhZE05TmVJcl9icGhON1RYMDhqWWRmUVZ4RnBOSEUtNlZGRmJEVHZQaHk2LTB2S0ZQMXNIUVpvbjFTbURzTEhkVm1mMU90MC1WN1pwLS1tRDlubnc5Z2R2Y0tYWkE?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "a4b7ec4d0124",
+   "title": "ASL supports one of SEA’s largest floating solar projects",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE04MlhvZ0dCbHR5MjJjSzE3dk41emJ5TXVuZ2JaM1laZ3Q2ZWNFaUJaSTdEM2s1VzdYY2Itd3dZUUpsYU82LWZTcEh6eVRxNmUxS1d3TnJWTXppcW5zLXd3alFsLXFIbVNyaDVsdGl6bw?oc=5",
+   "domain": "law.asia",
+   "outlet": "Law.asia",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "c9139f852d37",
+   "title": "ANEEL proposes including solar systems and charging stations in the new hourly tariff.",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPTG44d3BOYVZydGtrYldfS1E0bVEwN2hQcGN5SXdGcXdIakRSUDk2ZjJEaGVNME02Q3RiX3NOY29mZ3p6X3hLaFZNc1QxMWFudHgyajdibmhwSjJ1QkdqOGlyUTEzaGFUa0QzcHgzNzZ4bTNNX2Q0bWx0YURFYUNzQnBycnlJcTZDUHpjM2JR?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "88902b7cd35c",
+   "title": "ANEEL Today, a proposal for hourly pricing for low-voltage consumers will be presented.",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRkRDRjJZYXhSZDV5eGstd2xxSXFuWmhfRmgzVE4tYXdrOXVNNXZZb0s1Mk1KVWV3QmQ3OFJPMkxMeHkwUnNHZEZudmdTdE9ycV9mSVppY2pNMFJSbVprZ19KTFlUZm1nTmpXd2RwVExNWDBTNmI5bklYMzZRNk9wMnBMZjBSbHdycHlPSVNLSGZUWE5zbWxjVEdGb2ljb2JrYjBlV3ZjZnoxZDd3TEpYT0xR?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-09",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "74aad456767d",
+   "title": "In 2022, North Carolina farmer Lance Tabor used a 40-acre solar site for sheep grazing; he brought 41 anim",
+   "url": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxNaHQxcjNFdTBHNEt6czhDVjBZdEM3SHRmWWVOMkdaVHUyXzltUllVS0NsQ0FfWW1qanB0Y1I0dkVPcG1NMzhJUVdZZEsxWkp1VUs4ckp1dDRkNlU2YWRTWkFSalY0LWZTUWk5dTh4WGI2YVVPZ3dpTUxkQ3gzX1NTeXlMVHZ0WWxaajFuV0VYMkd0alIyMV96SFkzdVRCQUxwR1AzUzJpeWVHVy12Nks2WXpkT0RrUjE0TkhTb2hnRWVFUUxLNk9oLXJqd2xrZktHWEhueUpwbDJIdjd2NTh4SlBOMU52UlY1bVB5MlNObWlSWUpaQzhVNm04eEF3c0RYcEl1emxFNUo3T29LR0hVUEtENjc1MzNBcGc1WXV4elJDUEpEWXJ6cmhDWnVfUjBjTnAxYi1pU21fVDlGUGFRcUlESHRaMjZL0gHOAkFVX3lxTE8wZ0F5T0drblc1N3pPd3RLTlRNczcwZENaY2lPdmZ4dVZJNmFKMUlvMTlLNmdjODlkM0M5Z01VaERoLXkzZnlUb3BCRHN3N0JxTkFqYnpONW9pUEFFVm9HdFZ4NHNGZGZLUmUwS3JRUE9vc1hRdmhRTXpkTjQyMlllbjE1RFZiZHhpSWU1QVdtQWFQUTNlR1RCdmdubU45RHBxdGl2VzBHUkkxQ3YwNWJpLUR4enZlTTlxLVNScHFDSGZmQ21VbmVvZ05tVWpscTY1Y2pjUHBEN2taSkswdDAyUzAtMmhjTVUtMVdlWFJKSkpYWVN6ZlV5SVJEcmNyS0pGTTBaUEx1LWJicU1kbVltbEpTa0FXTFRPMGo1SWdrSU40eW4zNzNSaGhDQUZJTU1qN2VHN01mWXRWQ2pGUmRET2RYdW5HOUpIVUlNQnc?oc=5",
+   "domain": "m.economictimes.com",
+   "outlet": "The Economic Times",
+   "published": "2026-11-08",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "e3c00140861f",
+   "title": "More than 2,4 million households need to renew their electricity bill discount.",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVEtwWHR1cHpKTGUwTEF2a1FlbE9WQ3ZtLVRWUVR4MWc4bzJocVozWHI3eGNTLVY3Q19RdXp1MU84V0ZIVjRHQXVvX0NSZ0p3Z2s2ZXpmYzZ2VnBmN1dCVkRpUDExMzVBcW1EUzljZHlCaVQ2U3Bxb3RxRGI0djBBdGdB?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-07",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "ffc724943ad2",
+   "title": "Mexico tenders solar power plant with batteries and green hydrogen.",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNd0M3X29MbmVmWVRTTUIxY3lPVF9tZEhodnhrVGtFQzRGRk1TM2p0MFBtTmplYnFFWV9ucnZtNTJ5ajNjcmR1SW9OWklibzdlZFd6ci16TjBGOHhqdkRZcEhFSzIxRy1yaEpCbjZQM1lSUUhqSjBoVXdJZ1J6M2hoUVZLdlpJaFJnOHRwTGZwTlpaZVpZSDhfR1A5WFFBclBnSlVEY2tnMVByQQ?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-07",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "fb015afad391",
+   "title": "Heinrich demands answers on data centers proposed for federal public lands",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVWJlU3hqM3ZDcy1BY2dqRjB4YWM2SFRXVVcyWUw2UVhRTnpPcDQwZ0ZzbnJ3S0NWbVNVN1ZScW1zYW9QR0RyUzhJb0pLZ0xjRkhzd3BlYnhVYkpzRVZqMl8ySTdFVWtRZk5BODVyZUxsYlZibHRteV90ZWMxaGNfbmpZSDlDVExaQWt6Y2ZuTQ?oc=5",
+   "domain": "organmountainnews.com",
+   "outlet": "Organ Mountain News",
+   "published": "2026-11-07",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "New Mexico"
+   ],
+   "cues": [
+    "benefits_doubt"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "92cdcd7285b6",
+   "title": "The ENEM exam will have a special security plan to guarantee power during the tests.",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBPempqbW5yR2tRMEE1ekJ6NjRFUlR4bGUyT3dwcEhIbkdoOUhETDlqMS1na0pmbm5qQkxRZDZlOEcxWFNreTh5T2JNeVlZdFk1aTdXWkhReUQ1NzBGR1RYQVZGVlFobnNXOW9lSHhlM2h2UQ?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-06",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "952733f06770",
+   "title": "Strong winds knock down 6 transmission towers in Mato Grosso do Sul.",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOblhHM2FIQUJMM3AwQ2tfRkZReUJ2WTNCZ1AyZ3ptQWN5SzRhaEdRTWFFRC1lQmNoS1g3M004czg2anZhOXF0UmVWa1RTQXgzSXoxb3J4eHFDOGZFUHRuMFZ5SUcta0p5eENtb3d6QkRJWDVRSS1paW43UnFKdDBmZk01SXgxWFlsZE1QTUNmLS00R0x4VXVubVNZTDVxbnhWM1E?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-06",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "c582079c5df1",
+   "title": "St. Landry Parish solar farm fires raise resident concerns",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxONERJZnhXUWRTXzUwNXI1YkhaUC1ONUF3SVllSkNFOWVGMWs4NVhsVGR4ZXV6UHlPT2k3OXRKR014RW4yWTl5SjFfd0UtZzM1djVyd1IzUjhlVHhhSWR6M0kwMlZCQ1F0MGhBNWJFUEFXdUpsSExGNGlYRVU5NVBfakdWdmUwaGZ2Z3hSWENDVENLeG85aTlvMEp4ZDJiZXF2YnhZNWhQVVlLR1ZnZlE?oc=5",
+   "domain": "acadiananewsfirst.com",
+   "outlet": "KATC",
+   "published": "2026-11-06",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [
+    "St. Landry Parish"
+   ],
+   "via_states": [
+    "Louisiana"
+   ],
+   "cues": [],
+   "score": 3,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "2681118867ab",
+   "title": "Open energy: from data to decision",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4tZF8xVHlLNnVHNkRmNWh4bTZWczlLSjEzanFfNGxJNEJycXRMVXFORldnaW11NTQ5UXpzdXk2eEpiSEZpd3BraGswR19zUWRWX0xKUW4td29ydmFrSUNKVmZkQ0NZNjJOMVF4NHRDUHBMU09k?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-06",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "b39b1ddeb9e0",
+   "title": "Network and curtailment account for almost 80% of the concerns in the wind energy sector.",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNck1DcDRwcHRfWHdHLWMyNEMtWmZXcnFQMjJnVVFUMjFvN1d5eGk3X3JOQkpNYnFuSURFOEljblhGc2x2X1NDU1dZYl9TNHlZRTFOb3R4M01nNEprb2pROTRWVzZjT25PTmowd0VhdVdmeVdRa0VCTjlUZGdrM3NURUg5dw?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-06",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "c61b2a18b621",
+   "title": "Evergy remains committed to Lawrence-area solar farm, but questions about project’s future remain",
+   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPT29nRGVxREdxRnBWYmwyc0VpUEZ4bmpNaEdLc044WUNjVjJmd2wxcG8weVJTOEUxeE5EWV9NN0NLX2pxckFVc19KSWMyckRUTERlNEoxWER2b2hFU1J3aXo3WUIzSTFLSEktdXJIVWpPWFBxaWMwakFKTlVHczAwc09CSWMxREpCbGRpZE1NUk5ENThCRk8wOXVGeWNpdUs0a1Fhc2dUSzhVU2RfT2pOclZCY2hzSmxmSEZ4STlVLVE0bmRXSzFKMVotVXhsR3hmYXhLOWx3YlJ3WkIteWNzWGpwNFlzOXlFVnVqUA?oc=5",
+   "domain": "www2.ljworld.com",
+   "outlet": "Lawrence Journal-World",
+   "published": "2026-11-06",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Kansas"
+   ],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "9cda2a71301c",
+   "title": "Solar and wind power plants enter into discussion regarding the revision of physical guarantees.",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNE02STNpdUI1SDJqZ0Zmakwwbi1zNWFKOExWUVFsNFhRVGp1R05BUnY5OVRpcmhvSFFqZXJSSGp0cFluLXFXbmxQc09BVTVRYnE4RzVQZVlRSEkybWRiR2xkZC10WFE0Q201bWhIUUhfVlR3TF9Id3JaS2VySjEzUDlHckRBSDJQZlhr?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-05",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "593817445e24",
+   "title": "SECI and Odisha target 3GW floating solar and storage projects in Odisha",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNLXFoTk84NXJqMkswQVk4TEZ1MTJoc2k1SXdCSGpRWGdsRGdyclhldGl6ZFdhYVJlN1o5ZWUxVTA1LUFJajNQeEZpNG5xMlI2aEpmQkZyaHlYU2dyNkx1OURCVFRRWnd1WTRjbzcyb0dmU1RsSDZJMEFiaDFUWnFVbWxHX0QxMW1DNHc5bC1EMHNmLURMRW5YZTEyMElRNjR1XzVF?oc=5",
+   "domain": "asian-power.com",
+   "outlet": "Asian Power",
+   "published": "2026-11-05",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "d12bbf038148",
+   "title": "Fortlev Solar presents Lastro Laje for photovoltaic installations without drilling.",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxORGhVcDBwa1JrZ19vYXhtUUlPVmt6Q2x0WTJQVWdzcTFUS29LUlpsSWNVR0Z2S3QzbWxvdVNEcm1PWjktNTBWVDBBajRSTXoxTlY4UkVQNnRGWXJTYW9kLUJEOG15bGI3bEx6WEV1RVlldzF2U25GVVk2TVBPZ0dXZ0JzWGlueDRaUDVkSU44UnJQcmsyV3NfZQ?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-05",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "6dcb176aee36",
+   "title": "Brazilian courts have ruled against ICMS tax on solar energy credits used by consumers in Maranhão.",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWmRRdjZiQ04xcmNXSk16TTJvd3MyVTRhZjB1dUZtbHR6aEtGU3hLcVhlNFNfT3JnUDFhS3l4U0JLbnVGQWdkd2paWUh0Wi1uY2p3WjF1dWlORURxYlZYLUNKZFFXclZsS3hKM09qczBWQkR2R1IzUDVYQkwwS3NZVGJnTUpkalRLNGJ2bU1tVW14eHBVNWFYOVZ2Vm5xUmZm?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-05",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "d3caf2720174",
+   "title": "What happens when floating solar panels meet a Canadian winter?",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE16dzU2UFZCZHNFaUhrZExZc3MwMF8zcG56eXpEQVRIMGRFLU9jbGJHWVVBdGJuT25tc0M4ZnZfNl8tNmo5REg5cHA4aEVZeldSS1BJZzg1dVRxSFFKRmFtUEg1dy04V2F1czFPRmNtRUJIUQ?oc=5",
+   "domain": "begiant.ca",
+   "outlet": "Be Giant",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "6b8acc06c1e1",
+   "title": "Vietnam approves 452 MW floating solar project",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTlRPTkxEdjBZeGhMQWU4N1A1Yk5XbVRSLVR6Q05lUktCQWs5bTFhU2dQQWxiUlFTVkdJb001ZzFJVXpwTEowN2ViN09fdkpGMWNFb0Z2T2ZhMmZtYmRWQ052enNfcmVIeTFLXzZLbmRPeWJ3QUxscUx3Vm10RGJselZpeWEzeTJGNEZ3UkNxMA?oc=5",
+   "domain": "pv-magazine.com",
+   "outlet": "pv magazine Global",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "d7f6f20fc31e",
+   "title": "Vietnam Approves $355 Million 452 MW Floating Solar Project In Dak Lak Province",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWTliRFQ5cXFma00weklKdlhZNmpHUzkxc0pfdU1Tdm5qT0lBZnlZQUxXdHZfZGlvQjJlMnlkQnllZ21WVGxBYjBra2lPcUstSE0tTGk1TS1yUkhLVnpYVHBrVmhTVk5nRE5qRkJVRmZaVUFvRWFwbFRiUkpmMW9lTkYxRTZKa3p1Q1RwbEo2bHJBemktalpzSnY5UWpyMHplZzNzVVlVcFB2U19MWk5mZ1JRWDZZUQ?oc=5",
+   "domain": "solarquarter.com",
+   "outlet": "SolarQuarter",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "e4062b3673e7",
+   "title": "Solar energy without feeding into the grid: why does Zero Grid attract companies and rural producers?",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOTmJ0d0ZHUTg4MXZKSGdZeTJ1eHBUUUl0Q3B6aURXc09ySVIxMXJaM29YM2tQT2Zxd0Q2LXlucG9Vb2drNElZdXVPOHppenlkY3lyOEdiSGx2N1htY2I3aTFKMUk1MWxIYXlVT3I1RmFCakJxZXlIYWlPbkNuMnBsakNsUQ?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "rural_character",
+    "support_energy"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "117b8f261b00",
+   "title": "SECI, OHPC partner on floating solar in Odisha",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOcGJxZG05Ri1WcGRBTEZhZkJSRjk3eDI3V3JuTnV3bDdnQzFTSlZUYUhHTUNXTUNQcEd1czcxZXpabWdkdzZiYmxwOF9wUEV6SC1TR0xzaXI1Qk92a3BFZnNrUE1NQVZrM05SSkJXdzNBaVhLWVFWUF9mQkJnWVZHaUJEUk5jX3ZkZVhlWU1R?oc=5",
+   "domain": "renewablesnow.com",
+   "outlet": "Renewables Now",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "75b4ff05a6b2",
+   "title": "PLATFORM REVIEW | Jilin No 2 – Chinese-built floating solar power structure utilises bamboo-based composite construction",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNYkhXamFTLVNmR1JTRGFNemhNbEE5bS1PN2s0UUxXS0VzVF9FUmhfaDVDZDhGd2V5TkdUTTlMS2tQVEpxYjVzSlRmU1o3N29ROXd0dFkwNFJNaGU1aWNaZndSVnZvMlZZQ3RIb2xBUEQzMDliQkNlS0duQUpZOGFWcE9HaXhXanV3aDJZZUhRNnk1X2NpdVBFQV9XajhWWEhLR2FDVWtIYk9Yekdz0gG6AUFVX3lxTFBGeURhQ3AyWldYZWZYelNlV2hQUUduSUJRNnh0aVZDZ0stMDJJdC1XVmlxNHpXS3VoTWNZalR1ZTFJSUFwU0lCdUwzakE0VElTOEEtdklzdzhrdTVfMjhBdzY0YmhuZmV1THRWRjE2aUlPTDBPdElQcWloZTlnYm9JS25fX1loYkFncGJLb0NBZnRsOFhqeTIxVDBDOVBKcjUxM2UzS0F2MjI3OUFiYktEdVEyV0VJaG8xQQ?oc=5",
+   "domain": "bairdmaritime.com",
+   "outlet": "Baird Maritime",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "48d7aae463da",
+   "title": "PIS and COFINS taxes on energy offset in shared generation: a charge that shouldn't be on the bill.",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9QcnpleGoyd1JYNEZ5OHQtT2VsR3JuZGY5RTB0ZXBDOFZUOHhiRUhJcjRyVVpVbDFlSFRrR2MtdVF6dFBkTDE5WURjdHhobElXSkJrMHdtLWoyVy1wNGdHdDgxbDY2MVJscWZrN3Jrdw?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "4d359315fcf5",
+   "title": "In Texas, sheep now graze more than 70,000 acres of solar farms. One rancher who started in 2021 runs more than 8,000 of them",
+   "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNeFZvSE5sem8yYXNxX19uQXBvSDV1MENQYjhScnRNMmNqYl9GOXdoQ0JkaWU1TjU1a01oVXdhbkN0c0g3TEduRVIzQXE5R19kNGlydUdiX1hud25USUxHTzM1NjB0Mm91ZnlYZTBkM25mbzM1RGo4dFdxUDBIWmt5VzZXdGxCMGN2QWIybTlUbl9ULWNBR0p2a1ZubFRfQmJ0VEdEem1Tay1BSWFKbTc4alFTMDdITFo4aExWazRPV1NQdWF4ckkxMFFJLTB6RkZkeEk1LVdMdWo5Ym5HNk01WS0xVDBZYjRnd0pvWm81YTJmUXNmTTYw?oc=5",
+   "domain": "futura-sciences.com",
+   "outlet": "Futura, le média qui explore le monde",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [
+    "Texas"
+   ],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 3,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "7c8dcd43f614",
+   "title": "Floating solar potential for energy and water security",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNYW82SXcydV9EcXZJdGhjY2tTdjNOd254eFZYTnUwaTBLNWFERnJRQXVHSmtqU3BnNkg5M1E5LUM4Njl0VDJqN01TbXRCakRjZWhuamh0WUdkNXM1a2t1XzdKUGx6b1NEVFl0LVJETUNIb1UydnJucGdLWEtJU1ppSGd2WGVBWWlRajd6WFFhMlYwQVNQMmJiSHNMQlBrakZp?oc=5",
+   "domain": "waterpowermagazine.com",
+   "outlet": "International Water Power",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "5c37d545d6df",
+   "title": "Colorado",
+   "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE8zZkVWSFd5X25PZkszZzZZR1lQcWhtUDIyUTdhYlFXdWl5OTlneG83X1UxOFFuUW93cGVtM0V3OUprQVE?oc=5",
+   "domain": "nrdc.org",
+   "outlet": "NRDC",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [
+    "Colorado"
+   ],
+   "counties": [],
+   "via_states": [
+    "Colorado"
+   ],
+   "cues": [],
+   "score": 1,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "f226feb05243",
+   "title": "Canopy Power partners with FSC to accelerate floating solar builds",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNVDNuemcwYTRWMjVaRGU2Zmt0Z05EUkpSVnhadldRdU9zcGxZT0xHYjc5WTdFMVVmV0RSQzNDS29BRlhSaFJKZHh3WG0tWGgyam9lMjk1VVREOGp0b3dNSFFFa3hHankySUFKLWNwMFl4cm9Hc2ZkWGhKaS1wdzk5WEU1R0dZdmxZZFZqYUxreDNxLV9tdUktZHRCV296SnBlLVhMUWlWWV85VDhYdjZXaFVCNmFhTlk?oc=5",
+   "domain": "pv-magazine-australia.com",
+   "outlet": "pv magazine Australia",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "49d7501f9366",
+   "title": "Arkansas to add 2,200-acre solar farm to power generation",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbjdJVXo5U0dRX2tILUpxd0dDbl9NMHl6M0ttbkRGWkxkVWJyNzRKZTFXT2didXdzSWpzUGNKNlhsZE9rY1ZWQXlIMHB2ZXpKa0lteDY5TDVER1hRcWNob3dmbHlwaU92WHBzeU1aVUV5VGROYzlHaEF0YTNWNHM5bWRTU1UwMzFDbUhXYjhfUV9BY0FwQnc?oc=5",
+   "domain": "okenergytoday.com",
+   "outlet": "Oklahoma Energy Today",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [
+    "Arkansas",
+    "Kansas"
+   ],
+   "counties": [],
+   "via_states": [
+    "Arkansas",
+    "Oklahoma"
+   ],
+   "cues": [],
+   "score": 3,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "8de8eb71e2d1",
+   "title": "50 GW Floating Solar, 30 GW Storage: Odisha’s Clean Energy Roadmap",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPQTZZM3BIV285TTlhb2JUczZfVzdyang1S2tyeGR3ME1lbjk5SDVIc2lRWXhMSXM3cnVkTkdLTHhKbkhqSkxfUUVLcERVbmlkMnh1aFJ1SG9saTAwMWVzLWoyNElTWnVOM081Wk96NG8tWjlQajIwX2dkTE9pRVVwRThiajZ5QUd4ZE5oOGRmQkJaVm9iU2x4cnM2SjdaOXBGSFpVU29qYnl1bGhMaUk1U3d6amZIOUxLdWtmUUlYeWt2S3RwYmJ3TW9LNmvSAdIBQVVfeXFMTUotSmhzd1k0Qi1nM1V6Uk5Oek1xX1MxOVh3RUhocTBnUTFMcVhlNWhFU2ZaTkI5UE41ZXVJSG40TWlheVJ5VVVqMFFLVUE2d2QwOHYtSzRCdC1yTXh5ZW8ybHBEUGo4OVdHNE1qdGZ1MENJSkhONVpMc2taYWhBbERnMzF0QlJkZ3Qtd0lOLVFraVBvd1RucHRSRUZaWmYwUWppb2lIX2R3bzlycjZQWWcybWNUeHFJcFgzMzN4LTVlM0xIQm1USlpscnNVYTRUZmxR?oc=5",
+   "domain": "businesstoday.in",
+   "outlet": "Business Today",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "support_energy"
+   ],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "9664f2f34e63",
+   "title": "4.95-MW US agrivoltaic solar farm to offer 10% cheaper electricity",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNWlBMS3JNVmdSRlFNSkhDSUVZMF9TaHhjR3RxNDZXUEZmUU45aWdrUXd3NTNEUzhZOGlXQ05iZEtGNklob0NoZkV5TS1GLUh0dWFJVXBfNDQ3d0MyWWRRMGlKQURkekVnYWVsT0g0eU95NkdQVDY2VEFINWRzNmtuTUt1dC14RDFWWkFndkwzSmw?oc=5",
+   "domain": "interestingengineering.com",
+   "outlet": "Interesting Engineering",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "062ebd1dcc73",
+   "title": "\"Solar Cinema\" arrives in the Northeast supported by AXIA Energia.",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMW4tZGRoUGpTeGJPblNhdlBfUHRoVjR6LW5PSWEwODQ1YlRmdE9qQmpucjVmRzNHVG1Pd29UNzB5WDJqLWNCTVhWV1VpZThTdjhKbWxoclFNaUttZTBRTjh5VWtNUjNzSzEtQks0Q1QtV1llbURkLTVGOUFDTGRBMDhtbVBfTUE1bmNPTWRjUmlCdjFibC15V1FR?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-04",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "34712ca81479",
+   "title": "Technical area of ANEEL proposes changes to the rules for shared generation.",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE91NzN0cVFOVTNzZkZmOGFVUXU2cmFfbncyRlJSN1lPSjdjSkl1NVJ0TVRnOVdkWVA4V2NlYWxWaVRGUE02aF9lV0taTXpVRFF2SU0zOERWamJqNEhBUHVubjd5TEp4THQ2UExXVXA1T2RLd1FOdkJTeGpMZlU?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-03",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "2a553901002b",
+   "title": "Tariffs are expected to rise in the North and Northeast and fall in the South and Southeast in 2027.",
+   "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9WVG5rdnkzOGMzV3FQWFFNRG1xcS14al9KeFFyR3Q4NUl6aHJjX2IwSVMtZ011dndBQVAzWmtZM0lBZkM3V0xqWVh2RnpCR0NZTUZ0UGdyQlpWampZaXVBelVlWnFoLTFNT2pDUXBpSkNlQ2FxLU9tVzE2TjVmdw?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-03",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "162375e9f48f",
+   "title": "Storms have caused more than 750 power outages in Paraná in the last six weeks.",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5pVVRQbnhqZS1oZWZzLXVXVzRsdkJOSll6cmRoRjZmUkctbmFkX1FFR2RYcXJpT2RUVy1IdVV2ZEhRdWowQW9OaGNGd0tZZXVXRExLVDEta3NrV0ZDanItNFNUTVhYUExBZmtR?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-03",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "e401cb7729b0",
+   "title": "Mibet introduces G7 floating solar system with portrait module layout",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNSFdGOGNHTElEUDd1RDJhbGN1RkhWUC04UWxMeEF3UGtLZXkzRDBYUG56TEw2VVpaNUt5OTFfTkg4dWNUSEdGdmtMd3N6eFB0cVpKTExuLW95dnJYS09ldGNvUTJtMmt4clAzVmkxTUd4bTJGSnd0MDdBbHNrN0hvS05UM3pSQ1RXNFdCTXRQMWQ1aTNib0lHVzBLcmxKNDVRZXpFYWN0UTRPaWVWSk1ORA?oc=5",
+   "domain": "pv-tech.org",
+   "outlet": "PV Tech",
+   "published": "2026-11-03",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
+   "id": "6dee0d5d2114",
+   "title": "Import tax exemption for solar inverters advances in the Chamber of Deputies.",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVVE4TGczM3ZLXzJfa3lCUE1kQ21hd1BveG91S0lwWmpYamlEUWhwR2NHMVlwWHd0VHItV0xZTEdOZE9pUXVNNlI1V0duc2UxVXNzcFdtN093SHppOHJUVXBMZkZTYk5uTW9xMDIxdnRueGtLNWF2UGxKWEpMYUZHS0hpWUR1MkxwZjhuaEhB?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-03",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "2795ee59b118",
+   "title": "Energy of the future: solar, batteries and VPPs are creating a new electricity grid.",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1YVjNzMEFpZ0hkWXBEMkdFVm11OHRFdnlTSExSeWVuTXFaU1NKay1MTWd2SUVCczBfUVNlUEtsNGhQRVREZUpxNTcyVDlvYmJMNnBVOW1aQWNtUy13Y0c4V2JkLXNURFlHTVNoNm9Bd0s1Zw?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-03",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "support_energy"
+   ],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "b9175e9fc3fe",
+   "title": "Cypress Creek Energy opens Wilson headquarters",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNHRnR2RnWDVYUTN6WjJoSHd1RmMtNTd1N3lMSHJ3QVZkNWljOGVPNTNpZjMzY3hhQjFXc18xTzQzZ0dRVjBReUVlNzVMMWtUb2FWbGM1NnpGc3M3VDFVNDBpWWNxMm5laDNkbFRQendNTHZNS3FVMUtWdHRkc09MeUtuY0tHZWtXZ1BkdVZSSjFLZTA?oc=5",
+   "domain": "osceolatimes.com",
+   "outlet": "Osceola Times",
+   "published": "2026-11-03",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "Arkansas"
+   ],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "748ee606c846",
+   "title": "Animal shelter seeks support from battery and hybrid inverter manufacturers after blackout.",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOQ2lmVU9LR1pHT3VSdXY3YWpTNWRUMmczVWhIcUV3c05LdGhDYkJNRkw0M1NXeDdtcDhyZDlZOWdZRERUV1ptVmI3eFRMSWdVZk5maFh6QjUzWkFONnFCMGkwZVc4UUdXeG5oOFZBNlJSOThjU1FDVFlhR1llNFBWNmxVbnQ0SnRsUmZRd2FkRHZVV2hXcGpscmZXbDFMdw?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-11-03",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
+   "id": "a96cb110b66f",
+   "title": "University of Minnesota offers online introduction course to solar grazing",
+   "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE05ZWJoZ0ZoNUphcmdIbEZhTGJ0d1RYaWxUSlkxR3JzR2hEWnhOUkVVX1NkZnprTXFhTy16Q3dPRlNwanJoM2ZZdXhTWFY?oc=5",
+   "domain": "kfgo.com",
+   "outlet": "KFGO",
+   "published": "2026-11-02",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
   {
    "id": "577a59c799a0",
    "title": "Ukraine and Russia report fake emergency alerts after cyberattack targets apps",
@@ -44,7 +2644,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -110,7 +2710,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -132,7 +2732,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -252,7 +2852,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -280,7 +2880,7 @@
     "benefits_doubt"
    ],
    "score": 1,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -380,7 +2980,7 @@
    ],
    "cues": [],
    "score": 3,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -402,7 +3002,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -470,7 +3070,7 @@
    ],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -543,7 +3143,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -665,7 +3265,7 @@
     "support_energy"
    ],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -735,7 +3335,7 @@
    ],
    "cues": [],
    "score": 3,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -761,7 +3361,7 @@
    ],
    "cues": [],
    "score": 1,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -807,7 +3407,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -851,7 +3451,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -961,7 +3561,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1058,6 +3658,28 @@
    "weak": true
   },
   {
+   "id": "c85441af4db3",
+   "title": "TELF AG on Rwanda’s Floating Solar Ambitions",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBpMFhnYWJ3QkJ5aks2N0daZ0pOOE5YY0Z3MjlTQ1NLams0SXlKbkJzY2pNbVptNWtoamwzY1pMQnNIdURiVDUyZDJSZWlwb2xXaXhFa05TYnNmMEZBRFpURXdjYTFDU0UzdDVQZmcwNGZyVTY5Z29YLVFB?oc=5",
+   "domain": "vocal.media",
+   "outlet": "Vocal",
+   "published": "2026-10-30",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
    "id": "1b2589f42ce6",
    "title": "Storage and financing are among the highlights of FES Brazil 2026.",
    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1NRG5JdmlqQ2gwU2pyUW9YNEs5Wk8xNFlYZUhNUlBzN2NkNi1KRTQ1bHZVU2FmWHg1S3k0ZHRMUFNuQXpiT05IaDA3T3YyaTBZRlNlckQyM1g5MFNvUmZOQnFQdTNLT1k0a2J4TDZIVWRBUQ?oc=5",
@@ -1075,7 +3697,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -1097,13 +3719,14 @@
    "via_states": [
     "Colorado",
     "Louisiana",
-    "Missouri"
+    "Missouri",
+    "New Mexico"
    ],
    "cues": [
     "rural_character"
    ],
    "score": 3,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1125,7 +3748,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1149,7 +3772,7 @@
     "concessions"
    ],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1171,7 +3794,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1215,7 +3838,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1283,7 +3906,7 @@
    ],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1354,6 +3977,28 @@
    "weak": true
   },
   {
+   "id": "d516e05db6f3",
+   "title": "Floating solar makes a splash in Europe",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9leWlQVklFY0lkcFlROGFpeWpmNVNoblhPRTVvMVJqNm5sZmxPZ1ItVTFSWDNfa1l1SlN2bmVaT1dqN0dTT2J3c3phVXFOWGhyT1JtUHF4LVFFRTlWZHR6QVFfMUVjeklJYU5saEFJV1VaendXTmVVblRn?oc=5",
+   "domain": "pveurope.eu",
+   "outlet": "pv Europe",
+   "published": "2026-10-30",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
    "id": "d84b0602c1b7",
    "title": "DOJ, Colorado clash over access to Adams County polls",
    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMW03a2ppcHgwUTlxU2VSTzJHZmdCcFZYSkRCZHFHYzhFcVNiV0hLRnAyUXBBdTBDTEZ1VU9VSElQMFdwT0JEajJQV1VraFZ2NDJhN3RQaW1vUW45Vkk3WWFiNHRJWTA2MENzVFFianZvZ1g4RU96Z1N5X2I3YWlTSkdWR3B0THBTd2N2aWpEQ0IyN28?oc=5",
@@ -1399,7 +4044,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1443,7 +4088,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -1467,6 +4112,28 @@
    "score": 0,
    "last_seen": "2026-11-02",
    "first_seen": "2026-11-02",
+   "weak": true
+  },
+  {
+   "id": "8f8144e82c66",
+   "title": "ANEEL maintains green flag for November.",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE56dWFkT1JBT3M2VWluODQ3OUtJTlVfaEJxWEM5SGVCcHNTRUg0LVkxU3h3TWZCVFZpR2N2dmRYanJFSEYxdzlFX1hkYTJ4T2tLaE5tT0JvMzVtWEI0WmFNcXVvVlM0ZTRWbmtqTUhVZTQzVjg?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-10-30",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
    "weak": true
   },
   {
@@ -1540,7 +4207,7 @@
    ],
    "cues": [],
    "score": 3,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1636,7 +4303,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1658,7 +4325,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1702,7 +4369,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -1814,7 +4481,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1905,7 +4572,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1927,7 +4594,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -1949,7 +4616,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -2116,7 +4783,7 @@
     "farmland_loss"
    ],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -2188,7 +4855,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -2258,8 +4925,30 @@
    ],
    "cues": [],
    "score": 3,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
+   "weak": false
+  },
+  {
+   "id": "43ac5126eb9a",
+   "title": "Work on Indonesia-Singapore floating solar farm in Batam to start next year",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQc2pQSnhYRktrY2dRYVRfT0NnSjZCV2tpQkpvb1BBRzYyckFmSVRBSk44S2xjalNZS0ZkcC0zUURiMDROajdqbE5DU1I1R3VsazlHOWpOWk1nZmJpVk8yVllZXzhmVzRzTEtQVVE5amN5Y0VDVjNXbTNlaVpvNF9wRmxiMGJJX0h0VDQxaXJkLUh3MGw2LVl0OTYwcVhlNVdrR21sRXhkQThOX19yQUdzc2k4QlZhWHo2V2s0?oc=5",
+   "domain": "edb.gov.sg",
+   "outlet": "Singapore Economic Development Board (EDB)",
+   "published": "2026-10-27",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
    "weak": false
   },
   {
@@ -2284,7 +4973,7 @@
    ],
    "cues": [],
    "score": 3,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -2337,6 +5026,34 @@
    "weak": false
   },
   {
+   "id": "de9d898fe83f",
+   "title": "Southwest flood damage estimates are hundreds of millions for New Mexico alone",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPV1VuVndmYks3R1FvVUpEUUxlMzJ4RURjZjVwWlZsZGtwQUluM0swVkdUcFllVnBzdUlHWEhPYk5iaWtKMHZndXZNY2NVQXVja3FGWktlRmtsZUJTNXdrWEwzU29KalFQSnNHaG1wLU5OQWF1bzJkQ3FKNHFhQU1aNGhzSjhVVXRmVGxVeGViZ2JSdzI2S1RPR08wRTg5TU5BZDR6LWNINnpMVEdJd0t0U3NEdnQtUkE?oc=5",
+   "domain": "ideastream.org",
+   "outlet": "Ideastream",
+   "published": "2026-10-27",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [
+    "New Mexico"
+   ],
+   "counties": [],
+   "via_states": [
+    "New Mexico"
+   ],
+   "cues": [
+    "drainage_erosion"
+   ],
+   "score": 1,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
    "id": "f10a68fc3ce0",
    "title": "Rice agrivoltaic study shows panel tilt can protect crop yields with minimal power loss",
    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNOE5jbDMzaG50LWhycTRkZFloZGZycE56SEYycWk3YzIwSHBOanFla1NJM0l6V0htZDNRRTBaTEg5QzNFbEpPWWFhel9UZXBjcnB0TVk1ZmJJWFNwRFM0TVE0dGR0a3RaZWM0azlJdGpUdGt4UndGaHZ4NnUtZHA0T3FTZUxRaEpoSjNQc0dOVXI0R3hJNURJZ3dpdEhRMnVxMXdVZjVnZ0IyZF9ISlRkX2hDRkk1SkdVa1hxYXFxTkxRajN5?oc=5",
@@ -2375,11 +5092,11 @@
    "counties": [],
    "via_states": [],
    "cues": [
-    "tribal",
-    "support_energy"
+    "support_energy",
+    "tribal"
    ],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -2401,7 +5118,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -2423,7 +5140,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -2445,7 +5162,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -2544,7 +5261,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -2568,7 +5285,7 @@
    ],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -2776,7 +5493,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -2848,7 +5565,7 @@
     "farmland_loss"
    ],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -2905,6 +5622,28 @@
    "last_seen": "2026-10-26",
    "first_seen": "2026-10-26",
    "weak": true
+  },
+  {
+   "id": "916da9a0e90e",
+   "title": "Agrivoltaics in India, Grow Crops and Generate Solar Power",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPc3NBMl9jNzR0dWxYaXVWTk9BUFFuM1FuNXNxNng3NVNFY0hDbkd2eWRxbXp2NVFXU0RkS1NjeGRwZHg4OGs4eExSSV9Vb1JZX184MGgwNXBRaHNBYUprTVJCbWdKdGdpbElnUlJlRlpXa09jczI5Qy1lZFU5WGZ5UXUzTEIyeklRa1liX1VoYmljWWtVdUVqbTlPNTJtdF83clVV?oc=5",
+   "domain": "vajiramandravi.com",
+   "outlet": "Vajiram & Ravi",
+   "published": "2026-10-26",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
   },
   {
    "id": "f638ee003702",
@@ -2997,6 +5736,28 @@
    "weak": true
   },
   {
+   "id": "b94350ef4caa",
+   "title": "UAE Business : L & T showcases innovative renewable energy , power T & D solutions at Wetex",
+   "url": "https://www.gdnonline.com:443/Details/1410793/LT-showcases-innovative-renewable-energy,-power-TD-solutions-at-Wetex",
+   "domain": "gdnonline.com",
+   "outlet": "gdnonline.com",
+   "published": "2026-10-25",
+   "sources": [
+    "gdelt"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
    "id": "b7ead5ce71d6",
    "title": "She voted for Trump every time. Then came cancer and the bills",
    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOOGx1WXNOT0tsd3c0TnozcGFRNVItR3lTbzJwNWxUcUpDR1dubHlyWnQ4RmFMVlFmZDJ6MXkwel9OT0ZISjBlZEMzRW9sdUhodXJCZUdGZFpWMFgwT0tpbW03Q1p1UzBUMk5pXy00cmJwMjZSVlJGNFU4akQ2UEFpUUFZVHBIYmZXbnBxbTJwVGpVWHZ4TWlEdFQ2RnBBeFhIUHFTYXNZbmdYNnpaUVJaTnJSTm5JaVMtblZOems0N2RZcV9uNktHMzZHSmgzUQ?oc=5",
@@ -3040,7 +5801,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -3065,7 +5826,7 @@
    ],
    "cues": [],
    "score": 1,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -3111,7 +5872,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": true
   },
@@ -3179,7 +5940,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -3317,7 +6078,7 @@
     "benefits_doubt"
    ],
    "score": 1,
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -3390,7 +6151,7 @@
     "farmland_loss"
    ],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -3414,7 +6175,7 @@
     "farmland_loss"
    ],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -3436,7 +6197,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -3486,7 +6247,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -3560,7 +6321,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -3626,7 +6387,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -3766,9 +6527,31 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
+  },
+  {
+   "id": "70006ef9084f",
+   "title": "India Hosts 7th Agrivoltaics World Conference 2026 in New Delhi",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNRE05ZFAyWS1XcG9JeUxHR3MxdGhjSEVuM2hJSE83SXRkaVdVaXJfQmZ2d0R4Z3RTM2EzWmZZeTgwanZxYWVKcTZEZFYzYTY5Mk80Vzh1MW94TldBVndhZm5Eb1d2N28xVUdtSVlpT2pMQUlMNmcxVHlLUi1SOHJSTm45WEdJYVhuMEVNRTN3LTFiMkpjZkFXcDFqVDlsdk0w?oc=5",
+   "domain": "currentaffairs.adda247.com",
+   "outlet": "Adda247",
+   "published": "2026-10-23",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
   },
   {
    "id": "3dca9b7bae5b",
@@ -4011,7 +6794,7 @@
     "benefits_doubt"
    ],
    "score": 1,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -4079,7 +6862,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -4129,8 +6912,32 @@
     "farmland_loss"
    ],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
+   "weak": false
+  },
+  {
+   "id": "62a145d503fc",
+   "title": "Agrivoltaics Offers India Potential to Generate Solar Power Alongside Farming",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPV2JFUE41NHhvM3dmbDBXc2N1NWN5VmM1RWpvb05xeVA3bVpPUEg5SFlWUjdseFlEOVVuTFZKY3R4OWVXZFlNOTFyN0I3MG9ZNDA4U3lzY21oWnRZbEZ3UDRvOFZrX2tvSndxQy1OWjAyZDAybGVvVm1NY2EzSjU0TlZSYzM5cUlIQWVpVlBWaS1XaENiZ0FKTjVWcVAybTlvRnNFTzgzSlVOMTEx?oc=5",
+   "domain": "ddindia.co.in",
+   "outlet": "DD India",
+   "published": "2026-10-23",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "farmland_loss"
+   ],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
    "weak": false
   },
   {
@@ -4151,8 +6958,30 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
+   "weak": false
+  },
+  {
+   "id": "b8ff0a7d7657",
+   "title": "AgriVoltaics World Conference 2026",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBzOTBmUWJRNXZRQjhCcXRxRWtqQi1ucHo5VUJYbkN3Zk55MDloWTBEZUt0ZEdnT19pQzRQZElqYTcza1hfMngteXo4MHJ0TGtKZ3FjUm9YVHRrV1YwNFZ1Mko3SUE5bk5j?oc=5",
+   "domain": "pib.gov.in",
+   "outlet": "www.pib.gov.in",
+   "published": "2026-10-23",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
    "weak": false
   },
   {
@@ -4173,7 +7002,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -4225,7 +7054,7 @@
    "via_states": [],
    "cues": [],
    "score": 3,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -4271,9 +7100,31 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
+  },
+  {
+   "id": "e16b54dbbfa4",
+   "title": "\"The electricity sector will grow and be sustainable for many years to come,\" says Hitachi's director.",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPMXM0ZXlCV1p3dDVsbXlpU0dIa3M4bzV0QWFqUEZNX0tOVFloY29rZlZJRWNRVHVwYUJYbU1McjVFS0ZkZEdKdHVWcnJyLTFZX0o5NlprbXZVYldqOFhrbE5WelZDeDF2OVhyelhZbWstM1V1ckI1SmprZnR1djdtcmQ5a2xmQU00RXZCcA?oc=5",
+   "domain": "canalsolar.com.br",
+   "outlet": "Canal Solar",
+   "published": "2026-10-23",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
   },
   {
    "id": "e7f3c538b914",
@@ -4293,7 +7144,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -4385,9 +7236,31 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
+  },
+  {
+   "id": "010a00fd3e43",
+   "title": "Solar Panels above, Crops Below: Centre Plans AgriVoltaics Push",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcV9SWUNzQklIU2Z5WHk3N0RieUlYSFBDdnJaNXdSbE41QUxPMEYtOU9iM1BoVUJHMk16d0RldFZJeXd3NWVUWTd2R0wwcUVGWlBPYWNYUUMtWjk5NmtiendhaUJMb0xZelhXX09RdDdRRGQ4S3lhSndrOHV0bGVSOGlzQVdpLWFhRmtodWRGQ19pTUlUTy1DRFYzTVp6dTRZUGhOaHFIdUs?oc=5",
+   "domain": "indiancooperative.com",
+   "outlet": "Indian Cooperative",
+   "published": "2026-10-22",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
   },
   {
    "id": "a4ef87c867f5",
@@ -4429,7 +7302,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -4451,7 +7324,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -4473,7 +7346,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -4679,7 +7552,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -4810,6 +7683,30 @@
    "last_seen": "2026-11-02",
    "first_seen": "2026-11-02",
    "weak": true
+  },
+  {
+   "id": "114ae23bdfd1",
+   "title": "Govt framing policy to enhance farmers' income via adoption of agrivoltaics",
+   "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNNlhHMVZ6UjZjWjJFZElYY2lVU3pQWGUxV1N2bVIxS1B6ay13Nkt4NjdnRnNCNWNOSjVHNDlZX000bld5ZUhRaVZ0N1ZGdFp0QURkS1B6LTBSREVQQXFMZE4tY2Q2YWhOaVlNS0psRkJWcFFLX0pUclRUVC0zYnlwSkcwQVpXeGhobDNZS0QtdG1HckJqVHhSU1FaSkFFWlgzNVVPM01tWXFGWmJrN1RmU0ZvdG1BRC0yUmFvbFl2MHE3MUZjMDFkNDNIZlNzamdUNlNKRHk4NmtqU2VtQVhUWkY0WXZhUHpTYjVMZmRCSWl0S3YxZVJTT01CSTEzd1dLcnZoYVJYQ0ZoWjVMLUtNRjg0NUvSAeABQVVfeXFMT2RVOFUzYzBPQUVYRWFZSnF2R0dVZHRCUUFNdG9wTVRzRXFUTlVjNzBKQ3pmU1I2U1YzVVhSZzljWXdFdW1yT0l0SUUzOEhFa1JuQzZHTGsyODhsWEhVWV9OYzV4NjFPS0NWa0luNnZyZXBNeVhQSXRSa3pSQzlsUFBNckVkTlRsOWN4QUpnczlBaHdSeDU4S0NEVDBPMGlYbmdsUE8wYjR6Z1ZNMHk5MzQxczJTN25BTTZJN2hvb2MzcU55a216TFlrRmg1S0NEYW5GWWlSY1NSSjZwMGppOWE?oc=5",
+   "domain": "energy.economictimes.indiatimes.com",
+   "outlet": "ET EnergyWorld",
+   "published": "2026-10-22",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [
+    "farmland_loss"
+   ],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
   },
   {
    "id": "50bd92e436d4",
@@ -4991,7 +7888,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -5061,7 +7958,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -5083,7 +7980,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -5108,6 +8005,28 @@
    "last_seen": "2026-11-02",
    "first_seen": "2026-10-26",
    "weak": true
+  },
+  {
+   "id": "56478f84f5a0",
+   "title": "“Solar panels above, thriving crops below”: Union Minister Shri Shivraj Singh Chouhan inaugurates the 7th AgriVoltaics World Conference at Bharat Mandapam",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Ga3pjRmJwVXJCb3JwMDBicjlaMHZiNXY4Vjhkc2pqOVF5SUpXNmI0a3A5WHItNzVkanI3MFhwSFY5RmdLRHhvTm5mcThjTGY5VE01TWRTVV85OGh3YU9NTW85eDhiT3RZ?oc=5",
+   "domain": "pib.gov.in",
+   "outlet": "www.pib.gov.in",
+   "published": "2026-10-21",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
   },
   {
    "id": "86062e29004b",
@@ -5153,6 +8072,28 @@
    "score": 2,
    "last_seen": "2026-11-02",
    "first_seen": "2026-10-26",
+   "weak": false
+  },
+  {
+   "id": "7b21467a64c2",
+   "title": "Union Minister Joshi Outlines PM-KUSUM 2.0 Agrivoltaics Plan to Balance Food and Energy Needs",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbW9hdGtuVVRMRENONHVSR1loWjdXbFh0TUtFQXhyakZocjQxZE1LSV9mWmhRUmwzMGZOaFpGaEp1bVA2U2JvMEFiMk5Nak5EUmlXNEw4V2NrYXEzb1BkVy1rRVBsd3ZvVHF6MmhpSjE0dktOQlZIU3JaZC1yUEZqZjVKZ09fZkdvNTVXQ2RSVXhiZEFqT1hRNEctaTJQMW9YUVlHUWZRb2tVU2pRSTFzSjFsZE9lb2RwWDA0?oc=5",
+   "domain": "sahi.com",
+   "outlet": "Sahi",
+   "published": "2026-10-21",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "agrivoltaics"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
    "weak": false
   },
   {
@@ -5227,7 +8168,7 @@
     "drainage_erosion"
    ],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -5298,6 +8239,30 @@
    "weak": true
   },
   {
+   "id": "dc2afa670520",
+   "title": "Rethinking Campbell Ranch? Commissioner Olivas leading charge to discuss public lands alternative to 4,000 homes",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8wWTItMmgtekRwT1cxQ0FYbVFING9zVzBvYW5GaUR3OUFkTkktSkFGSTVSR1VHUkNfeE9XR2hDMFBiVE4tdUxMQTZ6Zzg5WnBKQUE?oc=5",
+   "domain": "nm.news",
+   "outlet": "nm.news",
+   "published": "2026-10-21",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "New Mexico"
+   ],
+   "cues": [],
+   "score": 0,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
+  },
+  {
    "id": "cb9b6fd99bad",
    "title": "Producers affected by the Mariana tragedy may receive solar energy.",
    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVG15Ym5JSFJOUWctS1pIOHUzSnVUejRRekhNRU03TGpQYnpBZ0ZNVzNYODdtb0tHcVpaaTJFczU0YjJXbWR2b0tjSmthMWM1VVlCaHlPeU11VzVuMHItc0JmQzdxd2VXd1pVX1AtYTRNdVZ0VGl1SlYwTU9wSUFMNWxR?oc=5",
@@ -5315,7 +8280,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -5366,7 +8331,7 @@
     "rural_character"
    ],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -5503,7 +8468,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -5555,7 +8520,7 @@
    ],
    "cues": [],
    "score": 5,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -5621,7 +8586,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -5689,7 +8654,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -5755,7 +8720,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -5863,7 +8828,7 @@
    ],
    "cues": [],
    "score": 3,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -5885,7 +8850,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -5953,11 +8918,12 @@
    "states": [],
    "counties": [],
    "via_states": [
-    "Colorado"
+    "Colorado",
+    "New Mexico"
    ],
    "cues": [],
    "score": 3,
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -6003,7 +8969,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -6161,7 +9127,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -6183,7 +9149,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -6430,9 +9396,39 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
+  },
+  {
+   "id": "1dcc5ef76c56",
+   "title": "Google expands partnership with Entergy Arkansas, will fund renewable energy and grid upgrades for West Memphis data center",
+   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPVG9VWUR0MVlFbC1MRjJqQ1d6TV9QSE45N1JYTkkySlBiUW5MT2tzZEF2X0FJd3VRWVRFeFJsQi00dzRDRm1GdXBZbkE1eUpheWwxemhIZGZydlZpd1Z2UGlobThSaW12bXZweURscUgyVUNlZnZaYkMxeExHWG1EWmd2V1JTa240YWk5b2Y3MnZzYVdRZGViWVVHcDdDMFFSV1lEQWRjZVVDOEt2N2FzeDVGeE1GTVFqNHVvR3l2dm9yQ2VSWlRBc29maVEwcDJfeGV4LTJLVWZlckZRTXB2OE94cTdsRTRjTjRFZDl3Z3JvMVBNR2NBRzRR?oc=5",
+   "domain": "datacenterdynamics.com",
+   "outlet": "Data Center Dynamics",
+   "published": "2026-10-20",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [
+    "Kansas",
+    "Arkansas"
+   ],
+   "counties": [],
+   "via_states": [
+    "Arkansas"
+   ],
+   "cues": [
+    "benefits_doubt",
+    "support_energy"
+   ],
+   "score": 1,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": true
   },
   {
    "id": "679c7853f4dd",
@@ -6530,7 +9526,7 @@
     "support_energy"
    ],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -6559,7 +9555,7 @@
     "support_energy"
    ],
    "score": 1,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -6603,7 +9599,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -6633,6 +9629,28 @@
    "score": 2,
    "last_seen": "2026-10-26",
    "first_seen": "2026-10-26",
+   "weak": false
+  },
+  {
+   "id": "8b5c99d6b303",
+   "title": "An Oregon irrigation reservoir could gain a second job as a 1 - MW floating solar power plant near Prineville",
+   "url": "https://www.ecoportal.net/en/oregon-irrigation-reservoir-gain-solar/43208/",
+   "domain": "ecoportal.net",
+   "outlet": "ecoportal.net",
+   "published": "2026-10-20",
+   "sources": [
+    "gdelt"
+   ],
+   "topics": [
+    "solar_on_water"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
    "weak": false
   },
   {
@@ -6724,7 +9742,7 @@
     "tribal"
    ],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -6768,7 +9786,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -6838,7 +9856,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-19",
    "weak": false
   },
@@ -6926,7 +9944,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": false
   },
@@ -6948,7 +9966,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-19",
    "weak": false
   },
@@ -6970,7 +9988,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-11-02",
    "weak": false
   },
@@ -6996,7 +10014,7 @@
    ],
    "cues": [],
    "score": 1,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-19",
    "weak": true
   },
@@ -7136,7 +10154,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -7215,6 +10233,30 @@
    "weak": true
   },
   {
+   "id": "13e5d543aff3",
+   "title": "New Hampshire town turns capped landfill into solar project, with $4 million in taxpayer savings",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNc3ZERXFLcjZHRFA1bEt2bE9BeG52aVJ1VVhXUjZQSHBCRlg0d2wtQnVnMHlMS1ZjT0EzNzNVZkNtYVZhNEt0cng0UTB4S1VMeVg0VkMzZTJJdURzc1FKT09aMWdjTzRpMlY0YW91NWYwd1dsQjN3bWpzMUo3OXMtd0dtTE5Jc1JHaUE?oc=5",
+   "domain": "thecooldown.com",
+   "outlet": "The Cool Down",
+   "published": "2026-10-19",
+   "sources": [
+    "googlenews"
+   ],
+   "topics": [
+    "solar_siting"
+   ],
+   "states": [],
+   "counties": [],
+   "via_states": [
+    "New Mexico"
+   ],
+   "cues": [],
+   "score": 2,
+   "last_seen": "2026-11-16",
+   "first_seen": "2026-11-16",
+   "weak": false
+  },
+  {
    "id": "7b3cee46b15f",
    "title": "More than 200 packed a Pennsylvania hearing on a data center, and police escorted some out",
    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMlFRRW5Sa2lLbjVZbVFWOXg0Z2NOYzRvRWZYeXlBbHNpSUU5VVVIME1MR2pTX08yY1BNU1RkMDFEVVM1UnBnQi1DZXJrU2dxdFRaNjRobWZlYkRXcm8yc3EzOUIyc0Y4ZExobG0xaTluSlQwWXVOXy1Za1o1QWc1ZVZWN29hRFFzbUhHQTZMd25xUQ?oc=5",
@@ -7280,7 +10322,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-19",
    "weak": false
   },
@@ -7374,7 +10416,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-19",
    "weak": false
   },
@@ -7440,7 +10482,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-19",
    "weak": true
   },
@@ -7681,7 +10723,7 @@
    ],
    "cues": [],
    "score": 1,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -7705,7 +10747,7 @@
    ],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -7727,7 +10769,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -7847,11 +10889,12 @@
     "Bowie County"
    ],
    "via_states": [
+    "Arkansas",
     "Texas"
    ],
    "cues": [],
    "score": 1,
-   "last_seen": "2026-10-26",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-19",
    "weak": true
   },
@@ -7901,7 +10944,7 @@
    "via_states": [],
    "cues": [],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-26",
    "weak": true
   },
@@ -7923,7 +10966,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-10-19",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-19",
    "weak": false
   },
@@ -8119,7 +11162,7 @@
     "fairness"
    ],
    "score": 1,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-19",
    "weak": true
   },
@@ -8882,7 +11925,7 @@
     "drainage_erosion"
    ],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-19",
    "weak": false
   },
@@ -10289,7 +13332,7 @@
     "tribal"
    ],
    "score": 2,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-10-19",
    "weak": false
   },
@@ -22135,7 +25178,7 @@
     "farmland_loss"
    ],
    "score": 0,
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-09-21",
    "weak": true
   },
@@ -28383,7 +31426,7 @@
     "wildlife"
    ],
    "score": 0,
-   "last_seen": "2026-10-19",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-09-13",
    "weak": true
   },
@@ -28475,7 +31518,7 @@
    "via_states": [],
    "cues": [],
    "score": 2,
-   "last_seen": "2026-09-28",
+   "last_seen": "2026-11-16",
    "first_seen": "2026-09-13",
    "weak": false
   },
